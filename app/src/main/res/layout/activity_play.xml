@@ -6,4 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".login.PlayActivity">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_login"
+        android:alpha="0.8"
+        />
+
+    <ImageButton
+        android:id="@+id/button_play"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/play_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="playButton"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
