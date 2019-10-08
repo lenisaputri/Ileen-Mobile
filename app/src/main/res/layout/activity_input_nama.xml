@@ -11,34 +11,73 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintGuide_percent="0.48"
         />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.51" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.8"
+        android:alpha="0.7"
         android:background="@drawable/bg_login" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/inputNama"
         android:layout_width="550dp"
         android:layout_height="500dp"
         android:src="@drawable/input_nama"
+        android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <TextView
+        android:id="@+id/kata1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEW USER"
+        android:fontFamily="@font/rocco_regular"
+        android:textColor="#081623"
+        android:textSize="28dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/kata2"
+        />
+
+    <TextView
+        android:id="@+id/kata2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please enter your name"
+        android:fontFamily="@font/rocco_regular"
+        android:layout_marginLeft="20dp"
+        android:textColor="#081623"
+        android:textSize="20dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        />
+
     <EditText
         android:id="@+id/input_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
         android:layout_marginTop="12dp"
-        android:layout_marginRight="50dp"
         android:hint="Input your name here"
+        android:fontFamily="@font/actor_regular"
+        android:layout_marginLeft="10dp"
         android:background="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,20 +85,34 @@
         />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="75dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginLeft="104dp"
-        android:layout_marginTop="36dp"
+        android:id="@+id/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:fontFamily="@font/digitalt"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/rocco_regular"
+        android:onClick="menuKlik"
         android:text="OK"
-        android:textColor="#2c272c"
-        android:textSize="35dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input_name"
-        android:onClick="menuKlik"/>
+        android:textColor="#081623"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_name" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/rocco_regular"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="28dp"
+        android:onClick="menuKlik"
+        android:text="CANCEL"
+        android:textColor="#081623"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/input_name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
