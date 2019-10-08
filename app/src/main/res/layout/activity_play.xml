@@ -19,15 +19,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg_login"
-        android:alpha="0.8"
+        android:alpha="0.7"
         />
 
     <ImageButton
         android:id="@+id/button_play"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="250dp"
         android:background="@drawable/play_button"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:onClick="playButton"
         />
