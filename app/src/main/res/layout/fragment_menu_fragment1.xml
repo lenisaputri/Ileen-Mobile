@@ -18,7 +18,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.5" />
+            app:layout_constraintGuide_percent="0.5"
+            />
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -28,7 +29,8 @@
             app:layout_constraintTop_toBottomOf="@+id/menu_icon"
             app:layout_constraintRight_toLeftOf="@id/guideline"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
+            android:alpha="1.0"
             />
         <ImageButton
             android:layout_width="wrap_content"
@@ -38,7 +40,8 @@
             app:layout_constraintTop_toBottomOf="@+id/menu_icon"
             app:layout_constraintLeft_toRightOf="@id/guideline"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
+            android:alpha="1.0"
             />
         <ImageButton
             android:layout_width="wrap_content"
@@ -49,6 +52,7 @@
             app:layout_constraintRight_toLeftOf="@id/guideline"
             android:layout_marginRight="10dp"
             android:layout_marginTop="30dp"
+            android:alpha="1.0"
             />
         <ImageButton
             android:layout_width="wrap_content"
@@ -59,6 +63,7 @@
             app:layout_constraintLeft_toRightOf="@id/guideline"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
+            android:alpha="1.0"
             />
         <ImageButton
             android:layout_width="wrap_content"
@@ -69,6 +74,7 @@
             app:layout_constraintRight_toLeftOf="@id/guideline"
             android:layout_marginRight="10dp"
             android:layout_marginTop="30dp"
+            android:alpha="1.0"
             />
         <ImageButton
             android:layout_width="wrap_content"
@@ -78,6 +84,7 @@
             app:layout_constraintLeft_toRightOf="@id/guideline"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
+            android:alpha="1.0"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
