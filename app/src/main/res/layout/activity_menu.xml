@@ -1,77 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".menu.MenuActivity">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:id="@+id/frameLayout"
+        app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+    </FrameLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/bg_menu"
+        android:alpha="0.7"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/menu_icon"
+        android:src="@drawable/menu_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        />
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/back_button"
+        android:id="@+id/back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/menu_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="18dp"
+        android:onClick="handlerBack"
+        />
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/one_button"
+        android:id="@+id/one"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="120dp"
+        android:onClick="handlerMenu1"
+        />
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/two_button"
+        android:id="@+id/two"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="120dp"
+        android:onClick="handlerMenu2"
+        />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:background="@drawable/bg_menu"
-            android:alpha="0.7"
-            />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/menu_icon"
-            android:src="@drawable/menu_icon"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="20dp"
-            />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.33" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/animal_menu"
-            app:layout_constraintTop_toBottomOf="@+id/menu_icon"
-            app:layout_constraintRight_toLeftOf="@id/guideline"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="30dp"
-            />
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/animal_menu"
-            app:layout_constraintTop_toBottomOf="@+id/menu_icon"
-            app:layout_constraintLeft_toRightOf="@id/guideline"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
-            />
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/animal_menu"
-            app:layout_constraintTop_toBottomOf="@+id/menu_icon"
-            app:layout_constraintLeft_toRightOf="@id/guideline2"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
-            />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.66" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</HorizontalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
