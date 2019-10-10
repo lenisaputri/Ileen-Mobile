@@ -38,13 +38,75 @@
             />
 
         <ImageButton
+            android:id="@+id/animal"
             android:layout_width="150dp"
             android:layout_height="145dp"
             android:background="@drawable/animal_menu"
-            android:id="@+id/animal"
             app:layout_constraintTop_toBottomOf="@+id/menu_icon"
             app:layout_constraintRight_toLeftOf="@id/guideline2"
+            app:layout_constraintRight_toRightOf="parent"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <ImageButton
+            android:id="@+id/clock"
+            android:layout_width="150dp"
+            android:layout_height="145dp"
+            android:background="@drawable/clock_menu"
+            app:layout_constraintTop_toBottomOf="@+id/menu_icon"
+            app:layout_constraintLeft_toRightOf="@id/guideline2"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <ImageButton
+            android:id="@+id/conversation"
+            android:layout_width="150dp"
+            android:layout_height="145dp"
+            android:background="@drawable/conversation_menu"
+            app:layout_constraintTop_toBottomOf="@+id/animal"
+            app:layout_constraintRight_toLeftOf="@id/guideline2"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <ImageButton
+            android:id="@+id/food"
+            android:layout_width="150dp"
+            android:layout_height="145dp"
+            android:background="@drawable/food_menu"
+            app:layout_constraintTop_toBottomOf="@+id/clock"
+            app:layout_constraintLeft_toRightOf="@id/guideline2"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <ImageButton
+            android:id="@+id/hobbies"
+            android:layout_width="150dp"
+            android:layout_height="145dp"
+            android:background="@drawable/hobbies_menu"
+            app:layout_constraintTop_toBottomOf="@+id/conversation"
+            app:layout_constraintRight_toLeftOf="@id/guideline2"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <ImageButton
+            android:id="@+id/number"
+            android:layout_width="150dp"
+            android:layout_height="145dp"
+            android:background="@drawable/number_menu"
+            app:layout_constraintTop_toBottomOf="@+id/food"
+            app:layout_constraintLeft_toRightOf="@id/guideline2"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

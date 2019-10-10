@@ -38,14 +38,53 @@
             />
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/transportation_menu"
-            android:id="@+id/animal"
+            android:id="@+id/sports"
+            android:layout_width="150dp"
+            android:layout_height="145dp"
+            android:background="@drawable/sports_menu"
             app:layout_constraintTop_toBottomOf="@+id/menu_icon"
             app:layout_constraintRight_toLeftOf="@id/guideline2"
+            app:layout_constraintRight_toRightOf="parent"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             />
+
+        <ImageButton
+            android:id="@+id/transportation"
+            android:layout_width="150dp"
+            android:layout_height="145dp"
+            android:background="@drawable/transportation_menu"
+            app:layout_constraintTop_toBottomOf="@+id/menu_icon"
+            app:layout_constraintLeft_toRightOf="@id/guideline2"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <ImageButton
+            android:id="@+id/weather"
+            android:layout_width="150dp"
+            android:layout_height="145dp"
+            android:background="@drawable/weather_menu"
+            app:layout_constraintTop_toBottomOf="@+id/sports"
+            app:layout_constraintRight_toLeftOf="@id/guideline2"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <ImageButton
+            android:id="@+id/practice"
+            android:layout_width="150dp"
+            android:layout_height="145dp"
+            android:background="@drawable/practice_menu"
+            app:layout_constraintTop_toBottomOf="@+id/transportation"
+            app:layout_constraintLeft_toRightOf="@id/guideline2"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>
