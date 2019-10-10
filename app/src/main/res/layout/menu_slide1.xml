@@ -27,14 +27,13 @@
             app:layout_constraintEnd_toEndOf="parent"/>
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:id="@+id/menu_icon"
             android:src="@drawable/menu_icon"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="20dp"
             />
 
         <ImageButton
@@ -46,7 +45,6 @@
             app:layout_constraintRight_toLeftOf="@id/guideline2"
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
             />
 
         <ImageButton
@@ -58,7 +56,6 @@
             app:layout_constraintLeft_toRightOf="@id/guideline2"
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
             />
 
         <ImageButton
@@ -70,7 +67,7 @@
             app:layout_constraintRight_toLeftOf="@id/guideline2"
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="3dp"
             />
 
         <ImageButton
@@ -82,7 +79,7 @@
             app:layout_constraintLeft_toRightOf="@id/guideline2"
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="3dp"
             />
 
         <ImageButton
@@ -94,7 +91,7 @@
             app:layout_constraintRight_toLeftOf="@id/guideline2"
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="3dp"
             />
 
         <ImageButton
@@ -106,7 +103,7 @@
             app:layout_constraintLeft_toRightOf="@id/guideline2"
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="3dp"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
