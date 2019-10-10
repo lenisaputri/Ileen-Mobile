@@ -10,8 +10,6 @@ import android.view.View;
 
 import com.example.ileen_mobile.R;
 import com.example.ileen_mobile.login.PlayActivity;
-import com.example.ileen_mobile.menu.fragments.MenuFragment1;
-import com.example.ileen_mobile.menu.fragments.MenuFragment2;
 
 public class MenuActivity extends AppCompatActivity {
 
