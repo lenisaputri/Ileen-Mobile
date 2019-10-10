@@ -1,88 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menu.MenuActivity"
-    android:background="@drawable/bg_menu">
-    <FrameLayout
+    tools:showIn="@layout/activity_menu">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:id="@+id/frameLayout"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/guideline1"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        >
-    </FrameLayout>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/menu_icon"
-        android:src="@drawable/menu_icon"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="20dp"
-        />
-    <ImageButton
-        android:layout_width="30dp"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutDots"
+        android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:background="@drawable/back_button"
-        android:id="@+id/back"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/menu_icon"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="45dp"
-        android:layout_marginTop="18dp"
-        android:onClick="handlerBack"
-        />
-    <ImageButton
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@drawable/one_button"
-        android:id="@+id/one"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/guideline"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginBottom="50dp"
-        android:layout_marginLeft="120dp"
-        android:onClick="handlerMenu1"
-        />
-    <ImageButton
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@drawable/two_button"
-        android:id="@+id/two"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/guideline"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="50dp"
-        android:layout_marginRight="120dp"
-        android:onClick="handlerMenu2"
-        />
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"></LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha=".5"
+        android:background="@android:color/white" />
+
+    <Button
+        android:id="@+id/btn_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:text="NEXT"
+        android:textColor="#000000" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.12" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.86" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
