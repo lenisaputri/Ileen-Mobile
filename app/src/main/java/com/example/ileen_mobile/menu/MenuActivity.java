@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.example.ileen_mobile.MainActivity;
 import com.example.ileen_mobile.R;
+import com.example.ileen_mobile.animal.AnimalActivity;
 import com.example.ileen_mobile.login.PlayActivity;
 
 public class MenuActivity extends AppCompatActivity {
@@ -144,5 +145,8 @@ public class MenuActivity extends AppCompatActivity {
             container.removeView(view);
         }
     }
-
+    public void animalHandler(View view) {
+        Intent intent =  new Intent(this, AnimalActivity.class);
+        startActivity(intent);
+    }
 }

@@ -3,6 +3,32 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="animal">1. Tame Animals (binatang jinak)
-Tame animals adalah binatang yang tidak berbahaya dan tidak menakutkan. Binatang jinak ini juga biasanya bisa dipelihara oleh manusia dan patuh terhadap perintah majikannya. Berikut ini adalah jenis-jenis binatang jinak dalam bahasa inggris:</string>
+    <string name="text_with_paragraphs">
+        1. Tame Animals (binatang jinak)\n
+        Tame animals adalah binatang yang tidak berbahaya dan tidak menakutkan.\n
+        Binatang jinak ini juga biasanya bisa dipelihara oleh manusia dan patuh terhadap perintah majikannya.\n
+        Berikut ini adalah jenis-jenis binatang jinak dalam bahasa inggris:\n
+        camel = unta\n
+        canary = burung kenari\n
+        cat = kucing\n
+        cattle = sapi perah\n
+        chicken = ayam\n
+        cow = sapi\n
+        dog = anjing\n
+        donkey = keledai\n
+        dove = burung merpati\n
+        duck = bebek\n
+        goat = kambing\n
+        goldfish = ikan mas koki\n
+        goose = angsa\n
+        guinea pig = marmut\n
+        hamster = hamster\n
+        horse = horse\n
+        pig = babi\n
+        sheep = domba\n
+        rabbit = kelinci\n
+        pigeon = burung dara\n
+        turtle = kura-kura\n
+        turkey = ayam kalkun
+    </string>
 </resources>

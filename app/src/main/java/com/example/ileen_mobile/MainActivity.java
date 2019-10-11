@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 
+import com.example.ileen_mobile.animal.AnimalActivity;
 import com.example.ileen_mobile.login.InputNamaActivity;
 import com.example.ileen_mobile.login.PlayActivity;
 
@@ -24,5 +26,10 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         }, 5000);
+    }
+
+    public void animalHandler(View view) {
+        Intent intent =  new Intent(this, AnimalActivity.class);
+        startActivity(intent);
     }
 }
