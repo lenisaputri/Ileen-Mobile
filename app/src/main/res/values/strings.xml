@@ -5,30 +5,17 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text_with_paragraphs">
         1. Tame Animals (binatang jinak)\n
-        Tame animals adalah binatang yang tidak berbahaya dan tidak menakutkan.\n
-        Binatang jinak ini juga biasanya bisa dipelihara oleh manusia dan patuh terhadap perintah majikannya.\n
-        Berikut ini adalah jenis-jenis binatang jinak dalam bahasa inggris:\n
-        camel = unta\n
-        canary = burung kenari\n
-        cat = kucing\n
-        cattle = sapi perah\n
-        chicken = ayam\n
-        cow = sapi\n
-        dog = anjing\n
-        donkey = keledai\n
-        dove = burung merpati\n
-        duck = bebek\n
-        goat = kambing\n
-        goldfish = ikan mas koki\n
-        goose = angsa\n
-        guinea pig = marmut\n
-        hamster = hamster\n
-        horse = horse\n
-        pig = babi\n
-        sheep = domba\n
-        rabbit = kelinci\n
-        pigeon = burung dara\n
-        turtle = kura-kura\n
-        turkey = ayam kalkun
+        Tame animals adalah binatang yang tidak berbahaya dan tidak menakutkan.\nBinatang jinak ini juga biasanya bisa dipelihara oleh manusia dan patuh terhadap perintah majikannya.\nBerikut ini adalah jenis-jenis binatang jinak dalam bahasa inggris:\n
+        camel = unta\ncanary = burung kenari\ncat = kucing\ncattle = sapi perah\nchicken = ayam\ncow = sapi\ndog = anjing\ndonkey = keledai\ndove = burung merpati\n
+        duck = bebek\ngoat = kambing\ngoldfish = ikan mas koki\ngoose = angsa\nguinea pig = marmut\nhamster = hamster\nhorse = horse\npig = babi\nsheep = domba\nrabbit = kelinci\n
+        pigeon = burung dara\nturtle = kura-kura\nturkey = ayam kalkun\n
+        2. Wild Animals\n
+        Wild animals dalam bahasa indonesia berarti binatang liar. Binatang liar tidak dibiasakan hidup berdampingan dengan manusia karena kadang mereka terlalu berbahaya untuk dipelihara.\n
+        Binatang liar biasanya hidup di hutan, gunung, laut, rawa, padang rumput, dan lain-lain. \n
+        Berikut ini adalah jenis-jenis binatang liar dalam bahasa inggris:
+        ape = kera\nbear = beruang\nbison = bison\ncheetah = cheetah\ncrocodile = buaya\ndeer = rusa\nelephant = gajah\nflamingo = burung flamingo\n
+        fox = rubah\ngirrafe = jerapah\ngorilla = gorila\nhyena = hyena\niguana = iguana\njaguar = jaguar\nkangaroo = kangguru\nkomodo = komodo\nleopard = macan tutul\n
+        lion = singa\nowl = burung hantu\npanda = panda\nrhinoceros = badak\nscorpion  = kalajengking\nsnake = ular\ntapir = tapir\ntiger = macan\n
+        wolf = serigala\nzebra = zebra
     </string>
 </resources>
