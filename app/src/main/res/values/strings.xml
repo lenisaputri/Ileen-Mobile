@@ -18,4 +18,23 @@
         lion = singa\nowl = burung hantu\npanda = panda\nrhinoceros = badak\nscorpion  = kalajengking\nsnake = ular\ntapir = tapir\ntiger = macan\n
         wolf = serigala\nzebra = zebra
     </string>
+    <string name="clock">
+        Istilah yang sering muncul dalam Telling Time\n
+        \t\t1. a.m : ante meridiem (dimulai dari jam 12 malam sampai jam 12 siang)\n\t\t2. p.m : post meridiem (dimulai dari jam 12 siang sampai jam 12 malam)\n
+        \t\t3. Long hand : Jarum panjang\n\t\t4. Short hand : Jarum pendek\n\t\t5. Second hand : Jarum detik\n\t\t6. Alarm clock : Jam beker\n
+        \t\t7. Clock : Jam dinding\n\t\t8. Watch : Jam tangan\n\t\t9. Hour : Jam\n\t\t10. Minute : Menit\n\t\t11. Second : Detik\n
+        \t\t12. O\'clock : Digunakan untuk menunjukan jam ketika jarum panjangnya tepat ke jam 12.\n\t\t13. Past : Lebih\n
+        \t\t14. To : Kurang\n\t\t15. A quarter : Seperempat (15 menit)\n\t\t16. A half : Setengah (30 menit)\n
+        Umumnya ada dua rumus untuk menyatakan jam yaitu:\n
+        A. Jam + Menit\n
+        \t\tCara ini merupakan cara yang paling mudah untuk menunjukan waktu, hanya dibacakan saja angkanya dalam bahasa inggris.\n
+        \t\tContoh :\n
+        \t\t\t03:30 = It\'s three thirty (Itu jam tiga tigapuluh)\n
+        \t\t\t06:45 = It\'s six forty-five (itu enam empatpuluh lima)\n
+        B. Minutes + past atau to +hour\n
+        \t\tPada cara ini kita harus menyebutkan menit-nya dulu baru jam-nya dan memakai kata \'past\' atau \'to\' untuk menerangkan kurang atau lebihnya menit pada jam tersebut.\n
+        \t\tContoh :\n
+        \t\t\t08:10 = It\'s ten past eight (Itu jam delapan lewat sepuluh menit)\n
+        \t\t\t08:55 = It\'s five (minutes) to nine (lima menit lagi menuju jam sembilan atau jam sembilan kurang lima menit)\n
+    </string>
 </resources>
