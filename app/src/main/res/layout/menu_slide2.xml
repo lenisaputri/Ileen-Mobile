@@ -46,7 +46,7 @@
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginRight="10dp"
             android:onClick="sportsHandler"
-            />
+            android:layout_marginEnd="10dp" />
 
         <ImageButton
             android:id="@+id/transportation"
@@ -58,7 +58,7 @@
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginRight="10dp"
             android:onClick="transportationHandler"
-            />
+            android:layout_marginEnd="10dp" />
 
         <ImageButton
             android:id="@+id/weather"
@@ -71,7 +71,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="3dp"
             android:onClick="weatherHandler"
-            />
+            android:layout_marginEnd="10dp" />
 
         <ImageButton
             android:id="@+id/practice"
@@ -84,7 +84,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="3dp"
             android:onClick="practiceHandler"
-            />
+            android:layout_marginEnd="10dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

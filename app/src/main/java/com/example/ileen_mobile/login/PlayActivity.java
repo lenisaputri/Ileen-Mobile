@@ -2,22 +2,31 @@ package com.example.ileen_mobile.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.ileen_mobile.R;
 
 public class PlayActivity extends AppCompatActivity {
 
+    Dialog myDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
+
+        myDialog = new Dialog(this);
     }
 
     public void playButton(View view) {
@@ -30,6 +39,20 @@ public class PlayActivity extends AppCompatActivity {
         button.startAnimation(myAnim);
         Intent intent =  new Intent(PlayActivity.this, InputNamaActivity.class);
         startActivity(intent);
+    }
+
+    public void ShowPopup(View view) {
+        ImageView close_icon;
+        myDialog.setContentView(R.layout.setting_popup);
+        close_icon =(ImageView) myDialog.findViewById(R.id.close_icon);
+        close_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDialog.dismiss();
+            }
+        });
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
     }
 
     class MyBounceInterpolator implements android.view.animation.Interpolator {

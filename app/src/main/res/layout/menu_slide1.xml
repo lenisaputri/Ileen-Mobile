@@ -46,7 +46,7 @@
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginRight="10dp"
             android:onClick="animalHandler"
-            />
+            android:layout_marginEnd="10dp" />
 
         <ImageButton
             android:id="@+id/clock"
@@ -58,7 +58,7 @@
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginRight="10dp"
             android:onClick="clockHandler"
-            />
+            android:layout_marginEnd="10dp" />
 
         <ImageButton
             android:id="@+id/conversation"
@@ -71,7 +71,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="3dp"
             android:onClick="conversationHandler"
-            />
+            android:layout_marginEnd="10dp" />
 
         <ImageButton
             android:id="@+id/food"
@@ -84,7 +84,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="3dp"
             android:onClick="foodHandler"
-            />
+            android:layout_marginEnd="10dp" />
 
         <ImageButton
             android:id="@+id/hobbies"
@@ -97,7 +97,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="3dp"
             android:onClick="hobbiesHandler"
-            />
+            android:layout_marginEnd="10dp" />
 
         <ImageButton
             android:id="@+id/number"
@@ -110,7 +110,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="3dp"
             android:onClick="numberHandler"
-            />
+            android:layout_marginEnd="10dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>
