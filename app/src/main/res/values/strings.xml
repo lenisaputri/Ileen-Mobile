@@ -139,4 +139,60 @@
         \t\t\t 16. sandwich = roti isi\n
         \t\t\t 17. candy = permen\n
     </string>
+    <string name="number">
+        Penggolongan angka dalam bahasa inggris terbagi menjadi\n empat bagian yaitu
+	    Cardinal Numbers, Ordinal Numbers, Fractions, dan Frequency Numbers\n
+        <tt> </tt>1. Cardinal numbers adalah angka yang menyatakan berapa\n banyak benda, orang, atau hewan.\n
+        <tt> </tt>Contohnya :
+        <tt> </tt>a. one (1)\n
+        <tt> </tt>b. two (2)\n
+        <tt> </tt>c. three (3)\n
+        <tt> </tt>d. four (4)\n
+        <tt> </tt>e. five (5)\n
+        <tt> </tt>f. six (6) \n
+        <tt> </tt>g. seven (7)\n
+        <tt> </tt>h. eight (8)\n
+        <tt> </tt>i. nine (9)\n
+        <tt> </tt>j. ten (10) dan seterusnya.\n
+        <tt> </tt>2. Ordinal numbers adalah angka yang menunjukkan peringkat\n atau posisi dari benda atau sesuatu\n
+        <tt> </tt>Contohnya :\n
+        <tt> </tt>a. first (1st)\n
+        <tt> </tt>b. second (2nd)\n
+        <tt> </tt>c. third (3rd)\n
+        <tt> </tt>d. fourth (4th)\n
+        <tt> </tt>e. fifth (5th) dan seterusnya.\n
+        <tt> </tt>3. Fractions adalah bagian kecil dari angka-angka.\n
+        <tt> </tt> Contohnya :\n
+        <tt> </tt>a. 2/3 = two third\n
+        <tt> </tt>b. 1/3 = a third\n
+        <tt> </tt>c. ½ = a half\n
+        <tt> </tt>d. 2/5 = two fifth\n
+        <tt> </tt>e. ¼ = a quarter\n
+        <tt> </tt>f. 1/5 = a fifth\n
+        <tt> </tt>g. 5 ½ = five and a half\n
+        <tt> </tt>h. 2/4 = five and two fourth\n
+    </string>
+    <string name="sport">
+        Sport atau olahraga adalah kegiatan yang melibatkan \n pengerahan tenaga fisik dan
+ keterampilan dimana seorang\n individu atau tim bersaing dengan orang lain atau orang lain untuk hiburan\n
+    1. Nama-nama Olahraga\n
+	<tt> </tt>a. Acrobatics = Akrobat\n
+	<tt> </tt>b. Cycling = Sepeda\n
+	<tt> </tt>c. Chess = Catur\n
+	<tt> </tt>d. Discus = Lempar cakram\n
+	<tt> </tt>e. Football = Sepak bola\n
+	<tt> </tt>f. Gymnastics = Olahraga Senam\n
+	<tt> </tt>g. Horse riding = Berkuda\n
+	<tt> </tt>h. Motorsport = Balap mobil\n
+	<tt> </tt>i. Parachuting = Terjun payung\n
+	<tt> </tt>j. Sprint = Lari cepat\n
+	<tt> </tt>k. Sailing = Berlayar\n
+	<tt> </tt>l. Surfing = Berselancar\n
+	<tt> </tt>m. Karate = Karate\n
+	<tt> </tt>n. Running = Olahraga Lari\n
+	<tt> </tt>o. Skiing = Olahraga Ski\n
+	<tt> </tt>p. Wrestling = Gulat\n
+	<tt> </tt>q. Diving = Selam\n
+	<tt> </tt>r. Basketball = Bola Basket\n
+    </string>
 </resources>
