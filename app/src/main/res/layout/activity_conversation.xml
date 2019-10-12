@@ -24,7 +24,7 @@
             android:id="@+id/hobbies"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="70dp"
             android:fontFamily="@font/londrina_solid_regular"
             android:text="CONVERSATION"
             android:textColor="#FFFFFF"
