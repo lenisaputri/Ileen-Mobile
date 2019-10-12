@@ -22,8 +22,15 @@ import com.example.ileen_mobile.MainActivity;
 import com.example.ileen_mobile.R;
 import com.example.ileen_mobile.animal.AnimalActivity;
 import com.example.ileen_mobile.clock.ClockActivity;
+import com.example.ileen_mobile.conversation.ConversationActivity;
+import com.example.ileen_mobile.food.FoodActivity;
 import com.example.ileen_mobile.hobbies.HobbiesActivity;
 import com.example.ileen_mobile.login.PlayActivity;
+import com.example.ileen_mobile.number.NumberActivity;
+import com.example.ileen_mobile.practice.PracticeActivity;
+import com.example.ileen_mobile.sport.SportActivity;
+import com.example.ileen_mobile.transportation.TransportationActivity;
+import com.example.ileen_mobile.weather.WeatherActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -185,6 +192,9 @@ public class MenuActivity extends AppCompatActivity {
         myAnim.setInterpolator(interpolator);
 
         button.startAnimation(myAnim);
+
+        Intent intent =  new Intent(this, ConversationActivity.class);
+        startActivity(intent);
     }
 
     public void foodHandler(View view) {
@@ -195,6 +205,9 @@ public class MenuActivity extends AppCompatActivity {
         myAnim.setInterpolator(interpolator);
 
         button.startAnimation(myAnim);
+
+        Intent intent =  new Intent(this, FoodActivity.class);
+        startActivity(intent);
     }
 
     public void hobbiesHandler(View view) {
@@ -219,6 +232,8 @@ public class MenuActivity extends AppCompatActivity {
 
         button.startAnimation(myAnim);
 
+        Intent intent =  new Intent(this, NumberActivity.class);
+        startActivity(intent);
     }
 
     public void sportsHandler(View view) {
@@ -229,6 +244,9 @@ public class MenuActivity extends AppCompatActivity {
         myAnim.setInterpolator(interpolator);
 
         button.startAnimation(myAnim);
+
+        Intent intent =  new Intent(this, SportActivity.class);
+        startActivity(intent);
     }
 
     public void transportationHandler(View view) {
@@ -239,6 +257,9 @@ public class MenuActivity extends AppCompatActivity {
         myAnim.setInterpolator(interpolator);
 
         button.startAnimation(myAnim);
+
+        Intent intent =  new Intent(this, TransportationActivity.class);
+        startActivity(intent);
     }
 
     public void weatherHandler(View view) {
@@ -249,6 +270,9 @@ public class MenuActivity extends AppCompatActivity {
         myAnim.setInterpolator(interpolator);
 
         button.startAnimation(myAnim);
+
+        Intent intent =  new Intent(this, WeatherActivity.class);
+        startActivity(intent);
     }
 
     public void practiceHandler(View view) {
@@ -259,6 +283,9 @@ public class MenuActivity extends AppCompatActivity {
         myAnim.setInterpolator(interpolator);
 
         button.startAnimation(myAnim);
+
+        Intent intent =  new Intent(this, PracticeActivity.class);
+        startActivity(intent);
     }
 
     class MyBounceInterpolator implements android.view.animation.Interpolator {

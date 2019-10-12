@@ -80,4 +80,63 @@
         <tt> </tt>i. My hobby is swimming.\n
         <tt> </tt>(Hobi saya berenang.)\n
     </string>
+    <string name="conversation">
+        Conversation atau percakapan merupakan sebuah hal yang biasa dalam bahasa Inggris.\n
+        Contohnya percakapan sehari - hari yang membicarakan tentang cuaca, hobi, makanan, dan lain - lain.\n
+        1. Menanyakan suatu benda\n
+        \t\t A: What is this?\n
+        \t\t B: This  is a pencil.\n
+        2. Menanyakan seseorang\n
+        \t\t A: Who is he?\n
+        \t\t B: He is my brother.\n
+        3. Menanyakan kegiatan seseorang\n
+        \t\t A: What are you doing?\n
+        \t\t B: I am studying.\n
+        3. Menanyakan kabar\n
+        \t\t Mita: Hi. How are you?\n
+        \t\t Sisi: I am fine. Thank you. You?\n
+        \t\t Mita: I am very well. Thank you.\n
+        4. Menyapa seseorang\n
+        \t\t Candra : Good morning, I am Candra.\n
+        \t\t Maya : Good morning, I’m Maya.\n
+        5. Menanyakan asal tempat tinggal\n
+        \t\t Candra : Where are you from?\n
+        \t\t Maya : I am from Lampung. And you?\n
+        \t\t Candra : I am from Bekasi.\n
+        6. Menanyakan hobi seseorang\n
+        \t\t A : What is your hobby?\n
+        \t\t B : My hobby is reading.\n
+        7. Menanyakan makanan favorit\n
+        \t\t A : What is your favorite food?\n
+        \t\t B : My favorite food is nasi goreng.\n
+    </string>
+    <string name="food">
+        Ada empat jenis waktu makan yaitu :\n
+        \t\t\t a. Breakfast = Sarapan\n
+        \t\t\t b. Brunch = Makan diantara waktu sarapan dan makan siang (breakfast + lunch)\n
+        \t\t\t c. Lunch = Makan siang\n
+        \t\t\t d. Dinner = Makan malam\n
+        Ada 3 jenis tahapan dari sebuah hidangan yaitu:\n
+        \t\t\t a. Appetizer (hidangan pembuka)\n
+        \t\t\t b. Main Course (hidangan utama)\n
+        \t\t\t c. Dessert (hidangan penutup)\n
+        Jenis - Jenis Makanan dalam Bahasa Inggris :\n
+        \t\t\t 1. rice = nasi\n
+        \t\t\t 2. fried rice = nasi goreng\n
+        \t\t\t 3. egg = telur\n
+        \t\t\t 4. omelette = telur dadar\n
+        \t\t\t 5. muffin = kue mufin\n
+        \t\t\t 6. cookie = kue kering\n
+        \t\t\t 7. bread = roti\n
+        \t\t\t 8. pizza = pizza\n
+        \t\t\t 9. popcorn = berondong jagung\n
+        \t\t\t 10. pie = kue pai\n
+        \t\t\t 11. cake = kue\n
+        \t\t\t 12. soup = sup\n
+        \t\t\t 13. jam = selai\n
+        \t\t\t 14. pancake = panekuk\n
+        \t\t\t 15. burger = burger\n
+        \t\t\t 16. sandwich = roti isi\n
+        \t\t\t 17. candy = permen\n
+    </string>
 </resources>
