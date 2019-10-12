@@ -11,7 +11,10 @@ import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -149,17 +152,127 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void animalHandler(View view) {
+        ImageButton button = (ImageButton)findViewById(R.id.animal);
+        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
+
+        MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+        myAnim.setInterpolator(interpolator);
+
+        button.startAnimation(myAnim);
+
         Intent intent =  new Intent(this, AnimalActivity.class);
         startActivity(intent);
     }
 
     public void clockHandler(View view) {
+        ImageButton button = (ImageButton)findViewById(R.id.clock);
+        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
+
+        MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+        myAnim.setInterpolator(interpolator);
+
+        button.startAnimation(myAnim);
+
         Intent intent =  new Intent(this, ClockActivity.class);
         startActivity(intent);
     }
 
+    public void conversationHandler(View view) {
+        ImageButton button = (ImageButton)findViewById(R.id.conversation);
+        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
+
+        MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+        myAnim.setInterpolator(interpolator);
+
+        button.startAnimation(myAnim);
+    }
+
+    public void foodHandler(View view) {
+        ImageButton button = (ImageButton)findViewById(R.id.food);
+        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
+
+        MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+        myAnim.setInterpolator(interpolator);
+
+        button.startAnimation(myAnim);
+    }
+
     public void hobbiesHandler(View view) {
+        ImageButton button = (ImageButton)findViewById(R.id.hobbies);
+        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
+
+        MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+        myAnim.setInterpolator(interpolator);
+
+        button.startAnimation(myAnim);
+
         Intent intent =  new Intent(this, HobbiesActivity.class);
         startActivity(intent);
+    }
+
+    public void numberHandler(View view) {
+        ImageButton button = (ImageButton)findViewById(R.id.number);
+        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
+
+        MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+        myAnim.setInterpolator(interpolator);
+
+        button.startAnimation(myAnim);
+
+    }
+
+    public void sportsHandler(View view) {
+        ImageButton button = (ImageButton)findViewById(R.id.sports);
+        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
+
+        MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+        myAnim.setInterpolator(interpolator);
+
+        button.startAnimation(myAnim);
+    }
+
+    public void transportationHandler(View view) {
+        ImageButton button = (ImageButton)findViewById(R.id.transportation);
+        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
+
+        MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+        myAnim.setInterpolator(interpolator);
+
+        button.startAnimation(myAnim);
+    }
+
+    public void weatherHandler(View view) {
+        ImageButton button = (ImageButton)findViewById(R.id.weather);
+        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
+
+        MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+        myAnim.setInterpolator(interpolator);
+
+        button.startAnimation(myAnim);
+    }
+
+    public void practiceHandler(View view) {
+        ImageButton button = (ImageButton)findViewById(R.id.practice);
+        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
+
+        MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+        myAnim.setInterpolator(interpolator);
+
+        button.startAnimation(myAnim);
+    }
+
+    class MyBounceInterpolator implements android.view.animation.Interpolator {
+        private double mAmplitude = 1;
+        private double mFrequency = 10;
+
+        MyBounceInterpolator(double amplitude, double frequency) {
+            mAmplitude = amplitude;
+            mFrequency = frequency;
+        }
+
+        public float getInterpolation(float time) {
+            return (float) (-1 * Math.pow(Math.E, -time/ mAmplitude) *
+                    Math.cos(mFrequency * time) + 1);
+        }
     }
 }
