@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="65dp"
             android:fontFamily="@font/londrina_solid_regular"
-            android:text="ANIMAL"
+            android:text="CLOCK"
             android:textColor="#FFFFFF"
             android:textSize="55dp"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -37,13 +37,13 @@
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/londrina_solid_regular"
-            android:text="@string/animal"
+            android:text="@string/clock"
             android:textColor="#FFFFFF"
             android:textSize="20dp"
             android:background="@color/bg"
             app:layout_constraintLeft_toRightOf="@+id/guideline6"
             app:layout_constraintRight_toLeftOf="@id/guideline7"
-            app:layout_constraintTop_toBottomOf="@id/guideline5" />
+            app:layout_constraintTop_toBottomOf="@id/guideline5"/>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline5"
@@ -65,6 +65,5 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.96" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

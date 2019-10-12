@@ -57,6 +57,7 @@
             app:layout_constraintLeft_toRightOf="@id/guideline2"
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginRight="10dp"
+            android:onClick="clockHandler"
             />
 
         <ImageButton
