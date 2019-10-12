@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".weather.WeatherActivity"></activity>
+        <activity android:name=".practice.OneActivity"></activity>
+        <activity android:name=".weather.WeatherActivity" />
         <activity android:name=".transportation.TransportationActivity" />
         <activity android:name=".sport.SportActivity" />
         <activity android:name=".practice.PracticeActivity" />
