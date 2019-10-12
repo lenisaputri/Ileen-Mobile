@@ -5,17 +5,36 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="animal">
         1. Tame Animals (binatang jinak)\n
-        Tame animals adalah binatang yang tidak berbahaya dan tidak menakutkan.\nBinatang jinak ini juga biasanya bisa dipelihara oleh manusia dan patuh terhadap perintah majikannya.\nBerikut ini adalah jenis-jenis binatang jinak dalam bahasa inggris:\n
+        \t\tTame animals adalah binatang yang tidak berbahaya dan tidak menakutkan.\nBinatang jinak ini juga biasanya bisa dipelihara oleh manusia dan patuh terhadap perintah majikannya.\nBerikut ini adalah jenis-jenis binatang jinak dalam bahasa inggris:\n
         camel = unta\ncanary = burung kenari\ncat = kucing\ncattle = sapi perah\nchicken = ayam\ncow = sapi\ndog = anjing\ndonkey = keledai\ndove = burung merpati\n
         duck = bebek\ngoat = kambing\ngoldfish = ikan mas koki\ngoose = angsa\nguinea pig = marmut\nhamster = hamster\nhorse = horse\npig = babi\nsheep = domba\nrabbit = kelinci\n
         pigeon = burung dara\nturtle = kura-kura\nturkey = ayam kalkun\n
         2. Wild Animals\n
-        Wild animals dalam bahasa indonesia berarti binatang liar. Binatang liar tidak dibiasakan hidup berdampingan dengan manusia karena kadang mereka terlalu berbahaya untuk dipelihara.\n
+        \t\tWild animals dalam bahasa indonesia berarti binatang liar. Binatang liar tidak dibiasakan hidup berdampingan dengan manusia karena kadang mereka terlalu berbahaya untuk dipelihara.\n
         Binatang liar biasanya hidup di hutan, gunung, laut, rawa, padang rumput, dan lain-lain. \n
         Berikut ini adalah jenis-jenis binatang liar dalam bahasa inggris:
         ape = kera\nbear = beruang\nbison = bison\ncheetah = cheetah\ncrocodile = buaya\ndeer = rusa\nelephant = gajah\nflamingo = burung flamingo\n
         fox = rubah\ngirrafe = jerapah\ngorilla = gorila\nhyena = hyena\niguana = iguana\njaguar = jaguar\nkangaroo = kangguru\nkomodo = komodo\nleopard = macan tutul\n
         lion = singa\nowl = burung hantu\npanda = panda\nrhinoceros = badak\nscorpion  = kalajengking\nsnake = ular\ntapir = tapir\ntiger = macan\n
         wolf = serigala\nzebra = zebra
+    </string>
+    <string name="clock">
+        Istilah yang sering muncul dalam Telling Time :\n
+        \t\t\t1. a.m : ante meridiem (dimulai dari jam 12 malam sampai jam 12 siang)\n
+        \t\t\t2. p.m : post meridiem (dimulai dari jam 12 siang sampai jam 12 malam)\n\t\t\t3. Long hand : Jarum panjang\n\t\t\t4. Short hand : Jarum pendek\n
+        \t\t\t5. Second hand : Jarum detik\n\t\t\t6. Alarm clock : Jam beker\n\t\t\t7. Clock : Jam dinding\n\t\t\t8. Watch : Jam tangan\n\t\t\t9. Hour : Jam\n
+        \t\t\t10. Minute : Menit\n\t\t\t11. Second : Detik\n\t\t\t12. O\'clock : Digunakan untuk menunjukan jam ketika jarum panjangnya tepat ke jam 12.\n
+        \t\t\t13. Past : Lebih\n\t\t\t14. To : Kurang\n\t\t\t15. A quarter : Seperempat (15 menit)\n\t\t\t16. A half : Setengah (30 menit)\n
+        Umumnya ada dua rumus untuk menyatakan jam yaitu:\n
+        A. Jam + Menit\n
+        \t\tCara ini merupakan cara yang paling mudah untuk menunjukan waktu, hanya dibacakan saja angkanya dalam bahasa inggris.\n
+        \t\tContoh :\n
+        \t\t\t03:30 = It\'s three thirty (Itu jam tiga tigapuluh)\n
+        \t\t\t06:45 = It\'s six forty-five (itu enam empatpuluh lima)\n
+        B. Minutes + past atau to +hour\n
+        \t\tPada cara ini kita harus menyebutkan menit-nya dulu baru jam-nya dan memakai kata \'past\' atau \'to\' untuk menerangkan kurang atau lebihnya menit pada jam tersebut.\n
+        \t\tContoh :\n
+        \t\t\t08:10 = It\'s ten past eight (Itu jam delapan lewat sepuluh menit)\n
+        \t\t\t08:55 = It\'s five (minutes) to nine (lima menit lagi menuju jam sembilan atau jam sembilan kurang lima menit)\n
     </string>
 </resources>

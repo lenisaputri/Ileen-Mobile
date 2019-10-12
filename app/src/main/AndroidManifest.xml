@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".animal.AnimalActivity"></activity>
+        <activity android:name=".clock.ClockActivity"></activity>
+        <activity android:name=".animal.AnimalActivity" />
         <activity android:name=".login.InputNamaActivity" />
         <activity android:name=".menu.MenuActivity" />
         <activity android:name=".login.PlayActivity" />
