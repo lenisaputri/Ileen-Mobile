@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".animal.AnimalActivity"></activity>
+        <activity android:name=".clock.ClockActivity"></activity>
+        <activity android:name=".hobbies.HobbiesActivity"></activity>
         <activity android:name=".login.InputNamaActivity" />
         <activity android:name=".menu.MenuActivity" />
         <activity android:name=".login.PlayActivity" />
