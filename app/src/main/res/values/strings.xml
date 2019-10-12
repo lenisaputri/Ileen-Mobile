@@ -18,4 +18,48 @@
         lion = singa\nowl = burung hantu\npanda = panda\nrhinoceros = badak\nscorpion  = kalajengking\nsnake = ular\ntapir = tapir\ntiger = macan\n
         wolf = serigala\nzebra = zebra
     </string>
+    <string name="hobbies">
+        <i>Hobby</i> merupakan kegemaran atau kesukaan dengan sebuah benda, makanan, pelajaran \natau kegiatan yang kita lakukan dengan senang hati tanpa paksaan.\n
+        1. Nama-nama Hobby :\n
+        <tt> </tt>a. cycling : bersepeda\n
+        <tt> </tt>b. reading : membaca\n
+        <tt> </tt>c. dancing : menari\n
+        <tt> </tt>d. painting : melukis\n
+        <tt> </tt>e. gardening : berkebun\n
+        <tt> </tt>f. singing : menyanyi\n
+        <tt> </tt>g. swimming : berenang\n
+        <tt> </tt>h. fishing : memancing\n
+        <tt> </tt>i. playing badminton : bermain bulu tangkis\n
+        <tt> </tt>j. playing music : bermain musik\n
+        <tt> </tt>k. cooking : memasak\n
+        <tt> </tt>l. playing guitar : bermain gitar\n
+        <tt> </tt>m. camping : berkemah\n
+        <tt> </tt>n. watching TV : nonton TV\n
+        <tt> </tt>o. writing : menulis\n
+        <tt> </tt>p. drawing : menggambar\n
+        <tt> </tt>q. surfing : berselancar\n
+        <tt> </tt>r. playing tennis = bermain tenis\n
+        <tt> </tt>s. hiking = naik gunung\n
+        <tt> </tt>t. philately = mengumpulkan perangko\n
+        2. Contoh Kalimat :\n
+        <tt> </tt>a. Winda likes playing music.\n
+        <tt> </tt>(Winda suka bermain music.)\n
+        <tt> </tt>b. Ferdy likes painting.\n
+        <tt> </tt>(Ferdi suka melukis.)\n
+        <tt> </tt>c. Rima likes playing volleyball.\n
+        <tt> </tt>(Rima suka bermain volley.)\n
+        <tt> </tt>d. My uncle likes fishing.\n
+        <tt> </tt>(Paman saya suka memancing.)\n
+        <tt> </tt>e. Cinta likes reading.\n
+        <tt> </tt>(Cinta suka membaca.)\n
+        <tt> </tt>f. Liza likes singing.\n
+        <tt> </tt>(Liza suka menyanyi.)\n
+        <tt> </tt>g. Fadhil likes playing football.\n
+        <tt> </tt>(Fadhil suka bermain sepak bola.)\n
+        <tt> </tt>h. Sandy likes playing badminton.\n
+        <tt> </tt>(Sandi suka bermain bulu tangkis.)\n
+        <tt> </tt>i. My hobby is swimming.\n
+        <tt> </tt>(Hobi saya berenang.)\n
+
+    </string>
 </resources>

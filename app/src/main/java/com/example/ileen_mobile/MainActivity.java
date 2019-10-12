@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.view.View;
 
 import com.example.ileen_mobile.animal.AnimalActivity;
+import com.example.ileen_mobile.hobbies.HobbiesActivity;
 import com.example.ileen_mobile.login.InputNamaActivity;
 import com.example.ileen_mobile.login.PlayActivity;
 
@@ -30,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void animalHandler(View view) {
         Intent intent =  new Intent(this, AnimalActivity.class);
+        startActivity(intent);
+    }
+
+    public void hobbiesHandler(View view){
+        Intent intent =  new Intent(this, HobbiesActivity.class);
         startActivity(intent);
     }
 }
