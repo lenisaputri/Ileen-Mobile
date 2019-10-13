@@ -275,18 +275,18 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void practiceHandler(View view) {
-        ImageButton button = (ImageButton)findViewById(R.id.practice);
-        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
-
-        MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
-        myAnim.setInterpolator(interpolator);
-
-        button.startAnimation(myAnim);
-
-        Intent intent =  new Intent(this, PracticeActivity.class);
-        startActivity(intent);
-    }
+//    public void practiceHandler(View view) {
+//        ImageButton button = (ImageButton)findViewById(R.id.practice);
+//        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
+//
+//        MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+//        myAnim.setInterpolator(interpolator);
+//
+//        button.startAnimation(myAnim);
+//
+//        Intent intent =  new Intent(this, PracticeActivity.class);
+//        startActivity(intent);
+//    }
 
     class MyBounceInterpolator implements android.view.animation.Interpolator {
         private double mAmplitude = 1;
