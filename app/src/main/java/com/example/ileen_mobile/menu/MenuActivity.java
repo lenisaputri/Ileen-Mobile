@@ -34,12 +34,16 @@ import com.example.ileen_mobile.weather.WeatherActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
+    /**
+     * Slide menu
+     */
+
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
     private LinearLayout dotsLayout;
     private TextView[] dots;
     private int[] layouts;
-    private Button btnNext;
+//    private Button btnNext, btnLeft;
 
 
     @Override
@@ -49,7 +53,8 @@ public class MenuActivity extends AppCompatActivity {
 
         viewPager = findViewById(R.id.view_pager);
         dotsLayout = findViewById(R.id.layoutDots);
-        btnNext = findViewById(R.id.btn_next);
+//        btnNext = findViewById(R.id.btn_next);
+//        btnLeft = findViewById(R.id.btn_left);
         layouts = new int[]{
                 R.layout.menu_slide1,
                 R.layout.menu_slide2};
@@ -58,20 +63,20 @@ public class MenuActivity extends AppCompatActivity {
 
         myViewPagerAdapter = new MyViewPagerAdapter();
         viewPager.setAdapter(myViewPagerAdapter);
-        viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
+//        viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
 
-        btnNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // checking for last page
-                // if last page home screen will be launched
-                int current = getItem(+1);
-                if (current < layouts.length) {
-                    // move to next screen
-                    viewPager.setCurrentItem(current);
-                }
-            }
-        });
+//        btnNext.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // checking for last page
+//                // if last page home screen will be launched
+//                int current = getItem(+1);
+//                if (current < layouts.length) {
+//                    // move to next screen
+//                    viewPager.setCurrentItem(current);
+//                }
+//            }
+//        });
     }
 
     private void addBottomDots(int currentPage) {
@@ -98,31 +103,33 @@ public class MenuActivity extends AppCompatActivity {
         return viewPager.getCurrentItem() + i;
     }
 
-    //  viewpager change listener
-    ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
-
-        @Override
-        public void onPageSelected(int position) {
-            // changing the next button text 'NEXT' / 'GOT IT'
-            if (position == layouts.length - 1) {
-                // last page. make button text to GOT IT
-                btnNext.setText("LEFT");
-            } else {
-                // still pages are left
-                btnNext.setText("NEXT");
-            }
-        }
-
-        @Override
-        public void onPageScrolled(int arg0, float arg1, int arg2) {
-
-        }
-
-        @Override
-        public void onPageScrollStateChanged(int arg0) {
-
-        }
-    };
+//    //  viewpager change listener
+//    ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
+//
+//        @Override
+//        public void onPageSelected(int position) {
+//            // changing the next button text 'NEXT' / 'GOT IT'
+//            if (position == layouts.length - 1) {
+//                // last page. make button text to GOT IT
+//                btnLeft.setText("LEFT");
+//                btnNext.setVisibility(View.GONE);
+//            } else {
+//                // still pages are left
+//                btnNext.setText("NEXT");
+//                btnLeft.setVisibility(View.GONE);
+//            }
+//        }
+//
+//        @Override
+//        public void onPageScrolled(int arg0, float arg1, int arg2) {
+//
+//        }
+//
+//        @Override
+//        public void onPageScrollStateChanged(int arg0) {
+//
+//        }
+//    };
 
     public class MyViewPagerAdapter extends PagerAdapter {
         private LayoutInflater layoutInflater;
@@ -157,6 +164,10 @@ public class MenuActivity extends AppCompatActivity {
             container.removeView(view);
         }
     }
+
+    /**
+     * Handler Menu
+     */
 
     public void animalHandler(View view) {
         ImageButton button = (ImageButton)findViewById(R.id.animal);
@@ -287,6 +298,10 @@ public class MenuActivity extends AppCompatActivity {
 //        Intent intent =  new Intent(this, PracticeActivity.class);
 //        startActivity(intent);
 //    }
+
+    /**
+     * Animation button
+     */
 
     class MyBounceInterpolator implements android.view.animation.Interpolator {
         private double mAmplitude = 1;

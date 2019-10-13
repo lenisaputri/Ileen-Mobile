@@ -26,14 +26,24 @@
         android:alpha=".5"
         android:background="@android:color/white" />
 
-    <Button
-        android:id="@+id/btn_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:background="@null"
-        android:text="NEXT"
-        android:textColor="#000000" />
+<!--    <Button-->
+<!--        android:id="@+id/btn_next"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:background="@null"-->
+<!--        android:text="NEXT"-->
+<!--        android:textColor="#000000" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_left"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:background="@null"-->
+<!--        android:text="LEFT"-->
+<!--        android:textColor="#000000" />-->
 
 </RelativeLayout>

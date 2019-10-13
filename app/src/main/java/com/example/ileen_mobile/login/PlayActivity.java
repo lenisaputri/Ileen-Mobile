@@ -39,6 +39,7 @@ public class PlayActivity extends AppCompatActivity {
         myAnim.setInterpolator(interpolator);
 
         button.startAnimation(myAnim);
+
         Intent intent =  new Intent(PlayActivity.this, PracticeActivity.class);
         startActivity(intent);
     }
