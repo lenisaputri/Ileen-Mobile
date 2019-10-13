@@ -231,6 +231,20 @@
         <tt> </tt>(pamanku pergi ke jakarta naik mobil)\n
     </string>
     <string name="weather">
-
+        <i>Weather</i> atau cuaca adalah keadaan di suatu tempat yang berkaitan\n
+        dengan suhu udara, sinar matahari, angin, hujan, dan kondisi udara lainnya.\n
+        -Macam-macam Cuaca\n
+        <tt> </tt>1. Sunny : Cerah\n
+        <tt> </tt>2. Snowy : Bersalju\n
+        <tt> </tt>3. Windy : Berangin\n
+        <tt> </tt>4. Wet : Basah\n
+        <tt> </tt>5. Warm : Hangat\n
+        <tt> </tt>6. Foggy : Berkabut\n
+        <tt> </tt>7. Hot : Panas\n
+        -Contoh Kalimat :\n
+        <tt> </tt>1. The rain is falling.\n
+        <tt> </tt>(Sedang turun hujan.)\n
+        <tt> </tt>Everything is getting wet.\n
+        <tt> </tt>(Semuanya menjadi basah.)\n
     </string>
 </resources>
