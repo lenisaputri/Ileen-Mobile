@@ -199,4 +199,35 @@
      <tt> </tt>u. Water Polo = Polo Air\n
      <tt> </tt>v. Volleyball = Voli\n
     </string>
+    <string name="transportation">
+        <i>Transportation</i> atau transportasi adalah alat transportasi, alat angkut, atau kendaraan./n
+        Transportasi terbagi menjadi 3 bagian yaitu transportasi darat, air dan udara.\n
+        1. Land Transportation (transportasi darat)\n
+        <tt> </tt>a. Car : Mobil\n
+        <tt> </tt>b. Bus : Bus\n
+        <tt> </tt>c. Train : Kereta\n
+        <tt> </tt>d. Pedicab : Becak\n
+        <tt> </tt>e. Taxi : Taksi\n
+        <tt> </tt>f. Truck : Truk\n
+        <tt> </tt>g. Scooter : Skuter\n
+        <tt> </tt>h. Crosstown : Angkutan kota\n
+        2. Water Transportation (transportasi air)\n
+        <tt> </tt>a. Ship : Kapal\n
+        <tt> </tt>b. Yatch : Perahu layar\n
+        <tt> </tt>c. Boat : Perahu\n
+        <tt> </tt>d. Tanker : Kapal tangki\n
+        <tt> </tt>e. Submarine : Kapal selam\n
+        <tt> </tt>f. Sailing Boat : Perahu layar\n
+        3. Air Transportation (transportasi udara)\n
+        <tt> </tt>a. Plane : Pesawat\n
+        <tt> </tt>b. Helicopter : Helikopter\n
+        <tt> </tt>c. Air balloon : Balon udara\n
+        -Contoh Kalimat :\n
+        <tt> </tt>a. I go to school by school bus \n
+        <tt> </tt>(aku pergi ke sekolah naik bis sekolah)\n
+        <tt> </tt>b. The truck color is yellow \n
+        <tt> </tt>(truk berwarna kuning)\n
+        <tt> </tt>c. My uncle go to Jakarta by car\n
+        <tt> </tt>(pamanku pergi ke jakarta naik mobil)\n
+    </string>
 </resources>
