@@ -140,7 +140,7 @@
         \t\t\t 17. candy = permen\n
     </string>
     <string name="number">
-        Penggolongan angka dalam bahasa inggris terbagi menjadi empat bagian yaitu\n
+        Penggolongan angka dalam bahasa inggris terbagi menjadi tiga bagian yaitu\n
 	    Cardinal Numbers, Ordinal Numbers dan Fractions\n
         1. Cardinal numbers adalah angka yang menyatakan berapa banyak benda,\n orang, atau hewan.\n
         <tt> </tt>Contohnya :\n
@@ -200,7 +200,7 @@
      <tt> </tt>v. Volleyball = Voli\n
     </string>
     <string name="transportation">
-        <i>Transportation</i> atau transportasi adalah alat transportasi, alat angkut, atau kendaraan./n
+        <i>Transportation</i> atau transportasi adalah alat transportasi, alat angkut, atau kendaraan.
         Transportasi terbagi menjadi 3 bagian yaitu transportasi darat, air dan udara.\n
         1. Land Transportation (transportasi darat)\n
         <tt> </tt>a. Car : Mobil\n
@@ -229,5 +229,8 @@
         <tt> </tt>(truk berwarna kuning)\n
         <tt> </tt>c. My uncle go to Jakarta by car\n
         <tt> </tt>(pamanku pergi ke jakarta naik mobil)\n
+    </string>
+    <string name="weather">
+
     </string>
 </resources>
