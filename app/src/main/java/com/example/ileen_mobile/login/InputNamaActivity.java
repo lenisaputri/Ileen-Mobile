@@ -19,7 +19,7 @@ public class InputNamaActivity extends AppCompatActivity {
     }
 
     public void menuKlik(View view) {
-        Intent i = new Intent(InputNamaActivity.this, MenuActivity.class);
+        Intent i = new Intent(InputNamaActivity.this, PlayActivity.class);
         startActivity(i);
     }
 }

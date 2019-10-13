@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ileen_mobile.R;
+import com.example.ileen_mobile.menu.MenuActivity;
+import com.example.ileen_mobile.practice.PracticeActivity;
 
 public class PlayActivity extends AppCompatActivity {
 
@@ -37,8 +39,40 @@ public class PlayActivity extends AppCompatActivity {
         myAnim.setInterpolator(interpolator);
 
         button.startAnimation(myAnim);
-        Intent intent =  new Intent(PlayActivity.this, InputNamaActivity.class);
+        Intent intent =  new Intent(PlayActivity.this, PracticeActivity.class);
         startActivity(intent);
+    }
+
+    public void studyButton(View view) {
+        ImageButton button = (ImageButton)findViewById(R.id.button_study);
+        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
+
+        MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+        myAnim.setInterpolator(interpolator);
+
+        button.startAnimation(myAnim);
+        Intent intent =  new Intent(PlayActivity.this, MenuActivity.class);
+        startActivity(intent);
+    }
+
+    public void nameButton(View view) {
+        ImageButton button = (ImageButton)findViewById(R.id.button_name);
+        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
+
+        MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+        myAnim.setInterpolator(interpolator);
+
+        button.startAnimation(myAnim);
+    }
+
+    public void gradeButton(View view) {
+        ImageButton button = (ImageButton)findViewById(R.id.button_grade);
+        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
+
+        MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
+        myAnim.setInterpolator(interpolator);
+
+        button.startAnimation(myAnim);
     }
 
     public void ShowPopup(View view) {
