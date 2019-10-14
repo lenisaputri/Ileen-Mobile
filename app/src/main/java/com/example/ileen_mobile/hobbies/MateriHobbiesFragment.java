@@ -14,10 +14,10 @@ import com.example.ileen_mobile.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MateriFoodFragment extends Fragment {
+public class MateriHobbiesFragment extends Fragment {
 
 
-    public MateriFoodFragment() {
+    public MateriHobbiesFragment() {
         // Required empty public constructor
     }
 
