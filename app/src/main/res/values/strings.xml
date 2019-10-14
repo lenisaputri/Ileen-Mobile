@@ -241,10 +241,21 @@
         <tt> </tt>5. Warm : Hangat\n
         <tt> </tt>6. Foggy : Berkabut\n
         <tt> </tt>7. Hot : Panas\n
+        <tt> </tt>8. Partly cloudy : Cerah Berawan\n
+        <tt> </tt>9. Cloudy : Berawan\n
+        <tt> </tt>10. Stormy : Badai\n
+        <tt> </tt>11. Thunderbolt : Halilintar\n
+        <tt> </tt>12. Dry Period : Kekeringan / Masa kering / Kemarau\n
         -Contoh Kalimat :\n
         <tt> </tt>1. The rain is falling.\n
         <tt> </tt>(Sedang turun hujan.)\n
         <tt> </tt>Everything is getting wet.\n
         <tt> </tt>(Semuanya menjadi basah.)\n
+        <tt> </tt>2. Hey sist. Look! It has turned chilly.\n
+        <tt> </tt>(Hei sist… Lihat! Cuaca berubah menjadi agak dingin.)\n
+        <tt> </tt>3. I am afraid of the thunder.\n
+        <tt> </tt>(Aku takut dengan guntur/halilintar.)\n
+        <tt> </tt>4. Yesterday was a cold Saturday night.\n
+        <tt> </tt>(Kemarin adalah malam Minggu yang dingin.)\n
     </string>
 </resources>
