@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -23,12 +24,30 @@ public class PlayActivity extends AppCompatActivity {
 
     Dialog myDialog;
 
+    //Mendefinisikan MediaPlayer sebagai audioBackground
+    private MediaPlayer play;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
 
         myDialog = new Dialog(this);
+        playsound();
+    }
+
+    private void playsound(){
+        try {
+            if(play.isPlaying()){
+                play.stop();
+                play.release();
+            }
+        } catch(Exception e){
+
+        }
+        play = MediaPlayer.create(this, R.raw.play);
+        play.setLooping(true);
+        play.start();
     }
 
     public void playButton(View view) {
