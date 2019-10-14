@@ -11,22 +11,18 @@ import android.view.ViewGroup;
 
 import com.example.ileen_mobile.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class MateriFragment extends Fragment {
 
 
     public MateriFragment() {
-        // Required empty public constructor
-    }
 
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_materi, container, false);
     }
-
 }
