@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_materi"
+        android:title="Theory"
+        android:icon="@drawable/materi_button" />
+    <item android:id="@+id/action_gambar"
+        android:title="Picture"
+        android:icon="@drawable/gambar_button" />
+</menu>

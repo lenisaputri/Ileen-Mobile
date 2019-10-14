@@ -4,19 +4,19 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="animal">
-        1. Tame Animals (binatang jinak)\n
-        Tame animals adalah binatang yang tidak berbahaya dan tidak menakutkan.\nBinatang jinak ini juga biasanya bisa dipelihara oleh manusia dan patuh terhadap perintah majikannya.\nBerikut ini adalah jenis-jenis binatang jinak dalam bahasa inggris:\n
-        camel = unta\ncanary = burung kenari\ncat = kucing\ncattle = sapi perah\nchicken = ayam\ncow = sapi\ndog = anjing\ndonkey = keledai\ndove = burung merpati\n
-        duck = bebek\ngoat = kambing\ngoldfish = ikan mas koki\ngoose = angsa\nguinea pig = marmut\nhamster = hamster\nhorse = horse\npig = babi\nsheep = domba\nrabbit = kelinci\n
-        pigeon = burung dara\nturtle = kura-kura\nturkey = ayam kalkun\n
-        2. Wild Animals\n
-        Wild animals dalam bahasa indonesia berarti binatang liar. Binatang liar tidak dibiasakan hidup berdampingan dengan manusia karena kadang mereka terlalu berbahaya untuk dipelihara.\n
+        \t1. Tame Animals (binatang jinak)\n
+        \t\t\tTame animals adalah binatang yang tidak berbahaya dan tidak menakutkan.\n\tBinatang jinak ini juga biasanya bisa dipelihara oleh manusia dan patuh terhadap perintah majikannya.\n\tBerikut ini adalah jenis-jenis binatang jinak dalam bahasa inggris:\n
+        \t\t\tcamel = unta\n\t\t\tcanary = burung kenari\n\t\t\tcat = kucing\n\t\t\tcattle = sapi perah\n\t\t\tchicken = ayam\n\t\t\tcow = sapi\n\t\t\tdog = anjing\n\t\t\tdonkey = keledai\n\t\t\tdove = burung merpati\n
+        \t\t\tduck = bebek\n\t\t\tgoat = kambing\n\t\t\tgoldfish = ikan mas koki\n\t\t\tgoose = angsa\n\t\t\tguinea pig = marmut\n\t\t\thamster = hamster\n\t\t\thorse = horse\n\t\t\tpig = babi\n\t\t\tsheep = domba\n\t\t\trabbit = kelinci\n
+        \t\t\tpigeon = burung dara\n\t\t\tturtle = kura-kura\n\t\t\tturkey = ayam kalkun\n
+        \t2. Wild Animals\n
+        \t\t\tWild animals dalam bahasa indonesia berarti binatang liar. Binatang liar tidak dibiasakan hidup berdampingan dengan manusia karena kadang mereka terlalu berbahaya untuk dipelihara.\n
         Binatang liar biasanya hidup di hutan, gunung, laut, rawa, padang rumput, dan lain-lain. \n
         Berikut ini adalah jenis-jenis binatang liar dalam bahasa inggris:
-        ape = kera\nbear = beruang\nbison = bison\ncheetah = cheetah\ncrocodile = buaya\ndeer = rusa\nelephant = gajah\nflamingo = burung flamingo\n
-        fox = rubah\ngirrafe = jerapah\ngorilla = gorila\nhyena = hyena\niguana = iguana\njaguar = jaguar\nkangaroo = kangguru\nkomodo = komodo\nleopard = macan tutul\n
-        lion = singa\nowl = burung hantu\npanda = panda\nrhinoceros = badak\nscorpion  = kalajengking\nsnake = ular\ntapir = tapir\ntiger = macan\n
-        wolf = serigala\nzebra = zebra
+        \t\t\tape = kera\n\t\t\tbear = beruang\n\t\t\tbison = bison\n\t\t\tcheetah = cheetah\n\t\t\tcrocodile = buaya\n\t\t\tdeer = rusa\n\t\t\telephant = gajah\n\t\t\tflamingo = burung flamingo\n
+        \t\t\tfox = rubah\n\t\t\tgirrafe = jerapah\n\t\t\tgorilla = gorila\n\t\t\thyena = hyena\n\t\t\tiguana = iguana\n\t\t\tjaguar = jaguar\n\t\t\tkangaroo = kangguru\n\t\t\tkomodo = komodo\n\t\t\tleopard = macan tutul\n
+        \t\t\tlion = singa\n\t\t\towl = burung hantu\n\t\t\tpanda = panda\n\t\t\trhinoceros = badak\n\t\t\tscorpion  = kalajengking\n\t\t\tsnake = ular\n\t\t\ttapir = tapir\n\t\t\ttiger = macan\n
+        \t\t\twolf = serigala\n\t\t\tzebra = zebra
     </string>
     <string name="clock">
         Istilah yang sering muncul dalam Telling Time\n
