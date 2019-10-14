@@ -1,70 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".hobbies.HobbiesActivity"
-    android:background="@drawable/bg_menu">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".hobbies.MateriFoodFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <ImageView
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="150dp"
             android:src="@drawable/board_logo"
+            android:id="@+id/board"
             app:layout_constraintBottom_toTopOf="@id/guideline5"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/conversation"
+            android:id="@+id/hobbies"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="40dp"
             android:fontFamily="@font/londrina_solid_regular"
-            android:text="CONVERSATION"
+            android:text="HOBBIES"
             android:textColor="#FFFFFF"
-            android:textSize="45dp"
+            android:textSize="50dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/londrina_solid_regular"
-            android:text="@string/conversation"
-            android:textColor="#FFFFFF"
-            android:textSize="20dp"
+        <ImageView
+            android:layout_width="320dp"
+            android:layout_height="550dp"
             android:background="@color/bg"
-            app:layout_constraintLeft_toRightOf="@+id/guideline6"
+            app:layout_constraintTop_toBottomOf="@id/board"
+            app:layout_constraintLeft_toRightOf="@id/guideline6"
             app:layout_constraintRight_toLeftOf="@id/guideline7"
-            app:layout_constraintTop_toBottomOf="@id/guideline5" />
-
+            />
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/board"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/navigation"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            >
+            <TextView
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/londrina_solid_regular"
+                android:text="@string/hobbies"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                app:layout_constraintLeft_toRightOf="@+id/guideline6"
+                app:layout_constraintRight_toLeftOf="@id/guideline7"
+                app:layout_constraintTop_toBottomOf="@id/guideline5" />
+        </ScrollView>
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.02" />
+            app:layout_constraintGuide_percent="0.14" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.04" />
+            app:layout_constraintGuide_percent="0.08" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.96" />
+            app:layout_constraintGuide_percent="0.92" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</ScrollView>
+</FrameLayout>
