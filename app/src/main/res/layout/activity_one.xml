@@ -145,6 +145,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:background="@drawable/setting"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/empat"

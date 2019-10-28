@@ -1,20 +1,20 @@
 package com.example.ileen_mobile.animal;
 
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-
-import android.os.Build;
-import android.os.Bundle;
-import android.text.Html;
-import android.text.Spanned;
-import android.view.MenuItem;
-import android.widget.TextView;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.ileen_mobile.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class AnimalActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
+    private ViewPager viewPager;
+    private MyPager myPager;
+    int images[] = {R.drawable.animal_menu, R.drawable.clock_menu, R.drawable.conversation_menu};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,10 @@ public class AnimalActivity extends AppCompatActivity implements BottomNavigatio
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
+
+        viewPager = findViewById(R.id.view_pager);
+        myPager = new MyPager(AnimalActivity.this, images);
+//        viewPager.setAdapter(myPager);
     }
 
     private boolean loadFragment(Fragment fragment) {
