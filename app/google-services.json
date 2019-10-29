@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "579523332999",
+    "firebase_url": "https://ileen-mobile.firebaseio.com",
+    "project_id": "ileen-mobile",
+    "storage_bucket": "ileen-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579523332999:android:a367e867a76757a40c6122",
+        "android_client_info": {
+          "package_name": "com.example.ileen_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "579523332999-bll79ets1varlbfrdqvfs0ha42gcuedf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ileen_mobile",
+            "certificate_hash": "f33afa1b84a411fdaa5e000d14f1edca5d7cd600"
+          }
+        },
+        {
+          "client_id": "579523332999-3oqobvrj21tt2s2vu1l1hce9hfu4a457.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmY8op3FQA2VN4GpPZ8vSa3Ox9b4DSZHA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "579523332999-3oqobvrj21tt2s2vu1l1hce9hfu4a457.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
