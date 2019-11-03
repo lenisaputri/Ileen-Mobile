@@ -6,6 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -178,6 +179,18 @@ public class MenuActivity extends AppCompatActivity {
 
         button.startAnimation(myAnim);
 
+        MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.click_btn);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // TODO Auto-generated method stub
+                mp.release();
+            }
+
+        });
+        mp.start();
+
         Intent intent =  new Intent(this, AnimalActivity.class);
         startActivity(intent);
     }
@@ -190,6 +203,18 @@ public class MenuActivity extends AppCompatActivity {
         myAnim.setInterpolator(interpolator);
 
         button.startAnimation(myAnim);
+
+        MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.click_btn);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // TODO Auto-generated method stub
+                mp.release();
+            }
+
+        });
+        mp.start();
 
         Intent intent =  new Intent(this, ClockActivity.class);
         startActivity(intent);
@@ -204,6 +229,18 @@ public class MenuActivity extends AppCompatActivity {
 
         button.startAnimation(myAnim);
 
+        MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.click_btn);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // TODO Auto-generated method stub
+                mp.release();
+            }
+
+        });
+        mp.start();
+
         Intent intent =  new Intent(this, ConversationActivity.class);
         startActivity(intent);
     }
@@ -216,6 +253,18 @@ public class MenuActivity extends AppCompatActivity {
         myAnim.setInterpolator(interpolator);
 
         button.startAnimation(myAnim);
+
+        MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.click_btn);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // TODO Auto-generated method stub
+                mp.release();
+            }
+
+        });
+        mp.start();
 
         Intent intent =  new Intent(this, FoodActivity.class);
         startActivity(intent);
@@ -230,6 +279,18 @@ public class MenuActivity extends AppCompatActivity {
 
         button.startAnimation(myAnim);
 
+        MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.click_btn);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // TODO Auto-generated method stub
+                mp.release();
+            }
+
+        });
+        mp.start();
+
         Intent intent =  new Intent(this, HobbiesActivity.class);
         startActivity(intent);
     }
@@ -242,6 +303,18 @@ public class MenuActivity extends AppCompatActivity {
         myAnim.setInterpolator(interpolator);
 
         button.startAnimation(myAnim);
+
+        MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.click_btn);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // TODO Auto-generated method stub
+                mp.release();
+            }
+
+        });
+        mp.start();
 
         Intent intent =  new Intent(this, NumberActivity.class);
         startActivity(intent);
@@ -256,6 +329,18 @@ public class MenuActivity extends AppCompatActivity {
 
         button.startAnimation(myAnim);
 
+        MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.click_btn);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // TODO Auto-generated method stub
+                mp.release();
+            }
+
+        });
+        mp.start();
+
         Intent intent =  new Intent(this, SportActivity.class);
         startActivity(intent);
     }
@@ -268,6 +353,18 @@ public class MenuActivity extends AppCompatActivity {
         myAnim.setInterpolator(interpolator);
 
         button.startAnimation(myAnim);
+
+        MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.click_btn);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // TODO Auto-generated method stub
+                mp.release();
+            }
+
+        });
+        mp.start();
 
         Intent intent =  new Intent(this, TransportationActivity.class);
         startActivity(intent);
@@ -282,22 +379,21 @@ public class MenuActivity extends AppCompatActivity {
 
         button.startAnimation(myAnim);
 
+        MediaPlayer mp = MediaPlayer.create(MenuActivity.this, R.raw.click_btn);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // TODO Auto-generated method stub
+                mp.release();
+            }
+
+        });
+        mp.start();
+
         Intent intent =  new Intent(this, WeatherActivity.class);
         startActivity(intent);
     }
-
-//    public void practiceHandler(View view) {
-//        ImageButton button = (ImageButton)findViewById(R.id.practice);
-//        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
-//
-//        MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
-//        myAnim.setInterpolator(interpolator);
-//
-//        button.startAnimation(myAnim);
-//
-//        Intent intent =  new Intent(this, PracticeActivity.class);
-//        startActivity(intent);
-//    }
 
     /**
      * Animation button

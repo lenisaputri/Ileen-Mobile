@@ -16,11 +16,11 @@ import android.os.PowerManager;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 
+import com.example.ileen_mobile.HomeWatcher;
+import com.example.ileen_mobile.MusicService;
 import com.example.ileen_mobile.R;
 import com.example.ileen_mobile.menu.MenuActivity;
 import com.example.ileen_mobile.practice.PracticeActivity;
@@ -29,10 +29,6 @@ public class PlayActivity extends AppCompatActivity {
 
     Dialog myDialog;
 
-    //Mendefinisikan MediaPlayer sebagai audioBackground
-//    private MediaPlayer play;
-    HomeWatcher mHomeWatcher;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,100 +36,6 @@ public class PlayActivity extends AppCompatActivity {
 
         myDialog = new Dialog(this);
 //        playsound();
-
-        //BIND Music Service
-        doBindService();
-        Intent music = new Intent();
-        music.setClass(this, MusicService.class);
-        startService(music);
-
-        //Start HomeWatcher
-        mHomeWatcher = new HomeWatcher(this);
-        mHomeWatcher.setOnHomePressedListener(new HomeWatcher.OnHomePressedListener() {
-            @Override
-            public void onHomePressed() {
-                if (mServ != null) {
-                    mServ.pauseMusic();
-                }
-            }
-            @Override
-            public void onHomeLongPressed() {
-                if (mServ != null) {
-                    mServ.pauseMusic();
-                }
-            }
-        });
-        mHomeWatcher.startWatch();
-    }
-
-    //Bind/Unbind music service
-    private boolean mIsBound = false;
-    private MusicService mServ;
-    private ServiceConnection Scon =new ServiceConnection(){
-
-        public void onServiceConnected(ComponentName name, IBinder
-                binder) {
-            mServ = ((MusicService.ServiceBinder)binder).getService();
-        }
-
-        public void onServiceDisconnected(ComponentName name) {
-            mServ = null;
-        }
-    };
-
-    void doBindService(){
-        bindService(new Intent(this,MusicService.class),
-                Scon, Context.BIND_AUTO_CREATE);
-        mIsBound = true;
-    }
-
-    void doUnbindService()
-    {
-        if(mIsBound)
-        {
-            unbindService(Scon);
-            mIsBound = false;
-        }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        if (mServ != null) {
-            mServ.resumeMusic();
-        }
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-        //Detect idle screen
-        PowerManager pm = (PowerManager)
-                getSystemService(Context.POWER_SERVICE);
-        boolean isScreenOn = false;
-        if (pm != null) {
-            isScreenOn = pm.isScreenOn();
-        }
-
-        if (!isScreenOn) {
-            if (mServ != null) {
-                mServ.pauseMusic();
-            }
-        }
-    }
-
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-        //UNBIND music service
-        doUnbindService();
-        Intent music = new Intent();
-        music.setClass(this,MusicService.class);
-        stopService(music);
 
     }
 
@@ -154,6 +56,7 @@ public class PlayActivity extends AppCompatActivity {
 
     public void playButton(View view) {
         ImageButton button = (ImageButton)findViewById(R.id.button_play);
+
         final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
 
         MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
@@ -161,8 +64,22 @@ public class PlayActivity extends AppCompatActivity {
 
         button.startAnimation(myAnim);
 
+        MediaPlayer mp = MediaPlayer.create(PlayActivity.this, R.raw.click_btn);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // TODO Auto-generated method stub
+                mp.release();
+            }
+
+        });
+        mp.start();
+
         Intent intent =  new Intent(PlayActivity.this, PracticeActivity.class);
         startActivity(intent);
+
+
     }
 
     public void studyButton(View view) {
@@ -173,6 +90,19 @@ public class PlayActivity extends AppCompatActivity {
         myAnim.setInterpolator(interpolator);
 
         button.startAnimation(myAnim);
+
+        MediaPlayer mp = MediaPlayer.create(PlayActivity.this, R.raw.click_btn);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // TODO Auto-generated method stub
+                mp.release();
+            }
+
+        });
+        mp.start();
+
         Intent intent =  new Intent(PlayActivity.this, MenuActivity.class);
         startActivity(intent);
     }
@@ -185,6 +115,18 @@ public class PlayActivity extends AppCompatActivity {
         myAnim.setInterpolator(interpolator);
 
         button.startAnimation(myAnim);
+
+        MediaPlayer mp = MediaPlayer.create(PlayActivity.this, R.raw.click_btn);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // TODO Auto-generated method stub
+                mp.release();
+            }
+
+        });
+        mp.start();
     }
 
     public void gradeButton(View view) {
@@ -195,6 +137,18 @@ public class PlayActivity extends AppCompatActivity {
         myAnim.setInterpolator(interpolator);
 
         button.startAnimation(myAnim);
+
+        MediaPlayer mp = MediaPlayer.create(PlayActivity.this, R.raw.click_btn);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // TODO Auto-generated method stub
+                mp.release();
+            }
+
+        });
+        mp.start();
     }
 
     public void ShowPopup(View view) {
@@ -207,6 +161,19 @@ public class PlayActivity extends AppCompatActivity {
                 myDialog.dismiss();
             }
         });
+
+        MediaPlayer mp = MediaPlayer.create(PlayActivity.this, R.raw.click_btn);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // TODO Auto-generated method stub
+                mp.release();
+            }
+
+        });
+        mp.start();
+
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialog.show();
     }
