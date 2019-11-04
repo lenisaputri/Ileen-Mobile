@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <service
-            android:name=".MusicService"
+            android:name=".login.MusicService"
             android:enabled="true" />
         <activity android:name=".practice.OneActivity"></activity>
         <activity android:name=".weather.WeatherActivity" />
