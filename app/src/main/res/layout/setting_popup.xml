@@ -9,6 +9,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.54" />
+
         <ImageView
             android:id="@+id/bg_setting"
             android:layout_width="match_parent"
@@ -61,19 +75,36 @@
             app:layout_constraintBottom_toTopOf="@id/guideline8"
             android:layout_marginStart="220dp" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.5" />
+        <Button
+            android:id="@+id/btn_onMusic"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/ripple_effect"
+            android:fontFamily="@font/rocco_regular"
+            android:onClick="menuKlik"
+            android:text="OK"
+            android:textColor="#081623"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline9"
+            app:layout_constraintBottom_toTopOf="@id/guideline8" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.54" />
-
+        <Button
+            android:id="@+id/btn_onSound"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/ripple_effect"
+            android:fontFamily="@font/rocco_regular"
+            android:onClick="menuKlik"
+            android:text="OK"
+            android:textColor="#081623"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline9"
+            app:layout_constraintTop_toBottomOf="@id/guideline8" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>
