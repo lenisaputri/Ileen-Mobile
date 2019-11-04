@@ -38,7 +38,7 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.MyViewHold
     @Override
     public void onBindViewHolder(@NonNull AnimalAdapter.MyViewHolder holder, int position) {
         Animal item = listAnimal.get(position);
-        holder.txtAnimal.setText(item.getJudul());
+//        holder.txtAnimal.setText(item.getJudul());
         holder.imageAnimal.setImageDrawable(item.getImage());
     }
 
@@ -50,13 +50,13 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.MyViewHold
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public ImageView imageAnimal;
-        public TextView txtAnimal;
+//        public TextView txtAnimal;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             //6 menghubungkan id di layout ke view holder
             imageAnimal = itemView.findViewById(R.id.image_animal);
-            txtAnimal = itemView.findViewById(R.id.txt_animal);
+//            txtAnimal = itemView.findViewById(R.id.txt_animal);
         }
     }
 }
