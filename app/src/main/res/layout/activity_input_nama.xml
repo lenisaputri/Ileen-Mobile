@@ -85,7 +85,7 @@
 
     <Button
         android:id="@+id/btn_ok"
-        android:layout_width="119dp"
+        android:layout_width="130dp"
         android:layout_height="37dp"
         android:layout_marginTop="33dp"
         android:layout_marginRight="15dp"
@@ -95,23 +95,8 @@
         android:text="OK"
         android:textColor="#081623"
         android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/guideline4"
-        app:layout_constraintTop_toBottomOf="@id/input_name" />
-
-    <Button
-        android:id="@+id/btn_cancel"
-        android:layout_width="119dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginLeft="10dp"
-        android:background="@drawable/ripple_effect"
-        android:fontFamily="@font/rocco_regular"
-        android:onClick="menuKlik"
-        android:text="CANCEL"
-        android:textColor="#081623"
-        android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@id/guideline4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/input_name" />
 
     <ImageButton
