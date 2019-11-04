@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "579523332999-3dne4574jtl1enedbjfo6jcj6q1d6j64.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ileen_mobile",
+            "certificate_hash": "2d86c8805f2d18ae9f7137ff9abc17d8ec6b17b8"
+          }
+        },
+        {
           "client_id": "579523332999-bll79ets1varlbfrdqvfs0ha42gcuedf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
