@@ -1,4 +1,4 @@
-package com.example.ileen_mobile.login;
+package com.example.ileen_mobile;
 
 import android.app.Service;
 import android.content.Intent;
@@ -6,8 +6,6 @@ import android.media.MediaPlayer;
 import android.os.Binder;
 import android.os.IBinder;
 import android.widget.Toast;
-
-import com.example.ileen_mobile.R;
 
 public class MusicService extends Service implements MediaPlayer.OnErrorListener {
 

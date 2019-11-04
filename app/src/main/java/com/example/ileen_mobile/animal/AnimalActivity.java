@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.ileen_mobile.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -16,6 +17,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AnimalActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
+    //instansiasi Recyclerview
+    RecyclerView rvAnimal;
+    //instansiasi list superhero
+    List<Animal> listAnimal = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +33,12 @@ public class AnimalActivity extends AppCompatActivity implements BottomNavigatio
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
 
+        rvAnimal = findViewById(R.id.rvAnimal);
+        Animal animal = new Animal(this.getResources().getDrawable(R.drawable.alpukat),"Alpukat");
+        listAnimal.add(animal);
+        AnimalAdapter buahAdapter = new AnimalAdapter(listAnimal);
+        rvAnimal.setAdapter(buahAdapter);
+        rvAnimal.setLayoutManager(new GridLayoutManager(this, 2));
     }
 
     private boolean loadFragment(Fragment fragment) {

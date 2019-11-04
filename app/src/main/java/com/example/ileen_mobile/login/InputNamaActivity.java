@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -41,6 +42,18 @@ public class InputNamaActivity extends AppCompatActivity {
             Intent i = new Intent(InputNamaActivity.this, PlayActivity.class);
             startActivity(i);
         }
+
+        MediaPlayer mp = MediaPlayer.create(InputNamaActivity.this, R.raw.click_btn);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // TODO Auto-generated method stub
+                mp.release();
+            }
+
+        });
+        mp.start();
     }
 
     public void ShowPopupNama(View view) {
@@ -53,6 +66,19 @@ public class InputNamaActivity extends AppCompatActivity {
                 myDialog.dismiss();
             }
         });
+
+        MediaPlayer mp = MediaPlayer.create(InputNamaActivity.this, R.raw.click_btn);
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                // TODO Auto-generated method stub
+                mp.release();
+            }
+
+        });
+        mp.start();
+
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialog.show();
     }

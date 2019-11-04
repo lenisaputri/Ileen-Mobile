@@ -1,4 +1,4 @@
-package com.example.ileen_mobile.login;
+package com.example.ileen_mobile;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
