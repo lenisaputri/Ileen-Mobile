@@ -17,10 +17,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AnimalActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
-    //instansiasi Recyclerview
-    RecyclerView rvAnimal;
-    //instansiasi list superhero
-    List<Animal> listAnimal = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +29,6 @@ public class AnimalActivity extends AppCompatActivity implements BottomNavigatio
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
 
-        rvAnimal = findViewById(R.id.rvAnimal);
-        Animal animal = new Animal(this.getResources().getDrawable(R.drawable.alpukat),"Alpukat");
-        listAnimal.add(animal);
-        AnimalAdapter buahAdapter = new AnimalAdapter(listAnimal);
-        rvAnimal.setAdapter(buahAdapter);
-        rvAnimal.setLayoutManager(new GridLayoutManager(this, 2));
     }
 
     private boolean loadFragment(Fragment fragment) {
