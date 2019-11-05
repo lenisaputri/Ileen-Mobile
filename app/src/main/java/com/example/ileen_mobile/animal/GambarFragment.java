@@ -40,19 +40,17 @@ public class GambarFragment extends Fragment {
         View rootView =  inflater.inflate(R.layout.fragment_gambar, container, false);
         rvAnimal = rootView.findViewById(R.id.rvAnimal);
 
-        Animal animal = new Animal(this.getResources().getDrawable(R.drawable.unta));
+        Animal animal = new Animal(this.getResources().getDrawable(R.drawable.camel));
         listAnimal.add(animal);
         animal = new Animal(this.getResources().getDrawable(R.drawable.canary));
         listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.kucing));
+        animal = new Animal(this.getResources().getDrawable(R.drawable.cat));
         listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.cattle));
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.ayam));
+        animal = new Animal(this.getResources().getDrawable(R.drawable.chicken));
         listAnimal.add(animal);
         animal = new Animal(this.getResources().getDrawable(R.drawable.cow));
         listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.anjing));
+        animal = new Animal(this.getResources().getDrawable(R.drawable.dog));
         listAnimal.add(animal);
         animal = new Animal(this.getResources().getDrawable(R.drawable.donkey));
         listAnimal.add(animal);
@@ -69,8 +67,6 @@ public class GambarFragment extends Fragment {
         animal = new Animal(this.getResources().getDrawable(R.drawable.marmut));
         listAnimal.add(animal);
         animal = new Animal(this.getResources().getDrawable(R.drawable.hamster));
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.horse));
         listAnimal.add(animal);
         animal = new Animal(this.getResources().getDrawable(R.drawable.pig));
         listAnimal.add(animal);
