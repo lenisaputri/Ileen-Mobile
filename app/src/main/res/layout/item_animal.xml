@@ -9,17 +9,15 @@
         android:id="@+id/image_animal"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:layout_constraintTop_toBottomOf="@id/guideline12"
         app:layout_constraintBottom_toTopOf="@+id/navigation"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/navigation"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@id/guideline12" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1" />
-
+        app:layout_constraintGuide_percent="0.01" />
 </androidx.constraintlayout.widget.ConstraintLayout>
