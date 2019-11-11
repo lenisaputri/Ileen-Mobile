@@ -5,7 +5,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,7 +18,6 @@ import com.example.ileen_mobile.adapter.ConversationViewHolder;
 import com.example.ileen_mobile.models.Conversation;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
@@ -33,10 +31,8 @@ public class MateriConversationFragment extends Fragment {
     private DatabaseReference mDatabase;
     // [END define_database_reference]
 
-    private Activity mActivity;
     private FirebaseRecyclerAdapter<Conversation, ConversationViewHolder> mAdapter;
     private RecyclerView mRecycler;
-    private LinearLayoutManager mManager;
 
     public MateriConversationFragment() {
         // Required empty public constructor
@@ -47,27 +43,18 @@ public class MateriConversationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        super.onCreateView(inflater, container, savedInstanceState);
         View rootView = inflater.inflate(R.layout.fragment_materi_conversation, container, false);
-
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
         mRecycler = rootView.findViewById(R.id.list_conversation);
         mRecycler.setHasFixedSize(true);
-
-
-        mActivity = getActivity();
-
-        LinearLayoutManager mManager = new LinearLayoutManager(mActivity);
-        mManager.setReverseLayout(true);
-        mManager.setStackFromEnd(true);
-        mRecycler.setLayoutManager(mManager);
+        mRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         // Set up FirebaseRecyclerAdapter with the Query
         Query query = getQuery(mDatabase);
 
-        FirebaseRecyclerOptions<Conversation> options = new FirebaseRecyclerOptions.Builder<Conversation>()
+        FirebaseRecyclerOptions options = new FirebaseRecyclerOptions.Builder<Conversation>()
                 .setQuery(query, Conversation.class)
                 .build();
 
@@ -115,5 +102,6 @@ public class MateriConversationFragment extends Fragment {
         Query query = mDatabase.child("conversation");
         return query;
     }
+
 
 }
