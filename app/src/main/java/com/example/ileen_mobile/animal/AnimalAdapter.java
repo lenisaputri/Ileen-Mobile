@@ -5,11 +5,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ileen_mobile.R;
+import com.example.ileen_mobile.menu.MenuActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +19,7 @@ import java.util.List;
 public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.MyViewHolder>{
     //1 dataset
     private List<Animal> listAnimal = new ArrayList<>();
+
 
     //2 constructor
     public AnimalAdapter(List<Animal> listAnimal) {
@@ -29,7 +32,6 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.MyViewHold
         View vh = LayoutInflater.
                 from(viewGroup.getContext()).
                 inflate(R.layout.item_animal,viewGroup,false);
-
         //4 membuat view holder
         MyViewHolder viewHolder = new MyViewHolder(vh);
         return viewHolder;
