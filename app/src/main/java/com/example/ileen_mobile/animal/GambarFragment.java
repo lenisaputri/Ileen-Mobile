@@ -80,6 +80,16 @@ public class GambarFragment extends Fragment {
         listAnimal.add(animal);
         animal = new Animal(this.getResources().getDrawable(R.drawable.turtle));
         listAnimal.add(animal);
+        animal = new Animal(this.getResources().getDrawable(R.drawable.koi));
+        listAnimal.add(animal);
+        animal = new Animal(this.getResources().getDrawable(R.drawable.template_1));
+        listAnimal.add(animal);
+        animal = new Animal(this.getResources().getDrawable(R.drawable.template_1));
+        listAnimal.add(animal);
+        animal = new Animal(this.getResources().getDrawable(R.drawable.template_1));
+        listAnimal.add(animal);
+        animal = new Animal(this.getResources().getDrawable(R.drawable.template_1));
+        listAnimal.add(animal);
         AnimalAdapter animalAdapter = new AnimalAdapter(listAnimal);
         rvAnimal.setAdapter(animalAdapter);
 
