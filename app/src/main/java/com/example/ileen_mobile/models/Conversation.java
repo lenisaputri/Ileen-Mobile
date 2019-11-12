@@ -6,19 +6,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Conversation {
-    public String isi_conversation;
+    public String isi;
 
     public Conversation() {
     }
 
-    public Conversation(String isi_conversation) {
-        this.isi_conversation = isi_conversation;
+    public Conversation(String isi) {
+        this.isi = isi;
     }
 
     @Exclude
     public Map<String, Object> toMap() {
         HashMap<String, Object> result = new HashMap<>();
-        result.put("isi_conversation", isi_conversation);
+        result.put("isi", isi);
         return result;
     }
 }
