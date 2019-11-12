@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,9 +28,9 @@ public class OneActivity extends AppCompatActivity {
     private Button jawaban4;
 
 
-    private String  jawabanBenar;
-
-    private int quiz = 1;
+    private String jawabanBenar;
+    private int jawabanBenarLabel = 0;
+    private int quizCount = 1;
     static final private int QUIZ_COUNT = 10;
 
     ArrayList<ArrayList<String>> quizArray = new ArrayList<>();
@@ -79,7 +80,7 @@ public class OneActivity extends AppCompatActivity {
     }
 
     public void showNextQuiz() {
-        Label.setText("Q" + quiz);
+        Label.setText("Q" + quizCount);
 
         Random random = new Random();
         int randomNum = random.nextInt(quizArray.size());
@@ -109,6 +110,7 @@ public class OneActivity extends AppCompatActivity {
 
         if(btnNext.equals(jawabanBenar)){
             alertTitle = "Benar";
+            jawabanBenarLabel++;
         }else {
             alertTitle = "Salah";
         }
@@ -119,10 +121,12 @@ public class OneActivity extends AppCompatActivity {
         builder.setPositiveButton("NEXT", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int i) {
-                if (quiz == QUIZ_COUNT){
-
+                if (quizCount == QUIZ_COUNT){
+                    Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                    intent.putExtra("JAWABAN_BENAR_LABEL", jawabanBenarLabel);
+                    startActivity(intent);
                 }else {
-                    quiz++;
+                    quizCount++;
                     showNextQuiz();
 
                 }
