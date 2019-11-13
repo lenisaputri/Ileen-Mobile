@@ -17,6 +17,6 @@ public class ConversationViewHolder extends RecyclerView.ViewHolder{
     }
 
     public void bindToConversation(Conversation conversation, View.OnClickListener onClickListener){
-        isiConversation.setText(conversation.isi_conversation);
+        isiConversation.setText(conversation.isi);
     }
 }
