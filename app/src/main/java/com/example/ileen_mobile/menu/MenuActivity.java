@@ -238,7 +238,7 @@ public class MenuActivity extends AppCompatActivity {
         });
         mp.start();
 
-        Intent intent =  new Intent(this, cobaaConversationActivity.class);
+        Intent intent =  new Intent(this, ConversationActivity.class);
         startActivity(intent);
     }
 

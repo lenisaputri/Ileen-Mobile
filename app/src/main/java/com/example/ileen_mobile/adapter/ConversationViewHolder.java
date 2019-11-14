@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.ileen_mobile.R;
 import com.example.ileen_mobile.models.Conversation;
 
+
 public class ConversationViewHolder extends RecyclerView.ViewHolder{
     public TextView isiConversation;
 

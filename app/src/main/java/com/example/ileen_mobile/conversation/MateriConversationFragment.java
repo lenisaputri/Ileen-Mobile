@@ -72,13 +72,7 @@ public class MateriConversationFragment extends Fragment {
             }
             @Override
             protected void onBindViewHolder(ConversationViewHolder holder, int position,final Conversation model) {
-                holder.bindToConversation(model, new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(Intent.ACTION_VIEW);
-                        startActivity(intent);
-                    }
-                });
+                holder.isiConversation.setText(model.getIsi());
             }
         };
 
