@@ -21,6 +21,7 @@ public class ResultActivity extends AppCompatActivity {
         TextView resultLabel = (TextView) findViewById(R.id.resultLabel);
         TextView totalScoreLabel = (TextView) findViewById(R.id.totalScoreLabel);
 
+
         int score = getIntent().getIntExtra("JAWABAN_BENAR_LABEL", 0);
 
         SharedPreferences setting = getSharedPreferences("ILEN", Context.MODE_PRIVATE);
@@ -37,8 +38,8 @@ public class ResultActivity extends AppCompatActivity {
 
     }
 
-    public void returnTop(View view) {
-        Intent intent = new Intent(this, OneActivity.class);
+    public void exitTop(View view) {
+        Intent intent = new Intent(this, PracticeActivity.class);
         startActivity(intent);
     }
 }
