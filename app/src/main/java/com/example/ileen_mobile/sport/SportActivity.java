@@ -3,6 +3,7 @@ package com.example.ileen_mobile.sport;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -11,40 +12,40 @@ import com.example.ileen_mobile.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class SportActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
+    private BottomNavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sport);
-        loadFragment(new MateriSportFragment());
-        // Required empty public constructor
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(this);
-    }
-
-    private boolean loadFragment(Fragment fragment) {
-        if (fragment != null) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, fragment)
-                    .addToBackStack(null)
-                    .commit();
-            return true;
-        }
-        return false;
+        navigationView = findViewById(R.id.navigation);
+        navigationView.setOnNavigationItemSelectedListener(this);
+        openFragment(new MateriSportFragment());
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        Fragment fragment = null;
         switch (menuItem.getItemId()) {
             case R.id.action_materi:
-                fragment = new MateriSportFragment();
-                break;
+                openFragment(new MateriSportFragment());
+                return true;
             case R.id.action_gambar:
-                fragment = new GambarSportFragment();
-                break;
+                openFragment(new GambarSportFragment());
+                return true;
         }
-        return loadFragment(fragment);
+        return false;
+    }
+
+    private void openFragment(Fragment fragment) {
+        openFragment(fragment, false);
+    }
+
+    private void openFragment(Fragment fragment, boolean addToBackstack) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment_container, fragment);
+        if (addToBackstack)
+            transaction.addToBackStack(null);
+        transaction.commit();
     }
 }

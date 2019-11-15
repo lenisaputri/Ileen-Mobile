@@ -29,7 +29,7 @@
         \n<p>pigeon = burung dara</p>
         \n<p>turtle = kura-kura</p>
         \n<p>turkey = ayam kalkun</p>
-        <p>2. Wild Animals</p>
+        \n<p>2. Wild Animals</p>
         \n<p>Wild animals dalam bahasa indonesia berarti binatang liar. Binatang liar tidak dibiasakan hidup berdampingan dengan manusia karena kadang mereka terlalu berbahaya untuk dipelihara.\n
         Binatang liar biasanya hidup di hutan, gunung, laut, rawa, padang rumput, dan lain-lain.</p>
         \n<p>Berikut ini adalah jenis-jenis binatang liar dalam bahasa inggris:</p>
@@ -87,7 +87,15 @@
         \t\tPada cara ini kita harus menyebutkan menit-nya dulu baru jam-nya dan memakai kata \'past\' atau \'to\' untuk menerangkan kurang atau lebihnya menit pada jam tersebut.\n
         \t\tContoh :\n
         \t\t\t08:10 = It\'s ten past eight (Itu jam delapan lewat sepuluh menit)\n
-        \t\t\t08:55 = It\'s five (minutes) to nine (lima menit lagi menuju jam sembilan atau jam sembilan kurang lima menit)\n
+        \t\t\t08:55 = It\'s five (minutes) to nine (lima menit lagi menuju jam sembilan atau jam sembilan kurang lima menit)\n\n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
     </string>
     <string name="hobbies">
         <i>Hobby</i> merupakan kegemaran atau kesukaan dengan sebuah benda, makanan, pelajaran \natau kegiatan yang kita lakukan dengan senang hati tanpa paksaan.\n
@@ -131,6 +139,15 @@
         <tt> </tt>(Sandi suka bermain bulu tangkis.)\n
         <tt> </tt>i. My hobby is swimming.\n
         <tt> </tt>(Hobi saya berenang.)\n
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
     </string>
     <string name="conversation">
         Conversation atau percakapan merupakan sebuah hal yang biasa dalam bahasa Inggris.\n
@@ -161,6 +178,15 @@
         7. Menanyakan makanan favorit\n
         \t\t A : What is your favorite food?\n
         \t\t B : My favorite food is nasi goreng.\n
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
     </string>
     <string name="food">
         Ada empat jenis waktu makan yaitu :\n
@@ -190,6 +216,15 @@
         \t\t\t 15. burger = burger\n
         \t\t\t 16. sandwich = roti isi\n
         \t\t\t 17. candy = permen\n
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
     </string>
     <string name="number">
         Penggolongan angka dalam bahasa inggris terbagi menjadi tiga bagian yaitu\n
@@ -223,6 +258,15 @@
         <tt> </tt>f. 1/5 = a fifth\n
         <tt> </tt>g. 5 ½ = five and a half\n
         <tt> </tt>h. 2/4 = five and two fourth\n
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
     </string>
     <string name="sport">
         <i>Sport</i> atau olahraga adalah kegiatan yang melibatkan pengerahan tenaga fisik dan\n
@@ -250,6 +294,15 @@
     <tt> </tt>t. Rollerblading = Bersepatu Roda\n
      <tt> </tt>u. Water Polo = Polo Air\n
      <tt> </tt>v. Volleyball = Voli\n
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
     </string>
     <string name="transportation">
         <i>Transportation</i> atau transportasi adalah alat transportasi, alat angkut, atau kendaraan.
@@ -281,6 +334,15 @@
         <tt> </tt>(truk berwarna kuning)\n
         <tt> </tt>c. My uncle go to Jakarta by car\n
         <tt> </tt>(pamanku pergi ke jakarta naik mobil)\n
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
     </string>
     <string name="weather">
         <i>Weather</i> atau cuaca adalah keadaan di suatu tempat yang berkaitan\n
@@ -309,5 +371,14 @@
         <tt> </tt>(Aku takut dengan guntur/halilintar.)\n
         <tt> </tt>4. Yesterday was a cold Saturday night.\n
         <tt> </tt>(Kemarin adalah malam Minggu yang dingin.)\n
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
+        \n<p></p>
     </string>
 </resources>
