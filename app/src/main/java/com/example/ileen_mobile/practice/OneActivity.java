@@ -43,11 +43,12 @@ public class OneActivity extends AppCompatActivity {
             {"There are season in indonesia, they are ...","Rainy and dry","Summer and winter","Wet and snowy","Authumn and spring"},
             {"Twenty degrees Fahrenheit in the number is ...","20ºF","22ºF","12ºF","21ºC"},
             {"We can see water falling from the sky at ?","Rainy","Sunny","Summer","Dry Season"},
-            {"We can see snow in the ...","Spring","Winter","Summer","Autumn"},
-            {"I like...","Cooking","Reading","Writing","Drawing"},
+            {"We can see snow in the ...","Winter","Spring","Summer","Autumn"},
             {"Don’t forget to bring...in dry season","Hat","Jacket","Gloves","Sock"},
             {"Jhon is tall but sardi is ...","Short","Long","Small","Beautifull"},
-            {"Keep ...My baby is sleeping.","Silent","Noisy","Crying","Standing"}
+            {"Keep ...My baby is sleeping.","Silent","Noisy","Crying","Standing"},
+            {"Kuda in English?","Horse","Chicken","Goat","Elephant"},
+
 
     };
 
@@ -109,10 +110,10 @@ public class OneActivity extends AppCompatActivity {
         String alertTitle;
 
         if(btnNext.equals(jawabanBenar)){
-            alertTitle = "Benar";
-            jawabanBenarLabel++;
+            alertTitle = "Right";
+            jawabanBenarLabel=jawabanBenarLabel+10;
         }else {
-            alertTitle = "Salah";
+            alertTitle = "False";
         }
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
