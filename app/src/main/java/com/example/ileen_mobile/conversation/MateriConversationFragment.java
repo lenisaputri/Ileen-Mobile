@@ -12,7 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.ileen_mobile.conversation.Conversation;
 
 import com.example.ileen_mobile.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -21,16 +20,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
 public class MateriConversationFragment extends Fragment {
 
     RecyclerView list_conversation;
-
-//    private ConversationAdapter conversationAdapter;
-//    List<Conversation> listConversation = new ArrayList<>();
 
     private LinearLayoutManager linearLayoutManager;
 
@@ -45,7 +37,6 @@ public class MateriConversationFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
@@ -84,15 +75,6 @@ public class MateriConversationFragment extends Fragment {
                 });
             }
         };
-//
-//        Conversation conversation = new Conversation("sssssdsd");
-//        listConversation.add(conversation);
-//
-//        conversation = new Conversation("sssssdsd");
-//        listConversation.add(conversation);
-
-//        ConversationAdapter conversationAdapter = new ConversationAdapter(listConversation);
-//        list_conversation.setAdapter(conversationAdapter);
 
         mAdapter.notifyDataSetChanged();
 
@@ -117,7 +99,7 @@ public class MateriConversationFragment extends Fragment {
     }
 
     private Query getQuery(DatabaseReference mDatabase){
-        Query query = mDatabase.child("animal");
+        Query query = mDatabase.child("conversation");
         return query;
     }
 

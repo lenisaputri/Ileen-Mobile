@@ -9,6 +9,7 @@
         android:id="@+id/isi_conversation"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:textColor="#ffffff"
         android:fontFamily="@font/londrina_solid_regular"
         android:textSize="18dp"
         android:text="isi"
