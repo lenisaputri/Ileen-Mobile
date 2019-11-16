@@ -24,6 +24,7 @@ public class ClockAdapter extends RecyclerView.Adapter<ClockAdapter.MyViewHolder
 
     //2 constructor
     public ClockAdapter(List<Clock> listClock) {
+
         this.listClock = listClock;
     }
 

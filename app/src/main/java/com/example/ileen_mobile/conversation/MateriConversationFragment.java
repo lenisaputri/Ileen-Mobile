@@ -1,40 +1,28 @@
 package com.example.ileen_mobile.conversation;
 
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.example.ileen_mobile.R;
-import com.example.ileen_mobile.adapter.ConversationViewHolder;
-import com.example.ileen_mobile.models.Conversation;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class MateriConversationFragment extends Fragment {
 
-    // [START define_database_reference]
-    private DatabaseReference mDatabase;
-    // [END define_database_reference]
-
-    private  View view;
-    private FirebaseRecyclerAdapter<Conversation, ConversationViewHolder> mAdapter;
-    private RecyclerView mRecycler;
-    private LinearLayoutManager mManager;
+    //instansiasi Recyclerview
+    RecyclerView list_conversation;
+    //instansiasi list superhero
+    private ConversationAdapter conversationAdapter;
+    List<Conversation> listConversation = new ArrayList<>();
+    private LinearLayoutManager linearLayoutManager;
 
     public MateriConversationFragment() {
         // Required empty public constructor
@@ -45,62 +33,22 @@ public class MateriConversationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_materi_conversation, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_materi_conversation, container, false);
+        list_conversation = rootView.findViewById(R.id.rvConversation);
 
-        mDatabase = FirebaseDatabase.getInstance().getReference();
+        Conversation conversation = new Conversation("dksmsksknfdsknfs");
+        listConversation.add(conversation);
 
-        mRecycler = view.findViewById(R.id.list_conversation);
-        mRecycler.setHasFixedSize(true);
+        conversation = new Conversation("dksmsksknfdsknfs");
+        listConversation.add(conversation);
 
-        mManager = new LinearLayoutManager(getActivity());
-        mManager.setReverseLayout(true);
-        mManager.setStackFromEnd(true);
-        mRecycler.setLayoutManager(mManager);
+        conversation = new Conversation("dksmsksknfdsknfs");
+        listConversation.add(conversation);
 
-        // Set up FirebaseRecyclerAdapter with the Query
-        Query query = getQuery(mDatabase);
+        ConversationAdapter conversationAdapter = new ConversationAdapter(listConversation);
+        list_conversation.setAdapter(conversationAdapter);
 
-        FirebaseRecyclerOptions options = new FirebaseRecyclerOptions.Builder<Conversation>()
-                .setQuery(query, Conversation.class)
-                .build();
-
-        mAdapter = new FirebaseRecyclerAdapter<Conversation, ConversationViewHolder>(options) {
-            @Override
-            public ConversationViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-                LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-                return new ConversationViewHolder(inflater.inflate(R.layout.item_materi_conversation, parent, false));
-            }
-            @Override
-            protected void onBindViewHolder(ConversationViewHolder holder, int position,final Conversation model) {
-                holder.isiConversation.setText(model.getIsi());
-            }
-        };
-
-        mAdapter.notifyDataSetChanged();
-        mRecycler.setAdapter(mAdapter);
-
-        return view;
+        list_conversation.setLayoutManager(new LinearLayoutManager(this.getActivity()));
+        return rootView;
     }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        if (mAdapter != null) {
-            mAdapter.startListening();
-        }
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        if (mAdapter != null) {
-            mAdapter.stopListening();
-        }
-    }
-
-    private Query getQuery(DatabaseReference mDatabase){
-        Query query = mDatabase.child("animal");
-        return query;
-    }
-
 }

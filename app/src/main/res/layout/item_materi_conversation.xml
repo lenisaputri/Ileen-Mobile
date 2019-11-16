@@ -11,6 +11,5 @@
         android:layout_height="match_parent"
         android:fontFamily="@font/londrina_solid_regular"
         android:textSize="18dp"
-        android:text="isi"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

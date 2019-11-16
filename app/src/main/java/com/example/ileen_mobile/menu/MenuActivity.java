@@ -19,7 +19,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.ileen_mobile.R;
-import com.example.ileen_mobile.activity.cobaaConversationActivity;
 import com.example.ileen_mobile.animal.AnimalActivity;
 import com.example.ileen_mobile.clock.ClockActivity;
 import com.example.ileen_mobile.conversation.ConversationActivity;
