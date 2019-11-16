@@ -1,29 +1,29 @@
 package com.example.ileen_mobile.conversation;
 
+import com.google.firebase.database.Exclude;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class Conversation {
-    public String isi_conversation;
+    public String isi;
 
     public Conversation() {
     }
 
-    public Conversation(String isi_conversation) {
+    public Conversation(String isi) {
 
-        this.isi_conversation = isi_conversation;
+        this.isi = isi;
     }
 
-    public String getIsi_conversation() {
-        return isi_conversation;
+    public String getIsi() {
+        return isi;
     }
 
-    public void setIsi_conversation(String isi_conversation) {
-        this.isi_conversation = isi_conversation;
+    @Exclude
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("isi", isi);
+        return result;
     }
-
-    //
-//    @Exclude
-//    public Map<String, Object> toMap() {
-//        HashMap<String, Object> result = new HashMap<>();
-//        result.put("isi", isi);
-//        return result;
-//    }
 }
