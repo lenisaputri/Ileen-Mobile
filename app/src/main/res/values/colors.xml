@@ -29,7 +29,7 @@
     <color name="purple_500">#FC9806</color>
     <color name="deep_purple_500">#E96813</color>
     <color name="indigo_500">#F84132</color>
-    <color name="blue_500">#EC8606</color>
+    <color name="blue_500">#E96813</color>
     <color name="cyan_500">#FF5722</color>
     <color name="light_blue_500">#C0271A</color>
 </resources>
