@@ -55,7 +55,13 @@ public class GambarSportFragment extends Fragment {
         listSport.add(sport);
         sport = new Sport("Berlayar","Sailing",this.getResources().getDrawable(R.drawable.sailing));
         listSport.add(sport);
-        sport = new Sport("Olahraga Skii","Skiing",this.getResources().getDrawable(R.drawable.ski));
+        sport = new Sport("Bersepeda","Cycling",this.getResources().getDrawable(R.drawable.cycling));
+        listSport.add(sport);
+        sport = new Sport("Ski","Skiing",this.getResources().getDrawable(R.drawable.ski));
+        listSport.add(sport);
+        sport = new Sport("Berselancar","Surfing",this.getResources().getDrawable(R.drawable.surfing));
+        listSport.add(sport);
+        sport = new Sport("Bola Voli","Volley Ball",this.getResources().getDrawable(R.drawable.volleyball));
         listSport.add(sport);
 
 
