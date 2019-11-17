@@ -21,6 +21,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.ileen_mobile.R;
+import com.example.ileen_mobile.grade.GradeActivity;
 import com.example.ileen_mobile.menu.MenuActivity;
 import com.example.ileen_mobile.practice.PracticeActivity;
 
@@ -235,6 +236,9 @@ public class PlayActivity extends AppCompatActivity {
 
         });
         mp.start();
+
+        Intent intent =  new Intent(PlayActivity.this, GradeActivity.class);
+        startActivity(intent);
     }
 
     // POP UP

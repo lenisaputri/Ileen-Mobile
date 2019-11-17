@@ -91,7 +91,6 @@
         android:layout_marginRight="15dp"
         android:background="@drawable/ripple_effect"
         android:fontFamily="@font/rocco_regular"
-        android:onClick="menuKlik"
         android:text="OK"
         android:textColor="#081623"
         android:textSize="20dp"
@@ -99,14 +98,14 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/input_name" />
 
-    <ImageButton
-        android:onClick="ShowPopupNama"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@drawable/setting"
-        android:layout_marginBottom="10dp"
-        android:layout_marginRight="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+<!--    <ImageButton-->
+<!--        android:onClick="ShowPopupNama"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:background="@drawable/setting"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"/>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
