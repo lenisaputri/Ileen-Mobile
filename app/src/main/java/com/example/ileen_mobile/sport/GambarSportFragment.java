@@ -63,7 +63,20 @@ public class GambarSportFragment extends Fragment {
         listSport.add(sport);
         sport = new Sport("Bola Voli","Volley Ball",this.getResources().getDrawable(R.drawable.volleyball));
         listSport.add(sport);
-
+        sport = new Sport("Bola Basket","Basket Ball",this.getResources().getDrawable(R.drawable.basket));
+        listSport.add(sport);
+        sport = new Sport("Panahan","Archery",this.getResources().getDrawable(R.drawable.archery));
+        listSport.add(sport);
+        sport = new Sport("Karate","Karate",this.getResources().getDrawable(R.drawable.karate));
+        listSport.add(sport);
+        sport = new Sport("","",this.getResources().getDrawable(R.drawable.template_1));
+        listSport.add(sport);
+        sport = new Sport("","",this.getResources().getDrawable(R.drawable.template_1));
+        listSport.add(sport);
+        sport = new Sport("","",this.getResources().getDrawable(R.drawable.template_1));
+        listSport.add(sport);
+        sport = new Sport("","",this.getResources().getDrawable(R.drawable.template_1));
+        listSport.add(sport);
 
         SportAdapter sportAdapter = new SportAdapter(listSport);
         rvSport.setAdapter(sportAdapter);
