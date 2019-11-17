@@ -25,4 +25,24 @@ public class PracticeActivity extends AppCompatActivity {
         Intent intent =  new Intent(this, OneActivity.class);
         startActivity(intent);
     }
+
+    public void twoHandler(View view) {
+        Intent intent =  new Intent(this, TwoActivity.class);
+        startActivity(intent);
+    }
+
+    public void threeHandler(View view) {
+        Intent intent =  new Intent(this, ThreeActivity.class);
+        startActivity(intent);
+    }
+
+    public void fourHandler(View view) {
+        Intent intent =  new Intent(this, FourActivity.class);
+        startActivity(intent);
+    }
+
+    public void fiveHandler(View view) {
+        Intent intent =  new Intent(this, FiveActivity.class);
+        startActivity(intent);
+    }
 }

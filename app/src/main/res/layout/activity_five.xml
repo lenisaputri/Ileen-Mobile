@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_menu"
-    tools:context=".practice.OneActivity">
+    tools:context=".practice.FiveActivity">
 
     <ImageView
         android:layout_width="380dp"
@@ -139,6 +139,5 @@
         app:layout_constraintTop_toTopOf="parent"
 
         />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
