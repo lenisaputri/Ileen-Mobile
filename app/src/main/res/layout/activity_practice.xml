@@ -18,8 +18,8 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
         <ImageButton
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:background="@drawable/one_button"
             android:id="@+id/one"
             app:layout_constraintTop_toTopOf="parent"
@@ -29,8 +29,8 @@
             android:onClick="oneHandler"
             />
         <ImageButton
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:id="@+id/lock1"
             android:background="@drawable/two_button"
             app:layout_constraintTop_toBottomOf="@id/one"
@@ -40,8 +40,8 @@
             android:onClick="twoHandler"
             />
         <ImageButton
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:id="@+id/lock2"
             android:background="@drawable/three_button"
             app:layout_constraintTop_toBottomOf="@id/one"
@@ -52,8 +52,8 @@
             android:onClick="threeHandler"
             />
         <ImageButton
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:id="@+id/lock3"
             android:background="@drawable/four_button"
             app:layout_constraintTop_toBottomOf="@id/lock2"
@@ -64,14 +64,14 @@
             android:onClick="fourHandler"
             />
         <ImageButton
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:id="@+id/lock4"
             android:background="@drawable/five_button"
             app:layout_constraintTop_toBottomOf="@id/lock1"
             app:layout_constraintLeft_toRightOf="@id/lock3"
             app:layout_constraintBottom_toTopOf="@+id/lock5"
-            android:layout_marginLeft="100dp"
+            android:layout_marginLeft="110dp"
             android:layout_marginTop="40dp"
             android:onClick="fiveHandler"
             />
