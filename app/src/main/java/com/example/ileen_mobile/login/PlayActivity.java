@@ -197,6 +197,8 @@ public class PlayActivity extends AppCompatActivity {
     }
 
     public void nameButton(View view) {
+
+        myDialog.setContentView(R.layout.rename_input_popup);
         ImageButton button = (ImageButton)findViewById(R.id.button_name);
         final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
 
@@ -216,6 +218,9 @@ public class PlayActivity extends AppCompatActivity {
 
         });
         mp.start();
+
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
     }
 
     public void gradeButton(View view) {
@@ -301,6 +306,8 @@ public class PlayActivity extends AppCompatActivity {
         myDialog.show();
 
     }
+
+
 
     public void coba(View view) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
