@@ -42,6 +42,7 @@ public class GradeAdapter extends RecyclerView.Adapter<GradeAdapter.MyViewHolder
         Grade item = listGrade.get(position);
         holder.txtNilai.setText(item.getNilai());
         holder.txtSoal.setText(item.getSoal());
+        holder.txtLevel.setText(item.getLev());
         holder.imageLevel.setImageDrawable(item.getLevel());
     }
 
@@ -52,12 +53,14 @@ public class GradeAdapter extends RecyclerView.Adapter<GradeAdapter.MyViewHolder
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public ImageView imageLevel;
+        public TextView txtLevel;
         public TextView txtNilai;
         public TextView txtSoal;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             imageLevel = itemView.findViewById(R.id.image_level);
+            txtLevel = itemView.findViewById(R.id.level);
             txtNilai = itemView.findViewById(R.id.srore);
             txtSoal = itemView.findViewById(R.id.question);
         }
