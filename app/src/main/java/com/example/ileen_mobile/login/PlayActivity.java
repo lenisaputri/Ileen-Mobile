@@ -2,9 +2,11 @@ package com.example.ileen_mobile.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.graphics.Color;
@@ -247,6 +249,7 @@ public class PlayActivity extends AppCompatActivity {
         ImageView close_icon;
 
         final Button btnOnMusic;
+//        final Button btnExit;
 
         myDialog.setContentView(R.layout.setting_popup);
         close_icon =(ImageView) myDialog.findViewById(R.id.close_icon);
@@ -271,6 +274,17 @@ public class PlayActivity extends AppCompatActivity {
             }
         });
 
+//        btnExit = (Button) myDialog.findViewById(R.id.btn_exit);
+//        btnExit.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+////                moveTaskToBack(true);
+////                android.os.Process.killProcess(android.os.Process.myPid());
+////                System.exit(1);
+//
+//            }
+//        });
+
         final MediaPlayer mp = MediaPlayer.create(PlayActivity.this, R.raw.click_btn);
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 
@@ -286,6 +300,32 @@ public class PlayActivity extends AppCompatActivity {
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialog.show();
 
+    }
+
+    public void coba(View view) {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle("Exit Application?");
+        alertDialogBuilder
+                .setMessage("Click yes to exit!")
+                .setCancelable(false)
+                .setPositiveButton("Yes",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                moveTaskToBack(true);
+                                android.os.Process.killProcess(android.os.Process.myPid());
+                                System.exit(1);
+                            }
+                        })
+
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+
+                        dialog.cancel();
+                    }
+                });
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
     }
 
     //ANIMASI
