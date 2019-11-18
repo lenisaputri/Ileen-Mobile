@@ -29,7 +29,7 @@
         android:id="@+id/animal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="45dp"
         android:fontFamily="@font/londrina_solid_regular"
         android:text="YOUR GRADE"
         android:textColor="#FFFFFF"
@@ -47,7 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="128dp"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
