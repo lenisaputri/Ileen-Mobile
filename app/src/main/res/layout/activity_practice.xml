@@ -72,7 +72,7 @@
             app:layout_constraintTop_toBottomOf="@id/lock1"
             app:layout_constraintLeft_toRightOf="@id/lock3"
             app:layout_constraintBottom_toTopOf="@+id/lock5"
-            android:layout_marginLeft="140dp"
+            android:layout_marginLeft="100dp"
             android:layout_marginTop="45dp"
             android:onClick="fiveHandler"
             />
