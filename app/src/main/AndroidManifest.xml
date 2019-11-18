@@ -16,6 +16,10 @@
             android:enabled="true" />
 
         <activity android:name=".practice.OneActivity" />
+        <activity android:name=".practice.TwoActivity" />
+        <activity android:name=".practice.ThreeActivity" />
+        <activity android:name=".practice.FourActivity" />
+        <activity android:name=".practice.FiveActivity" />
         <activity android:name=".weather.WeatherActivity" />
         <activity android:name=".transportation.TransportationActivity" />
         <activity android:name=".sport.SportActivity" />
