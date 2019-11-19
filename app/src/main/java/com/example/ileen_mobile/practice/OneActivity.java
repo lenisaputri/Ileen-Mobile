@@ -110,8 +110,8 @@ public class OneActivity extends AppCompatActivity {
         String alertTitle;
 
         if(btnNext.equals(jawabanBenar)){
-            alertTitle = "Right";
-            jawabanBenarLabel=jawabanBenarLabel+10;
+            alertTitle = "True";
+            jawabanBenarLabel++;
         }else {
             alertTitle = "False";
         }
