@@ -24,7 +24,6 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.MyViewHold
     private List<Animal> listAnimal = new ArrayList<>();
     Dialog myDialog;
 
-
     //2 constructor
     public AnimalAdapter(List<Animal> listAnimal) {
         this.listAnimal = listAnimal;
@@ -51,7 +50,7 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.MyViewHold
                 ImageView animalImg = myDialog.findViewById(R.id.img);
                 animalBing.setText(listAnimal.get(viewHolder.getAdapterPosition()).getBing());
                 animalBind.setText(listAnimal.get(viewHolder.getAdapterPosition()).getBind());
-                animalImg.setImageDrawable(listAnimal.get(viewHolder.getAdapterPosition()).getImage());
+//                animalImg.setImageDrawable(listAnimal.get(viewHolder.getAdapterPosition()).getImage());
 
                 myDialog.show();
             }
@@ -64,7 +63,7 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.MyViewHold
     public void onBindViewHolder(@NonNull AnimalAdapter.MyViewHolder holder, int position) {
         Animal item = listAnimal.get(position);
 
-        holder.imageAnimal.setImageDrawable(item.getImage());
+//        holder.imageAnimal.setImageDrawable(item.getImage());
     }
 
     @Override

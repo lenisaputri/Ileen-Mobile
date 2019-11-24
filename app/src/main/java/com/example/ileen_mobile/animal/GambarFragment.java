@@ -1,9 +1,14 @@
 package com.example.ileen_mobile.animal;
 
 
+import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,125 +16,153 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.ileen_mobile.R;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class GambarFragment extends Fragment {
-    //instansiasi Recyclerview
-    RecyclerView rvAnimal;
-    //instansiasi list superhero
-    private AnimalAdapter animalAdapter;
-    List<Animal> listAnimal = new ArrayList<>();
+
+    Dialog myDialog;
+
+    private DatabaseReference mDatabase;
+
+    private FirebaseRecyclerAdapter<Animal, MyViewHolder> mAdapter;
+
     private GridLayoutManager gridLayoutManager;
+    private RecyclerView rvAnimal;
 
     public GambarFragment() {
-        // Required empty public constructor
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View rootView =  inflater.inflate(R.layout.fragment_gambar, container, false);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        View rootView = inflater.inflate(R.layout.fragment_gambar, container, false);
         rvAnimal = rootView.findViewById(R.id.rvAnimal);
-
-        Animal animal = new Animal(this.getResources().getDrawable(R.drawable.camel),"Unta","Camel");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.canary),"Burung Kenari","Canary");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.cat),"Kucing","Cat");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.chicken),"Ayam","Chicken");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.cow),"Sapi","Cow");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.dog),"Anjing","Dog");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.donkey),"Keledai","Donkey");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.dove),"Burung Merpati","Dove");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.duck),"Bebek","Duck");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.goat),"Kambing","Goat");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.goldfish),"Ikan Mas","Goldfish");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.goose),"Angsa","Goose");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.marmut),"Marmut","Guinea Pig");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.hamster),"Hamster","Hamster");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.pig),"Babi","Pig");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.pigeon),"Burung Dara","Pigeon");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.rabbit),"Kelinci","Rabbit");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.sheep),"Domba","Sheep");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.turkey),"Ayam Kalkun","Turkey");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.turtle),"Kura-kura","Turtle");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.koi),"Ikan Koi","Koi");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.bear),"Beruang","Bear");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.crocodile),"Buaya","Crocodile");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.deer),"Rusa","Deer");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.elephant),"Gajah","Elephant");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.flamingo),"Burung Flamingo","Flamingo");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.fox),"Rubah","Fox");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.giraffe),"Jerapah","Giraffe");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.gorila),"Gorila","Gorilla");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.kanggoro),"Kangguru","Kangaroo");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.komodo),"Komodo","Komodo");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.leopard),"Macan Tutul","Leopard");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.lion),"Singa","Lion");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.owl),"Burung Hantu","Owl");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.panda),"Panda","Panda");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.snake),"Ular","Snake");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.tiger),"Harimau","Tiger");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.tiguana),"Iguana","Iguana");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.wolf),"Serigala","Wolf");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.template_1),"","");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.template_1),"","");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.template_1),"","");
-        listAnimal.add(animal);
-        animal = new Animal(this.getResources().getDrawable(R.drawable.template_1),"","");
-        listAnimal.add(animal);
-        AnimalAdapter animalAdapter = new AnimalAdapter(listAnimal);
-        rvAnimal.setAdapter(animalAdapter);
-
         rvAnimal.setLayoutManager(new GridLayoutManager(this.getActivity(), 3));
+
+        Query query = getQuery(mDatabase);
+
+        FirebaseRecyclerOptions options = new FirebaseRecyclerOptions.Builder<Animal>()
+                .setQuery(query, Animal.class)
+                .build();
+
+        mAdapter = new FirebaseRecyclerAdapter<Animal, MyViewHolder>(options) {
+            @Override
+            public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View vh = LayoutInflater.
+                        from(parent.getContext()).
+                        inflate(R.layout.item_animal,parent,false);
+
+                //4 membuat view holder
+
+                final MyViewHolder viewHolder = new MyViewHolder(vh);
+
+                myDialog = new Dialog(parent.getContext());
+                myDialog.setContentView(R.layout.animal_popup);
+
+                return viewHolder;
+            }
+            @Override
+            protected void onBindViewHolder(@NonNull final MyViewHolder holder, int position, @NonNull final Animal model) {
+
+                holder.setDisplayImage(model.getImage_url(), GambarFragment.this);
+
+                holder.animalItem.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        TextView animalBing = myDialog.findViewById(R.id.bing_name);
+                        TextView animalBind = myDialog.findViewById(R.id.bind_name);
+                        ImageView animalImg = myDialog.findViewById(R.id.img);
+
+
+
+                        myDialog.show();
+                    }
+                });
+
+            }
+        };
+
+        mAdapter.notifyDataSetChanged();
+
+        rvAnimal.setAdapter(mAdapter);
+
         return rootView;
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        if (mAdapter != null) {
+            mAdapter.startListening();
+        }
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAdapter != null) {
+            mAdapter.stopListening();
+        }
+    }
+
+    private Query getQuery(DatabaseReference mDatabase){
+        Query query = mDatabase.child("animal-example");
+        return query;
+    }
+
+
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+        private AdapterView.OnItemClickListener listener;
+
+        public ConstraintLayout animalItem;
+        public ImageView imageAnimal;
+        public TextView bingTitle;
+        public TextView bindTitle;
+
+        public MyViewHolder( View itemView) {
+            super(itemView);
+
+            animalItem = itemView.findViewById(R.id.animal_item);
+            imageAnimal = itemView.findViewById(R.id.image_animal);
+            bindTitle = itemView.findViewById(R.id.bind_name);
+            bingTitle = itemView.findViewById(R.id.bing_name);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                }
+            });
+        }
+
+        public void bindToAnimal(Animal animal, View.OnClickListener onClickListener){
+            bindTitle.setText(animal.bind);
+            bingTitle.setText(animal.bing);
+        }
+
+        public void setDisplayImage(String imageUrl, GambarFragment context) {
+            Glide.with(context)
+                    .load(imageUrl)
+                    .into(imageAnimal);
+        }
+
+    }
+
 }

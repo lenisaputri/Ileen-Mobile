@@ -70,7 +70,7 @@
         />
 
     <EditText
-        android:id="@+id/input_name"
+        android:id="@+id/edtUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -84,19 +84,34 @@
         />
 
     <Button
-        android:id="@+id/btn_ok"
-        android:layout_width="130dp"
+        android:id="@+id/btn_sign_in"
+        android:layout_width="70dp"
         android:layout_height="37dp"
         android:layout_marginTop="33dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginRight="95dp"
         android:background="@drawable/ripple_effect"
         android:fontFamily="@font/rocco_regular"
-        android:text="OK"
+        android:text="Sign In"
         android:textColor="#081623"
-        android:textSize="20dp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toRightOf="@+id/guideline4"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input_name" />
+        app:layout_constraintTop_toBottomOf="@id/edtUserName" />
+
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:layout_width="70dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginLeft="100dp"
+        android:background="@drawable/ripple_effect"
+        android:fontFamily="@font/rocco_regular"
+        android:text="Sign Up"
+        android:textColor="#081623"
+        android:textSize="15dp"
+        app:layout_constraintRight_toLeftOf="@+id/guideline4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtUserName" />
 
 <!--    <ImageButton-->
 <!--        android:onClick="ShowPopupNama"-->

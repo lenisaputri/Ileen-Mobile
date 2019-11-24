@@ -1,33 +1,37 @@
 package com.example.ileen_mobile.login;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Dialog;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.ileen_mobile.MainActivity;
 import com.example.ileen_mobile.R;
-import com.example.ileen_mobile.menu.MenuActivity;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class InputNamaActivity extends AppCompatActivity {
 
 //    Dialog myDialog;
 
-    EditText nameInput;
-    Button btnOk;
-    DatabaseReference reff;
-    InputNama inputNama;
+    EditText edtNewUser; //for sing up
+
+    EditText edtUser; //for sign in;
+
+    Button btnSingUp, btnSignIn;
+
+    FirebaseDatabase database;
+    DatabaseReference users;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,77 +39,104 @@ public class InputNamaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_input_nama);
 //        myDialog = new Dialog(this);
 
-        nameInput = findViewById(R.id.input_name);
-        btnOk = findViewById(R.id.btn_ok);
+        database = FirebaseDatabase.getInstance();
+        users = database.getReference("Users");
 
-        inputNama= new InputNama();
-        reff = FirebaseDatabase.getInstance().getReference().child("User");
+        edtUser = (EditText)findViewById(R.id.edtUserName);
 
-        btnOk.setOnClickListener(new View.OnClickListener() {
+        btnSignIn = (Button)findViewById(R.id.btn_sign_in);
+        btnSingUp = (Button)findViewById(R.id.btn_sign_up);
+
+        btnSingUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                inputNama.setInputName(nameInput.getText().toString().trim());
+                showSignUpDialog();
+            }
+        });
 
-                if(inputNama.getInputName().isEmpty()|| inputNama.getInputName().trim().length() == 0 || inputNama.equals("") ||inputNama == null){
-                    Toast.makeText(InputNamaActivity.this, "please enter your name", Toast.LENGTH_LONG).show();
-                }else{
-                    reff.push().setValue(inputNama);
-                    Intent i = new Intent(InputNamaActivity.this, PlayActivity.class);
-                    startActivity(i);
+        btnSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signIn(edtUser.getText().toString());
+            }
+        });
+
+    }
+
+    private void signIn(final String user){
+        users.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.child(user).exists())
+                {
+                    if(!user.isEmpty()) {
+                        User login = dataSnapshot.child(user).getValue(User.class);
+                        if (login.getUserName().equals(user)) {
+                            Intent homeActivity = new Intent(InputNamaActivity.this, PlayActivity.class);
+                            startActivity(homeActivity);
+                            finish();
+                        } else {
+                            Toast.makeText(InputNamaActivity.this, "Please Enter your user name", Toast.LENGTH_SHORT).show();
+                        }
+                    }
                 }
+                else
+                    Toast.makeText(InputNamaActivity.this, "User is not exists !", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
         });
     }
-//    public void menuKlik(View view) {
-//
-//        String name = nameInput.getText().toString();
-//
-//        if(name.isEmpty() || name.length() == 0 || name.equals("") || name == null){
-//            Toast.makeText(this, "please enter your name ", Toast.LENGTH_SHORT).show();
-//        }else{
-//            Intent i = new Intent(InputNamaActivity.this, PlayActivity.class);
-//            startActivity(i);
-//        }
-//
-//        MediaPlayer mp = MediaPlayer.create(InputNamaActivity.this, R.raw.click_btn);
-//        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-//
-//            @Override
-//            public void onCompletion(MediaPlayer mp) {
-//                // TODO Auto-generated method stub
-//                mp.release();
-//            }
-//
-//        });
-//        mp.start();
-//    }
 
-//    public void ShowPopupNama(View view) {
-//        ImageView close_icon;
-//        myDialog.setContentView(R.layout.setting_popup);
-//        close_icon =(ImageView) myDialog.findViewById(R.id.close_icon);
-//        close_icon.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                myDialog.dismiss();
-//            }
-//        });
-//
-//        MediaPlayer mp = MediaPlayer.create(InputNamaActivity.this, R.raw.click_btn);
-//        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-//
-//            @Override
-//            public void onCompletion(MediaPlayer mp) {
-//                // TODO Auto-generated method stub
-//                mp.release();
-//            }
-//
-//        });
-//        mp.start();
-//
-//        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-//        myDialog.show();
-//    }
+    private void showSignUpDialog() {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(InputNamaActivity.this);
+        alertDialog.setTitle("Sign Up");
+        alertDialog.setMessage("Please fill full the information");
 
+        LayoutInflater inflater = this.getLayoutInflater();
+        View sign_up_layout = inflater.inflate(R.layout.sign_up_layout,null);
+
+        edtNewUser = sign_up_layout.findViewById(R.id.edtNewUserName);
+
+        alertDialog.setView(sign_up_layout);
+
+        alertDialog.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+
+        alertDialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                final User user = new User(edtNewUser.getText().toString());
+
+                users.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.child(user.getUserName()).exists())
+                        {
+                            Toast.makeText(InputNamaActivity.this,"User already exists!",Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                        {
+                            users.child(user.getUserName()).setValue(user);
+                            Toast.makeText(InputNamaActivity.this,"User registration success!",Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+                dialogInterface.dismiss();
+            }
+        });
+        alertDialog.show();
+    }
 }

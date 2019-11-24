@@ -2,24 +2,33 @@ package com.example.ileen_mobile.animal;
 
 import android.graphics.drawable.Drawable;
 
+import com.google.firebase.database.Exclude;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class Animal {
     public String bind;
     public String bing;
-    public Drawable image;
+    public String image_url;
 
-    public Animal(Drawable image,String bind, String bing)
+    public Animal(){
+
+    }
+
+    public Animal(String image_url,String bind, String bing)
     {
         this.bind = bind;
         this.bing = bing;
-        this.image = image;
+        this.image_url = image_url;
     }
 
-    public Drawable getImage() {
-        return image;
+    public String getImage_url() {
+        return image_url;
     }
 
-    public void setImage(Drawable image) {
-        this.image = image;
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
     }
 
     public String getBind() {
@@ -36,5 +45,14 @@ public class Animal {
 
     public void setBing(String bing) {
         this.bing = bing;
+    }
+
+    @Exclude
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("bind", bind);
+        result.put("bing", bing);
+        result.put("image_url", image_url);
+        return result;
     }
 }
