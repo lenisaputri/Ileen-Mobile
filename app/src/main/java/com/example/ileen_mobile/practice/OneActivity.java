@@ -42,7 +42,7 @@ public class OneActivity extends AppCompatActivity {
             {"A monkey like to eat...","Banana","Bread","Meat","Milk"},
             {"These animal have two legs, except ...","Zebra","Duck","Bird","Chicken"},
             {"We have a... at 07.30 pm","Breakfast","Lunch","Dinner","SemiLunch"},
-            {"These animal is big animal. It has a long nose. It is an...","Elephant","Monkey","Tiger","Ant"},
+            {"These animal is big animal. It has a long nose. \nIt is an...","Elephant","Monkey","Tiger","Ant"},
             {"The animal that can climb the tree is..","Monkey","Bird","Giraffe","Chicken"},
             {"Animal who lives in the sea . . . .","Dolphin","Goat","Rabbit","Mouse"},
             {". . .  is a dangerous animal","Tiger","Cat","Sheep","Mouse"},
