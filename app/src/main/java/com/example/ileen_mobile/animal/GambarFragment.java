@@ -90,7 +90,9 @@ public class GambarFragment extends Fragment {
                         TextView animalBind = myDialog.findViewById(R.id.bind_name);
                         ImageView animalImg = myDialog.findViewById(R.id.img);
 
-
+                        animalBing.setText(model.getBing());
+                        animalBind.setText(model.getBind());
+//                        animalImg.setImageResource(model.getImage_url());
 
                         myDialog.show();
                     }
@@ -150,11 +152,6 @@ public class GambarFragment extends Fragment {
 
                 }
             });
-        }
-
-        public void bindToAnimal(Animal animal, View.OnClickListener onClickListener){
-            bindTitle.setText(animal.bind);
-            bingTitle.setText(animal.bing);
         }
 
         public void setDisplayImage(String imageUrl, GambarFragment context) {
