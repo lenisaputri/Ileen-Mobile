@@ -39,7 +39,7 @@ public class OneActivity extends AppCompatActivity {
 
     String quizData[][] =  {
             {"Complete the following words, C _ _ (kucing) ","CAT","CUT","CIT","CAY"},
-            {"A monkey like to eat...","Banana","Bread","Meat","Milk"},
+            {"A monk    ey like to eat...","Banana","Bread","Meat","Milk"},
             {"These animal have two legs, except ...","Zebra","Duck","Bird","Chicken"},
             {"We have a... at 07.30 pm","Breakfast","Lunch","Dinner","SemiLunch"},
             {"These animal is big animal. It has a long nose."+ "\n","It is an...","Elephant","Monkey","Tiger","Ant"},

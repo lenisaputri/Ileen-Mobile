@@ -1,6 +1,8 @@
 package com.example.ileen_mobile.food;
 
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
+import android.net.Uri;
 
 public class Food {
     public String bind;
