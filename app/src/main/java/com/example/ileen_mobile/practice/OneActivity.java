@@ -38,15 +38,15 @@ public class OneActivity extends AppCompatActivity {
 
 
     String quizData[][] =  {
-            {"What is the weather today ? we using umbrella ?","It is rainy","It is foggy","It is windy","It is sunny"},
-            {"In England we have four season are...","Summer,authumn,winter,spring","Summer,authumn,spring,rainy","Summer,authumn,spring,dry","Summer,authumn,spring,season"},
-            {"There are season in indonesia, they are ...","Rainy and dry","Summer and winter","Wet and snowy","Authumn and spring"},
-            {"Twenty degrees Fahrenheit in the number is ...","20ºF","22ºF","12ºF","21ºC"},
-            {"We can see water falling from the sky at ?","Rainy","Sunny","Summer","Dry Season"},
-            {"We can see snow in the ...","Winter","Spring","Summer","Autumn"},
-            {"Don’t forget to bring...in dry season","Hat","Jacket","Gloves","Sock"},
-            {"Jhon is tall but sardi is ...","Short","Long","Small","Beautifull"},
-            {"Keep ...My baby is sleeping.","Silent","Noisy","Crying","Standing"},
+            {"Complete the following words, C _ _ (kucing) ","CAT","CUT","CIT","CAY"},
+            {"A monkey like to eat...","Banana","Bread","Meat","Milk"},
+            {"These animal have two legs, except ...","Zebra","Duck","Bird","Chicken"},
+            {"We have a... at 07.30 pm","Breakfast","Lunch","Dinner","SemiLunch"},
+            {"These animal is big animal. It has a long nose."+ "\n","It is an...","Elephant","Monkey","Tiger","Ant"},
+            {"The animal that can climb the tree is..","Monkey","Bird","Giraffe","Chicken"},
+            {"Animal who lives in the sea . . . .","Dolphin","Goat","Rabbit","Mouse"},
+            {". . .  is a dangerous animal","Tiger","Cat","Sheep","Mouse"},
+            {"Animal that has long neck is . . . .\n","Giraffe","Lion","Mouse","Cat"},
             {"Kuda in English?","Horse","Chicken","Goat","Elephant"},
 
 
