@@ -26,7 +26,7 @@ public class ResultActivity extends AppCompatActivity {
 
         SharedPreferences setting = getSharedPreferences("ILEN", Context.MODE_PRIVATE);
         int totalScore = setting.getInt("totalScore", 0);
-        totalScore += score;
+        totalScore = score;
 
         resultLabel.setText(score + " / 10");
         totalScoreLabel.setText("Total Score : " + totalScore);
