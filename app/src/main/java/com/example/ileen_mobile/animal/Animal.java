@@ -11,16 +11,18 @@ public class Animal {
     public String bind;
     public String bing;
     public String image_url;
+    public String audio_url;
 
     public Animal(){
 
     }
 
-    public Animal(String image_url,String bind, String bing)
+    public Animal(String image_url,String bind, String bing, String audio_url)
     {
         this.bind = bind;
         this.bing = bing;
         this.image_url = image_url;
+        this.audio_url = audio_url;
     }
 
     public String getImage_url() {
@@ -47,12 +49,21 @@ public class Animal {
         this.bing = bing;
     }
 
+    public String getAudio_url() {
+        return audio_url;
+    }
+
+    public void setAudio_url(String audio_url) {
+        this.audio_url = audio_url;
+    }
+
     @Exclude
     public Map<String, Object> toMap() {
         HashMap<String, Object> result = new HashMap<>();
         result.put("bind", bind);
         result.put("bing", bing);
         result.put("image_url", image_url);
+        result.put("audio_url", audio_url);
         return result;
     }
 }

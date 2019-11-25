@@ -4,6 +4,9 @@ package com.example.ileen_mobile.animal;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,10 +16,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,16 +32,17 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
-
-import java.util.ArrayList;
-import java.util.List;
-
+import java.io.IOException;
 
 public class GambarFragment extends Fragment {
 
     Dialog myDialog;
 
+    private MediaPlayer mediaPlayer;
+
     private DatabaseReference mDatabase;
+
+    private Handler threadHandler = new Handler();
 
     private FirebaseRecyclerAdapter<Animal, MyViewHolder> mAdapter;
 
@@ -85,14 +91,38 @@ public class GambarFragment extends Fragment {
 
                 holder.animalItem.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view) {
+                    public void onClick(final View view) {
                         TextView animalBing = myDialog.findViewById(R.id.bing_name);
                         TextView animalBind = myDialog.findViewById(R.id.bind_name);
                         ImageView animalImg = myDialog.findViewById(R.id.img);
 
+                        final Button buttonStart = myDialog.findViewById(R.id.button_start);
+
                         animalBing.setText(model.getBing());
                         animalBind.setText(model.getBind());
-//                        animalImg.setImageResource();
+
+                        Glide.with(getActivity())
+                                .load(model.getImage_url())
+                                .into(animalImg);
+
+                        buttonStart.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                    mediaPlayer = new MediaPlayer();
+                                    mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+
+                                    try {
+                                        mediaPlayer.setDataSource(model.getAudio_url());
+                                        mediaPlayer.prepare();
+                                        mediaPlayer.start();
+
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
+
+                            }
+
+                        });
 
                         myDialog.show();
                     }
@@ -137,6 +167,10 @@ public class GambarFragment extends Fragment {
         public ImageView imageAnimal;
         public TextView bingTitle;
         public TextView bindTitle;
+
+        public Button buttonStart;
+        public Button buttonPause;
+
 
         public MyViewHolder( View itemView) {
             super(itemView);

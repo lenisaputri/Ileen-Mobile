@@ -22,7 +22,6 @@
             android:padding="10dp"
             android:id="@+id/img"
             android:text="image_url"
-            android:src="@drawable/camel"
             android:scaleType="centerCrop"
             />
         <TextView
@@ -50,5 +49,17 @@
             android:background="@color/colorPrimary"
             android:padding="5dp"
             />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:id="@+id/button_start"
+            android:layout_alignBottom="@+id/button_rewind"
+            android:layout_toRightOf="@+id/button_rewind"
+            android:layout_toEndOf="@+id/button_rewind"
+            android:onClick="doStart" />
+
     </LinearLayout>
 </RelativeLayout>
