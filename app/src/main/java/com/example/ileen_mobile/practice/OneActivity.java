@@ -6,135 +6,152 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.ileen_mobile.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-public class OneActivity extends AppCompatActivity {
+import javax.xml.transform.Result;
 
-    private TextView Label;
-    private TextView questionLabel;
-    private ImageView imageView;
-    private Button jawaban1;
-    private Button jawaban2;
-    private Button jawaban3;
-    private Button jawaban4;
+public class OneActivity extends AppCompatActivity implements View.OnClickListener{
+    final static long INTERVAL = 1000;//1sec
+    final static long TIMEOUT = 600000;//7sec
+    int progressValue = 0;
 
+    CountDownTimer mCountDown;
 
-    private String jawabanBenar;
-    private int jawabanBenarLabel = 0;
-    private int quizCount = 1;
-    static final private int QUIZ_COUNT = 10;
-
-    ArrayList<ArrayList<String>> quizArray = new ArrayList<>();
+    int index = 0,score = 0, thisQuestion=0,totalQuestion,correctAnswer;
 
 
-
-    String quizData[][] =  {
-            {"Complete the following words, C _ _ (kucing) ","CAT","CUT","CIT","CAY"},
-            {"A monkey like to eat...","Banana","Bread","Meat","Milk"},
-            {"These animal have two legs, except ...","Zebra","Duck","Bird","Chicken"},
-            {"We have a... at 07.30 pm","Breakfast","Lunch","Dinner","SemiLunch"},
-            {"These animal is big animal. It has a long nose. \nIt is an...","Elephant","Monkey","Tiger","Ant"},
-            {"The animal that can climb the tree is..","Monkey","Bird","Giraffe","Chicken"},
-            {"Animal who lives in the sea . . . .","Dolphin","Goat","Rabbit","Mouse"},
-            {". . .  is a dangerous animal","Tiger","Cat","Sheep","Mouse"},
-            {"Animal that has long neck is . . . .","Giraffe","Lion","Mouse","Cat"},
-            {"Kuda in English?","Horse","Chicken","Goat","Elephant"},
-
-
-    };
+    ProgressBar progressBar;
+    ImageView question_image;
+    Button btnA,btnB,btnC,btnD;
+    TextView txtScore,txtQuestionNum,question_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one);
 
-        Label = (TextView)findViewById(R.id.Label);
-        questionLabel = (TextView)findViewById(R.id.questionLabel);
-        imageView = (ImageView)findViewById(R.id.soal);
-        jawaban1 = (Button)findViewById(R.id.jawaban1);
-        jawaban2 = (Button)findViewById(R.id.jawaban2);
-        jawaban3 = (Button)findViewById(R.id.jawaban3);
-        jawaban4 = (Button)findViewById(R.id.jawaban4);
+        //Views
+        txtScore = findViewById(R.id.txtScore);
+        txtQuestionNum = findViewById(R.id.txtTotalQuestion);
+        question_text = findViewById(R.id.question_text);
+        question_image = findViewById(R.id.question_image);
 
+        progressBar = findViewById(R.id.progressBar);
 
-        for (int i = 0; i < quizData.length; i++){
-            ArrayList<String> tmpArray = new ArrayList<>();
-            tmpArray.add(quizData[i][0]);
-            tmpArray.add(quizData[i][1]);
-            tmpArray.add(quizData[i][2]);
-            tmpArray.add(quizData[i][3]);
-            tmpArray.add(quizData[i][4]);
+        btnA = findViewById(R.id.btnAnswerA);
+        btnB = findViewById(R.id.btnAnswerB);
+        btnC = findViewById(R.id.btnAnswerC);
+        btnD = findViewById(R.id.btnAnswerD);
 
-            quizArray.add(tmpArray);
-        }
-
-        showNextQuiz();
-    }
-
-    public void showNextQuiz() {
-        Label.setText("Q" + quizCount);
-
-        Random random = new Random();
-        int randomNum = random.nextInt(quizArray.size());
-
-        ArrayList<String> ganda = quizArray.get(randomNum);
-
-        questionLabel.setText(ganda.get(0));
-        jawabanBenar = ganda.get(1);
-
-        ganda.remove(0);
-        Collections.shuffle(ganda);
-
-        jawaban1.setText(ganda.get(0));
-        jawaban2.setText(ganda.get(1));
-        jawaban3.setText(ganda.get(2));
-        jawaban4.setText(ganda.get(3));
-
-        quizArray.remove(randomNum);
+        btnA.setOnClickListener(this);
+        btnB.setOnClickListener(this);
+        btnC.setOnClickListener(this);
+        btnD.setOnClickListener(this);
 
     }
 
-    public void checkAnswer(View view){
-        Button btnJawab = (Button) findViewById(view.getId());
-        String btnNext = btnJawab.getText().toString();
-
-        String alertTitle;
-
-        if(btnNext.equals(jawabanBenar)){
-            alertTitle = "True";
-            jawabanBenarLabel++;
-        }else {
-            alertTitle = "False";
-        }
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(alertTitle);
-        builder.setMessage("Jawaban : " + jawabanBenar);
-        builder.setPositiveButton("NEXT", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int i) {
-                if (quizCount == QUIZ_COUNT){
-                    Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
-                    intent.putExtra("JAWABAN_BENAR_LABEL", jawabanBenarLabel);
-                    startActivity(intent);
-                }else {
-                    quizCount++;
-                    showNextQuiz();
-
-                }
+    @Override
+    public void onClick(View v) {
+        mCountDown.cancel();
+        if(index < totalQuestion) //still have question in list
+        {
+            Button clickedButton = (Button)v;
+            if (clickedButton.getText().equals(Common.questionList.get(index).getCorrectAnswer()))
+            {
+                //Choose correct answer
+                score+=10;
+                correctAnswer++;
+                showQuestion(++index);
             }
-        });
-        builder.setCancelable(false);
-        builder.show();
+            else
+            {
+                score+=0;
+                correctAnswer+=0;
+                showQuestion(++index);
+            }
 
+            txtScore.setText(String.format("%d",score));
+
+        }
+    }
+
+    private void showQuestion(int index) {
+        if(index<totalQuestion)
+        {
+            thisQuestion++;
+            txtQuestionNum.setText(String.format("%d / %d",thisQuestion,totalQuestion));
+            progressBar.setProgress(0);
+            progressValue=0;
+
+            if (Common.questionList.get(index).getIsImageQuestion().equals(true))
+            {
+                //if is image
+                Glide.with(getBaseContext())
+                        .load(Common.questionList.get(index).getQuestion())
+                        .into(question_image);
+                question_image.setVisibility(View.VISIBLE);
+                question_text.setVisibility(View.INVISIBLE);
+            }
+            else
+            {
+                question_text.setText(Common.questionList.get(index).getQuestion());
+
+                question_image.setVisibility(View.INVISIBLE);
+                question_text.setVisibility(View.VISIBLE);
+            }
+
+            btnA.setText(Common.questionList.get(index).getAnswerA());
+            btnB.setText(Common.questionList.get(index).getAnswerB());
+            btnC.setText(Common.questionList.get(index).getAnswerC());
+            btnD.setText(Common.questionList.get(index).getAnswerD());
+
+            mCountDown.start(); //set timer
+        }
+        else
+        {
+            //if it is final question
+            Intent intent = new Intent(this, Result.class);
+            Bundle dataSend = new Bundle();
+            dataSend.putInt("SCORE",score);
+            dataSend.putInt("TOTAL",totalQuestion);
+            dataSend.putInt("CORRECT",correctAnswer);
+            intent.putExtras(dataSend);
+            startActivity(intent);
+            finish();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        totalQuestion = Common.questionList.size();
+
+        mCountDown = new CountDownTimer(TIMEOUT,INTERVAL) {
+            @Override
+            public void onTick(long minisec) {
+                progressBar.setProgress(progressValue);
+                progressValue++;
+            }
+
+            @Override
+            public void onFinish() {
+                mCountDown.cancel();
+                showQuestion(++index);
+            }
+        };
+        showQuestion(index);
     }
 }

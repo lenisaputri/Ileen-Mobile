@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -30,26 +31,44 @@
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         />
-
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:id="@+id/question_image"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnAnswerA"
+        />
 
     <TextView
-        android:id="@+id/questionLabel"
+        android:id="@+id/question_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Question"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/jawaban1"
+        app:layout_constraintBottom_toTopOf="@id/btnAnswerA"
         android:textSize="18dp"
         android:textColor="#FFFFFF"
         android:fontFamily="@font/londrina_solid_regular"
+        />
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:max="5"
+        app:layout_constraintBottom_toTopOf="@id/btnAnswerA"
         />
     <Button
         android:layout_width="330dp"
         android:layout_height="45dp"
         android:background="#3994dc"
-        android:id="@+id/jawaban1"
+        android:id="@+id/btnAnswerA"
         app:layout_constraintTop_toBottomOf="@id/soal"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -60,14 +79,13 @@
         android:textSize="14dp"
         android:textColor="#FFFFFF"
         android:fontFamily="@font/londrina_solid_regular"
-        android:onClick="checkAnswer"
         />
     <Button
         android:layout_width="330dp"
         android:layout_height="45dp"
         android:background="#3994dc"
-        android:id="@+id/jawaban2"
-        app:layout_constraintTop_toBottomOf="@id/jawaban1"
+        android:id="@+id/btnAnswerB"
+        app:layout_constraintTop_toBottomOf="@id/btnAnswerA"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="10dp"
@@ -77,14 +95,13 @@
         android:textSize="14dp"
         android:textColor="#FFFFFF"
         android:fontFamily="@font/londrina_solid_regular"
-        android:onClick="checkAnswer"
         />
     <Button
         android:layout_width="330dp"
         android:layout_height="45dp"
         android:background="#3994dc"
-        android:id="@+id/jawaban3"
-        app:layout_constraintTop_toBottomOf="@id/jawaban2"
+        android:id="@+id/btnAnswerC"
+        app:layout_constraintTop_toBottomOf="@id/btnAnswerB"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="10dp"
@@ -94,14 +111,13 @@
         android:textSize="14dp"
         android:textColor="#FFFFFF"
         android:fontFamily="@font/londrina_solid_regular"
-        android:onClick="checkAnswer"
         />
     <Button
         android:layout_width="330dp"
         android:layout_height="45dp"
         android:background="#3994dc"
-        android:id="@+id/jawaban4"
-        app:layout_constraintTop_toBottomOf="@id/jawaban3"
+        android:id="@+id/btnAnswerD"
+        app:layout_constraintTop_toBottomOf="@id/btnAnswerC"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="10dp"
@@ -111,7 +127,6 @@
         android:textSize="14dp"
         android:textColor="#FFFFFF"
         android:fontFamily="@font/londrina_solid_regular"
-        android:onClick="checkAnswer"
         />
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -124,21 +139,34 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         />
-
-    <TextView
-        android:id="@+id/Label"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/londrina_solid_regular"
-        android:text="1/10"
-        android:textColor="#FFFFFF"
-        android:textSize="35dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/txtScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/londrina_solid_regular"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="35dp"
+            />
+        <TextView
+            android:id="@+id/txtTotalQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="290dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/londrina_solid_regular"
+            android:text="1/10"
+            android:textColor="#FFFFFF"
+            android:textSize="35dp"
+            />
+    </LinearLayout>
 
-        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

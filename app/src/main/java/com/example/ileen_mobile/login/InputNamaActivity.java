@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.ileen_mobile.R;
+import com.example.ileen_mobile.practice.Common;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -73,6 +74,7 @@ public class InputNamaActivity extends AppCompatActivity {
                         User login = dataSnapshot.child(user).getValue(User.class);
                         if (login.getUserName().equals(user)) {
                             Intent homeActivity = new Intent(InputNamaActivity.this, PlayActivity.class);
+                            Common.currentUser = login;
                             startActivity(homeActivity);
                             finish();
                         } else {

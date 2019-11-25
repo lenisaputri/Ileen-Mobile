@@ -1,136 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".practice.PracticeActivity"
+    android:background="@drawable/bg_practice">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
-
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/bg_practice"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/one_button"
-            android:id="@+id/one"
+            android:id="@+id/board"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:src="@drawable/logo_board"
+            app:layout_constraintBottom_toTopOf="@id/guideline5"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/guideline6"
-            app:layout_constraintLeft_toLeftOf="@+id/guideline7"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="5dp"
-            android:onClick="oneHandler"
             />
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/lock1"
-            android:background="@drawable/two_button"
-            app:layout_constraintTop_toBottomOf="@id/one"
+        <TextView
+            android:id="@+id/practice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:fontFamily="@font/londrina_solid_regular"
+            android:text="PRACTICE"
+            android:textColor="#FFFFFF"
+            android:textSize="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="40dp"
-            android:onClick="twoHandler"
-            />
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/lock2"
-            android:background="@drawable/three_button"
-            app:layout_constraintTop_toBottomOf="@id/one"
-            app:layout_constraintRight_toLeftOf="@id/lock1"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listCategory"
+            app:layout_constraintTop_toBottomOf="@+id/guideline5"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginRight="70dp"
-            android:layout_marginTop="60dp"
-            android:onClick="threeHandler"
-            />
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/lock3"
-            android:background="@drawable/four_button"
-            app:layout_constraintTop_toBottomOf="@id/lock2"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/lock4"
-            android:layout_marginLeft="95dp"
-            android:layout_marginTop="45dp"
-            android:onClick="fourHandler"
-            />
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/lock4"
-            android:background="@drawable/five_button"
-            app:layout_constraintTop_toBottomOf="@id/lock1"
-            app:layout_constraintLeft_toRightOf="@id/lock3"
-            app:layout_constraintBottom_toTopOf="@+id/lock5"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="70dp"
-            android:onClick="fiveHandler"
-            />
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/lock5"
-            android:background="@drawable/lock_button"
-            app:layout_constraintTop_toBottomOf="@id/lock4"
             app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="45dp"
-            />
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/lock6"
-            android:background="@drawable/lock_button"
-            app:layout_constraintTop_toBottomOf="@id/lock3"
-            app:layout_constraintRight_toLeftOf="@id/lock5"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginRight="180dp"
-            android:layout_marginTop="50dp"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ImageButton
-            android:id="@+id/lock7"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="55dp"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/lock_button"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/lock6"
-            />
-        <ImageButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/lock8"
-            android:background="@drawable/lock_button"
-            app:layout_constraintTop_toBottomOf="@id/lock5"
-            app:layout_constraintLeft_toRightOf="@id/lock7"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="220dp"
-            android:layout_marginRight="20dp"
-            />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

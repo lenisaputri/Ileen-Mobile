@@ -33,21 +33,21 @@
         />
 
     <TextView
-        android:id="@+id/resultLabel"
+        android:id="@+id/txtTotalQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="3 / 10"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/totalScoreLabel"
+        app:layout_constraintBottom_toTopOf="@id/txtTotalScore"
         android:textSize="30dp"
         android:textColor="#FFFFFF"
         android:fontFamily="@font/londrina_solid_regular"
         />
 
     <TextView
-        android:id="@+id/totalScoreLabel"
+        android:id="@+id/txtTotalScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Total Score : 333"
@@ -59,7 +59,15 @@
         android:textColor="#FFFFFF"
         android:fontFamily="@font/londrina_solid_regular"
         />
-
+    <ProgressBar
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/doneProgressBar"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotalScore"
+        />
     <Button
         android:layout_width="330dp"
         android:layout_height="45dp"
