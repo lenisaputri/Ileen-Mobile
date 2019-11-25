@@ -92,7 +92,7 @@ public class GambarFragment extends Fragment {
 
                         animalBing.setText(model.getBing());
                         animalBind.setText(model.getBind());
-//                        animalImg.setImageResource(model.getImage_url());
+//                        animalImg.setImageResource();
 
                         myDialog.show();
                     }
