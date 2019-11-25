@@ -37,16 +37,16 @@ public class TwoActivity extends AppCompatActivity {
 
 
     String quizData[][] =  {
-            {"What is the weather today?we using umbrella?","It is rainy","It is foggy","It is windy","It is sunny"},
-            {"In England we have four season are...","Summer,authumn,winter,spring","Summer,authumn,spring,rainy","Summer,authumn,spring,dry","Summer,authumn,spring,season"},
-            {"There are season in indonesia, they are ...","Rainy and dry","Summer and winter","Wet and snowy","Authumn and spring"},
-            {"Twenty degrees Fahrenheit in the number is ...","20ºF","22ºF","12ºF","21ºC"},
-            {"We can see water falling from the sky at ?","Rainy","Sunny","Summer","Dry Season"},
-            {"We can see snow in the ...","Winter","Spring","Summer","Autumn"},
-            {"Don’t forget to bring...in dry season","Hat","Jacket","Gloves","Sock"},
-            {"Jhon is tall but sardi is ...","Short","Long","Small","Beautifull"},
-            {"Keep ...My baby is sleeping.","Silent","Noisy","Crying","Standing"},
-            {"Kuda in English?","Horse","Chicken","Goat","Elephant"},
+            {"A: What do you want to eat ? \n B: __________","Pizza","Ice Cream","Milk","Juice"},
+            {"A: What do you want to drink ? \n B: __________","Milk","Rice","Orange","Bread"},
+            {"The number after eighteen is...","Nineteen","Seventeen","Sixteen","Twenty"},
+            {"Ten multiple by five (10 x 5) is ...","Fifty","Five","Fifty five","Fifteen"},
+            {"Soto, nasi goreng, and rice are kinds of ...","Food","Drink","Vegetables","Fruit"},
+            {"I like to eat ... for breakfast.","Bread","Juice","Milk","Ice Cream"},
+            {"The baby drinks a bottle of ...","Milk","Juice","Soda","Coffee"},
+            {"This book cost is fifteen thousand rupiahs ...","Rp. 15.000","Rp. 50.000","Rp. 55.000","Rp. 25.000"},
+            {"Seven thousand and five hundred ...","7500","75","75000","750"},
+            {"Milk, juice, and coffee are kinds of ... ","Drink","Food","Fruit","Vegetables"},
 
 
     };
