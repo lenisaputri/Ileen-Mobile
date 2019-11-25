@@ -53,17 +53,17 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.MyViewHolder> 
 
                 myDialog.show();
 
-//                switch(listFood.size())
-//                {
-//                    case 0  :
-//                        MediaPlayer mediaPlayer = MediaPlayer.create(v.getContext(), R.raw.bread);
-//                        mediaPlayer.start();
-//                        break;
-//                    case 1:
-//                        mediaPlayer = MediaPlayer.create(v.getContext(), R.raw.cookies);
-//                        mediaPlayer.start();
-//                        break;
-//                }
+                switch(listFood.size())
+                {
+                    case R.drawable.bread  :
+                        MediaPlayer mediaPlayer = MediaPlayer.create(v.getContext(), R.raw.bread);
+                        mediaPlayer.start();
+                        break;
+                    case R.drawable.cookies:
+                        mediaPlayer = MediaPlayer.create(v.getContext(), R.raw.cookies);
+                        mediaPlayer.start();
+                        break;
+                }
             }
         });
 

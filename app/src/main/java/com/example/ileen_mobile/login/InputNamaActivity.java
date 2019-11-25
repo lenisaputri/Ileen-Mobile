@@ -92,9 +92,10 @@ public class InputNamaActivity extends AppCompatActivity {
     }
 
     private void showSignUpDialog() {
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(InputNamaActivity.this);
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(InputNamaActivity.this,R.style.MyDialogTheme);
         alertDialog.setTitle("Sign Up");
         alertDialog.setMessage("Please fill full the information");
+        alertDialog.setIcon(R.drawable.signup_icon);
 
         LayoutInflater inflater = this.getLayoutInflater();
         View sign_up_layout = inflater.inflate(R.layout.sign_up_layout,null);
@@ -103,7 +104,7 @@ public class InputNamaActivity extends AppCompatActivity {
 
         alertDialog.setView(sign_up_layout);
 
-        alertDialog.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+        alertDialog.setNegativeButton("NO" ,new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();
