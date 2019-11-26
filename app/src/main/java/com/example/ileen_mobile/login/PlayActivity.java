@@ -25,7 +25,8 @@ import android.widget.ImageView;
 import com.example.ileen_mobile.R;
 import com.example.ileen_mobile.grade.GradeActivity;
 import com.example.ileen_mobile.menu.MenuActivity;
-import com.example.ileen_mobile.practice.PracticeActivity;
+import com.example.ileen_mobile.practice.CategoryPracticeActivity;
+import com.example.ileen_mobile.practice.Model.Category;
 
 public class PlayActivity extends AppCompatActivity {
 
@@ -165,7 +166,7 @@ public class PlayActivity extends AppCompatActivity {
         });
         mp.start();
 
-        Intent intent =  new Intent(PlayActivity.this, PracticeActivity.class);
+        Intent intent =  new Intent(PlayActivity.this, CategoryPracticeActivity.class);
         startActivity(intent);
 
 

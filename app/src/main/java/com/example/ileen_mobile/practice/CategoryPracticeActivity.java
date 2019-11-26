@@ -1,81 +1,53 @@
 package com.example.ileen_mobile.practice;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.ileen_mobile.R;
-import com.example.ileen_mobile.menu.MenuActivity;
-import com.example.ileen_mobile.weather.WeatherActivity;
+import com.example.ileen_mobile.practice.Interface.ItemClickListener;
+import com.example.ileen_mobile.practice.Model.Category;
+import com.example.ileen_mobile.practice.ViewHolder.CategoryViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.example.ileen_mobile.practice.Common;
 
-public class PracticeActivity extends AppCompatActivity{
-
+public class CategoryPracticeActivity extends AppCompatActivity {
     RecyclerView listCategory;
-
     RecyclerView.LayoutManager layoutManager;
     FirebaseRecyclerAdapter<Category, CategoryViewHolder> adapter;
 
     FirebaseDatabase database;
     DatabaseReference categories;
 
-    public static PracticeActivity newInstances()
+    public static CategoryPracticeActivity newInstances()
     {
-        PracticeActivity practiceActivity = new PracticeActivity();
-        return practiceActivity;
+        CategoryPracticeActivity categoryPracticeActivity = new CategoryPracticeActivity();
+        return categoryPracticeActivity;
     }
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_practice);
+        setContentView(R.layout.activity_category_practice);
 
         database = FirebaseDatabase.getInstance();
         categories = database.getReference("Category");
 
         listCategory = findViewById(R.id.listCategory);
         listCategory.setHasFixedSize(true);
-        layoutManager = new GridLayoutManager(getApplicationContext(),2);
+        layoutManager = new LinearLayoutManager(this);
         listCategory.setLayoutManager(layoutManager);
-        listCategory.setAdapter(adapter);
 
-        loadCategories();
-    }
-
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                             Bundle savedInstanceState) {
-//        // Inflate the layout for this fragment
-//        myFragment = inflater.inflate(R.layout.activity_practice,container,false);
-//
-//        listCategory = myFragment.findViewById(R.id.listCategory);
-//        listCategory.setHasFixedSize(true);
-//        layoutManager = new GridLayoutManager(container.getContext(),2);
-//        listCategory.setLayoutManager(layoutManager);
-//
-//        loadCategories();
-//
-//        return myFragment;
-//    }
-
-    private void loadCategories() {
         FirebaseRecyclerOptions<Category> options =
                 new FirebaseRecyclerOptions.Builder<Category>()
                         .setQuery(categories, Category.class)
@@ -87,23 +59,20 @@ public class PracticeActivity extends AppCompatActivity{
             @Override
             public CategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                 LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-                return new CategoryViewHolder(inflater.inflate(R.layout.item_category, parent, false));
+                return new CategoryViewHolder(inflater.inflate(R.layout.category_layout, parent, false));
             }
 
             @Override
             protected void onBindViewHolder(@NonNull CategoryViewHolder viewHolder, int position, @NonNull final Category model) {
                 viewHolder.category_name.setText(model.getName());
-                Glide.with(getApplicationContext())
+                Glide.with(viewHolder.itemView)
                         .load(model.getImage())
                         .into(viewHolder.category_image);
 
                 viewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        //Toast.makeText(getActivity(), String.format("%s|%s", adapter.getRef(position).getKey(), model.getName()), Toast.LENGTH_SHORT).show();
-                        Intent startGame = new Intent(getApplicationContext(),Start.class);
-                        Common.categoryId = adapter.getRef(position).getKey();
-                        startActivity(startGame);
+                        Toast.makeText(view.getContext(), String.format("%s|%s", adapter.getRef(position).getKey(), model.getName()), Toast.LENGTH_SHORT).show();
                     }
                 });
             }

@@ -1,4 +1,4 @@
-package com.example.ileen_mobile.practice;
+package com.example.ileen_mobile.practice.Model;
 
 import com.google.firebase.database.Exclude;
 
@@ -42,4 +42,3 @@ public class Category {
         return result;
     }
 }
-

@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.ileen_mobile.R;
+import com.example.ileen_mobile.practice.Model.Category;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -39,7 +40,7 @@ public class ResultActivity extends AppCompatActivity {
         btnTryAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ResultActivity.this,PracticeActivity.class);
+                Intent intent = new Intent(ResultActivity.this, CategoryPracticeActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -70,7 +71,7 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     public void exitTop(View view) {
-        Intent intent = new Intent(this, PracticeActivity.class);
+        Intent intent = new Intent(this, CategoryPracticeActivity.class);
         startActivity(intent);
     }
 }

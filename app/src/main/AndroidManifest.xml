@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".practice.CategoryPracticeActivity"></activity>
         <activity android:name=".practice.Start" />
         <activity android:name=".practice.ResultActivity" />
 
@@ -26,7 +27,6 @@
         <activity android:name=".weather.WeatherActivity" />
         <activity android:name=".transportation.TransportationActivity" />
         <activity android:name=".sport.SportActivity" />
-        <activity android:name=".practice.PracticeActivity" />
         <activity android:name=".number.NumberActivity" />
         <activity android:name=".food.FoodActivity" />
         <activity android:name=".conversation.ConversationActivity" />
