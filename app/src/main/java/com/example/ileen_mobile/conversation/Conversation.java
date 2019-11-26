@@ -8,48 +8,62 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Conversation {
-    public String topik;
-    public Drawable dialog;
+    public String bind;
+    public String bing;
+    public String image_url;
+    public String audio_url;
 
-    public Conversation(String topik, Drawable dialog) {
-        this.topik = topik;
-        this.dialog = dialog;
+    public Conversation(){
+
     }
 
-    public String getTopik() {
-        return topik;
+    public Conversation(String image_url,String bind, String bing, String audio_url)
+    {
+        this.bind = bind;
+        this.bing = bing;
+        this.image_url = image_url;
+        this.audio_url = audio_url;
     }
 
-    public void setTopik(String topik) {
-        this.topik = topik;
+    public String getImage_url() {
+        return image_url;
     }
 
-    public Drawable getDialog() {
-        return dialog;
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
     }
 
-    public void setDialog(Drawable dialog) {
-        this.dialog = dialog;
+    public String getBind() {
+        return bind;
     }
 
-    public String isi;
-
-    public Conversation() {
+    public void setBind(String bind) {
+        this.bind = bind;
     }
 
-    public Conversation(String isi) {
-
-        this.isi = isi;
+    public String getBing() {
+        return bing;
     }
 
-    public String getIsi() {
-        return isi;
+    public void setBing(String bing) {
+        this.bing = bing;
+    }
+
+    public String getAudio_url() {
+        return audio_url;
+    }
+
+    public void setAudio_url(String audio_url) {
+        this.audio_url = audio_url;
     }
 
     @Exclude
     public Map<String, Object> toMap() {
         HashMap<String, Object> result = new HashMap<>();
-        result.put("isi", isi);
+        result.put("bind", bind);
+        result.put("bing", bing);
+        result.put("image_url", image_url);
+        result.put("audio_url", audio_url);
         return result;
     }
 }

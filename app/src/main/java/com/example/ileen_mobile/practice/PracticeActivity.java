@@ -29,6 +29,7 @@ import com.example.ileen_mobile.practice.Common;
 public class PracticeActivity extends AppCompatActivity{
 
     RecyclerView listCategory;
+
     RecyclerView.LayoutManager layoutManager;
     FirebaseRecyclerAdapter<Category, CategoryViewHolder> adapter;
 

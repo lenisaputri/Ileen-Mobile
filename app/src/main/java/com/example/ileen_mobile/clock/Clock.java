@@ -2,15 +2,23 @@ package com.example.ileen_mobile.clock;
 
 import android.graphics.drawable.Drawable;
 
+import com.google.firebase.database.Exclude;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class Clock {
     public String bind;
     public String bing;
-    public Drawable image;
+    public String image_url;
+    public String audio_url;
 
-    public Clock(String bind, String bing, Drawable image) {
+    public Clock(String image_url,String bind, String bing, String audio_url)
+    {
         this.bind = bind;
         this.bing = bing;
-        this.image = image;
+        this.image_url = image_url;
+        this.audio_url = audio_url;
     }
 
     public String getBind() {
@@ -29,11 +37,29 @@ public class Clock {
         this.bing = bing;
     }
 
-    public Drawable getImage() {
-        return image;
+    public String getImage_url() {
+        return image_url;
     }
 
-    public void setImage(Drawable image) {
-        this.image = image;
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
+    }
+
+    public String getAudio_url() {
+        return audio_url;
+    }
+
+    public void setAudio_url(String audio_url) {
+        this.audio_url = audio_url;
+    }
+
+    @Exclude
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("bind", bind);
+        result.put("bing", bing);
+        result.put("image_url", image_url);
+        result.put("audio_url", audio_url);
+        return result;
     }
 }
