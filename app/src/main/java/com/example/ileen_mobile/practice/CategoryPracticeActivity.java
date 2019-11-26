@@ -2,6 +2,7 @@ package com.example.ileen_mobile.practice;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -45,8 +46,7 @@ public class CategoryPracticeActivity extends AppCompatActivity {
 
         listCategory = findViewById(R.id.listCategory);
         listCategory.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(this);
-        listCategory.setLayoutManager(layoutManager);
+        listCategory.setLayoutManager(new GridLayoutManager(this, 3));
 
         FirebaseRecyclerOptions<Category> options =
                 new FirebaseRecyclerOptions.Builder<Category>()
