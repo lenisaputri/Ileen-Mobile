@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".practice.Start"
-    android:background="@drawable/bg_practice">
+    tools:context=".practice.Start">
 
     <ImageView
         android:layout_width="300dp"
@@ -15,7 +14,7 @@
         android:src="@drawable/logo_splash"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
         />
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

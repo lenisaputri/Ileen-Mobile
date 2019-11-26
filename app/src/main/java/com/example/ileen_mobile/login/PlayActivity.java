@@ -1,7 +1,5 @@
 package com.example.ileen_mobile.login;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ComponentName;
@@ -22,11 +20,12 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.ileen_mobile.R;
-import com.example.ileen_mobile.grade.GradeActivity;
 import com.example.ileen_mobile.menu.MenuActivity;
 import com.example.ileen_mobile.practice.CategoryPracticeActivity;
-import com.example.ileen_mobile.practice.Model.Category;
+import com.example.ileen_mobile.practice.RankingActivity;
 
 public class PlayActivity extends AppCompatActivity {
 
@@ -245,7 +244,7 @@ public class PlayActivity extends AppCompatActivity {
         });
         mp.start();
 
-        Intent intent =  new Intent(PlayActivity.this, GradeActivity.class);
+        Intent intent =  new Intent(PlayActivity.this, RankingActivity.class);
         startActivity(intent);
     }
 

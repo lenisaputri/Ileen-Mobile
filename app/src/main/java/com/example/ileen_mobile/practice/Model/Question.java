@@ -1,4 +1,4 @@
-package com.example.ileen_mobile.practice;
+package com.example.ileen_mobile.practice.Model;
 
 public class Question {
     private String Question,AnswerA,AnswerB,AnswerC,AnswerD,CorrectAnswer,CategoryId,IsImageQuestion;
@@ -82,4 +82,3 @@ public class Question {
         this.IsImageQuestion = isImageQuestion;
     }
 }
-

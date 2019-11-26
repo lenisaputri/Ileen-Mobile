@@ -1,19 +1,19 @@
 package com.example.ileen_mobile.practice;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.ileen_mobile.R;
+import com.example.ileen_mobile.practice.Common.Common;
 import com.example.ileen_mobile.practice.Interface.ItemClickListener;
 import com.example.ileen_mobile.practice.Model.Category;
 import com.example.ileen_mobile.practice.ViewHolder.CategoryViewHolder;
@@ -72,7 +72,10 @@ public class CategoryPracticeActivity extends AppCompatActivity {
                 viewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        Toast.makeText(view.getContext(), String.format("%s|%s", adapter.getRef(position).getKey(), model.getName()), Toast.LENGTH_SHORT).show();
+                        Intent startGame = new Intent(view.getContext() ,Start.class);
+                        Common.categoryId = adapter.getRef(position).getKey();
+                        Common.categoryName = model.getName();
+                        startActivity(startGame);
                     }
                 });
             }

@@ -11,19 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".practice.CategoryPracticeActivity"></activity>
+        <activity android:name=".practice.ViewHolder.ScoreDetail"></activity>
+        <activity android:name=".practice.RankingActivity" />
         <activity android:name=".practice.Start" />
-        <activity android:name=".practice.ResultActivity" />
+        <activity android:name=".practice.Done" />
+        <activity android:name=".practice.PlayingActivity" />
+        <activity android:name=".practice.CategoryPracticeActivity" />
 
         <service
             android:name=".login.MusicService"
             android:enabled="true" />
 
-        <activity android:name=".practice.OneActivity" />
-        <activity android:name=".practice.TwoActivity" />
-        <activity android:name=".practice.ThreeActivity" />
-        <activity android:name=".practice.FourActivity" />
-        <activity android:name=".practice.FiveActivity" />
         <activity android:name=".weather.WeatherActivity" />
         <activity android:name=".transportation.TransportationActivity" />
         <activity android:name=".sport.SportActivity" />

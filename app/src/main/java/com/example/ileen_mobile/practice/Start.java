@@ -1,14 +1,16 @@
 package com.example.ileen_mobile.practice;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.ileen_mobile.R;
+import com.example.ileen_mobile.practice.Common.Common;
+import com.example.ileen_mobile.practice.Model.Question;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -37,7 +39,7 @@ public class Start extends AppCompatActivity {
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Start.this,OneActivity.class);
+                Intent intent = new Intent(Start.this,PlayingActivity.class);
                 startActivity(intent);
                 finish();
             }
