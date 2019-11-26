@@ -25,36 +25,63 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.example.ileen_mobile.practice.Common;
-import com.google.firebase.database.Query;
 
 public class PracticeActivity extends AppCompatActivity{
 
-    private RecyclerView listCategory;
-    private GridLayoutManager gridLayoutManager;
-    FirebaseRecyclerAdapter<Category, CategoryViewHolder> mAdapter;
+    RecyclerView listCategory;
 
-    private DatabaseReference mDatabase;
+    RecyclerView.LayoutManager layoutManager;
+    FirebaseRecyclerAdapter<Category, CategoryViewHolder> adapter;
+
+    FirebaseDatabase database;
+    DatabaseReference categories;
+
+    public static PracticeActivity newInstances()
+    {
+        PracticeActivity practiceActivity = new PracticeActivity();
+        return practiceActivity;
+    }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_practice);
 
-        mDatabase =  FirebaseDatabase.getInstance().getReference();
+        database = FirebaseDatabase.getInstance();
+        categories = database.getReference("Category");
 
         listCategory = findViewById(R.id.listCategory);
         listCategory.setHasFixedSize(true);
+        layoutManager = new GridLayoutManager(getApplicationContext(),2);
+        listCategory.setLayoutManager(layoutManager);
+        listCategory.setAdapter(adapter);
 
-        gridLayoutManager = new GridLayoutManager(getApplicationContext(),2);
-        listCategory.setLayoutManager(gridLayoutManager);
+        loadCategories();
+    }
 
-        Query query = getQuery(mDatabase);
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+//                             Bundle savedInstanceState) {
+//        // Inflate the layout for this fragment
+//        myFragment = inflater.inflate(R.layout.activity_practice,container,false);
+//
+//        listCategory = myFragment.findViewById(R.id.listCategory);
+//        listCategory.setHasFixedSize(true);
+//        layoutManager = new GridLayoutManager(container.getContext(),2);
+//        listCategory.setLayoutManager(layoutManager);
+//
+//        loadCategories();
+//
+//        return myFragment;
+//    }
 
-        FirebaseRecyclerOptions options = new FirebaseRecyclerOptions.Builder<Category>()
-                .setQuery(query, Category.class)
-                .build();
+    private void loadCategories() {
+        FirebaseRecyclerOptions<Category> options =
+                new FirebaseRecyclerOptions.Builder<Category>()
+                        .setQuery(categories, Category.class)
+                        .build();
 
-        mAdapter = new FirebaseRecyclerAdapter<Category, CategoryViewHolder>(options)
+        adapter = new FirebaseRecyclerAdapter<Category, CategoryViewHolder>(options)
         {
             @NonNull
             @Override
@@ -75,37 +102,30 @@ public class PracticeActivity extends AppCompatActivity{
                     public void onClick(View view, int position, boolean isLongClick) {
                         //Toast.makeText(getActivity(), String.format("%s|%s", adapter.getRef(position).getKey(), model.getName()), Toast.LENGTH_SHORT).show();
                         Intent startGame = new Intent(getApplicationContext(),Start.class);
-                        Common.categoryId = mAdapter.getRef(position).getKey();
+                        Common.categoryId = adapter.getRef(position).getKey();
                         startActivity(startGame);
                     }
                 });
             }
 
         };
-        mAdapter.notifyDataSetChanged();
-        listCategory.setAdapter(mAdapter);
-
+        adapter.notifyDataSetChanged();
+        listCategory.setAdapter(adapter);
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        if (mAdapter != null) {
-            mAdapter.startListening();
+        if (adapter != null) {
+            adapter.startListening();
         }
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        if (mAdapter != null) {
-            mAdapter.stopListening();
+        if (adapter != null) {
+            adapter.stopListening();
         }
     }
-
-    private Query getQuery(DatabaseReference mDatabase) {
-        Query query = mDatabase.child("Category");
-        return query;
-    }
-
 }

@@ -1,18 +1,18 @@
-package com.example.ileen_mobile.clock;
+package com.example.ileen_mobile.number;
 
 import com.google.firebase.database.Exclude;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class ClockMateri {
+public class NumberMateri {
     public String isi;
     public String judul;
 
-    public ClockMateri() {
+    public NumberMateri() {
     }
 
-    public ClockMateri(String isi, String judul) {
+    public  NumberMateri(String isi, String judul) {
 
         this.isi = isi;
         this.judul = judul;
