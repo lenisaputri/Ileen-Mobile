@@ -168,10 +168,6 @@ public class GambarFragment extends Fragment {
         public TextView bingTitle;
         public TextView bindTitle;
 
-        public Button buttonStart;
-        public Button buttonPause;
-
-
         public MyViewHolder( View itemView) {
             super(itemView);
 

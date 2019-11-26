@@ -25,7 +25,7 @@ public class InputNamaActivity extends AppCompatActivity {
 
 //    Dialog myDialog;
 
-    EditText edtNewUser; //for sing up
+    EditText edtNewUser, edtNewClass; //for sing up
 
     EditText edtUser; //for sign in;
 
@@ -103,6 +103,7 @@ public class InputNamaActivity extends AppCompatActivity {
         View sign_up_layout = inflater.inflate(R.layout.sign_up_layout,null);
 
         edtNewUser = sign_up_layout.findViewById(R.id.edtNewUserName);
+        edtNewClass = sign_up_layout.findViewById(R.id.edtNewKelas);
 
         alertDialog.setView(sign_up_layout);
 
@@ -116,7 +117,7 @@ public class InputNamaActivity extends AppCompatActivity {
         alertDialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                final User user = new User(edtNewUser.getText().toString());
+                final User user = new User(edtNewUser.getText().toString(), edtNewClass.getText().toString());
 
                 users.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override

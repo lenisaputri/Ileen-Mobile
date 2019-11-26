@@ -12,6 +12,7 @@
 
     <ImageView
         android:id="@+id/image_clock"
+        android:text="image_url"
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:layout_constraintBottom_toTopOf="@+id/navigation"

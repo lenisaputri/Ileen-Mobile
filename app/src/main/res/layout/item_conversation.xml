@@ -8,30 +8,17 @@
     android:clickable="true"
     android:foreground="?android:attr/selectableItemBackground"
     android:id="@+id/conversation_item"
-    android:layout_marginTop="10dp"
     >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/bg"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="@dimen/cardview_compat_inset_shadow"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TOPIK"
-            android:textSize="40dp"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            android:id="@+id/topik"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="40dp"
-            android:fontFamily="@font/rocco_regular"
-            />
-    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_conversation"
+        android:text="image_url"
+        android:layout_width="210dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintEnd_toEndOf="@+id/navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline12" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline12"

@@ -33,12 +33,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="43dp"
             android:fontFamily="@font/londrina_solid_regular"
-            android:text="CONVERATION"
+            android:text="CONVERSATION"
             android:textColor="#FFFFFF"
             android:textSize="50dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvConversation"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -47,7 +48,9 @@
             app:layout_constraintBottom_toTopOf="@+id/navigation"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />

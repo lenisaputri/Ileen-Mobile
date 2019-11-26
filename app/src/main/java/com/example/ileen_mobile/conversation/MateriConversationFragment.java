@@ -27,7 +27,7 @@ public class MateriConversationFragment extends Fragment {
     private LinearLayoutManager linearLayoutManager;
 
     private DatabaseReference mDatabase;
-    private FirebaseRecyclerAdapter<Conversation, MyViewHolder> mAdapter;
+    private FirebaseRecyclerAdapter<ConversationMateri, MyViewHolder> mAdapter;
 
     public MateriConversationFragment() {
         // Required empty public constructor
@@ -47,11 +47,11 @@ public class MateriConversationFragment extends Fragment {
 
         Query query = getQuery(mDatabase);
 
-        FirebaseRecyclerOptions options = new FirebaseRecyclerOptions.Builder<Conversation>()
-                .setQuery(query, Conversation.class)
+        FirebaseRecyclerOptions options = new FirebaseRecyclerOptions.Builder<ConversationMateri>()
+                .setQuery(query, ConversationMateri.class)
                 .build();
 
-        mAdapter = new FirebaseRecyclerAdapter<Conversation, MyViewHolder>(options) {
+        mAdapter = new FirebaseRecyclerAdapter<ConversationMateri, MyViewHolder>(options) {
             @Override
             public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                 View vh = LayoutInflater.
@@ -65,8 +65,8 @@ public class MateriConversationFragment extends Fragment {
                 return viewHolder;
             }
             @Override
-            protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull final Conversation model) {
-                holder.bindToConversation(model, new View.OnClickListener() {
+            protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull final ConversationMateri model) {
+                holder.bindToConversationMateri(model, new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -112,8 +112,8 @@ public class MateriConversationFragment extends Fragment {
             isiConversation = itemView.findViewById(R.id.isi_conversation);
         }
 
-        public void bindToConversation(Conversation conversation, View.OnClickListener onClickListener){
-            isiConversation.setText(conversation.isi);
+        public void bindToConversationMateri(ConversationMateri conversationMateri, View.OnClickListener onClickListener){
+            isiConversation.setText(conversationMateri.isi);
         }
     }
 

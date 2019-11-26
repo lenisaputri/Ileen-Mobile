@@ -13,6 +13,10 @@ public class Clock {
     public String image_url;
     public String audio_url;
 
+    public Clock(){
+
+    }
+
     public Clock(String image_url,String bind, String bing, String audio_url)
     {
         this.bind = bind;

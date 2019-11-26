@@ -1,100 +1,192 @@
 package com.example.ileen_mobile.number;
 
 
+import android.app.Dialog;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.ileen_mobile.R;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class GambarNumberFragment extends Fragment {
-    //instansiasi Recyclerview
-    RecyclerView rvNumber;
-    //instansiasi list superhero
-    private NumberAdapter numberAdapter;
-    List<Number> listNumber = new ArrayList<>();
+    Dialog myDialog;
+
+    private MediaPlayer mediaPlayer;
+
+    private DatabaseReference mDatabase;
+
+    private Handler threadHandler = new Handler();
+
+    private FirebaseRecyclerAdapter<Number, MyViewHolder> mAdapter;
+
     private GridLayoutManager gridLayoutManager;
+    private RecyclerView rvNumber;
 
     public GambarNumberFragment() {
-        // Required empty public constructor
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
         View rootView = inflater.inflate(R.layout.fragment_gambar_number, container, false);
         rvNumber = rootView.findViewById(R.id.rvNumber);
-
-        Number num = new Number("Nol","Zero",this.getResources().getDrawable(R.drawable.zero));
-        listNumber.add(num);
-        num = new Number("Satu","One",this.getResources().getDrawable(R.drawable.one));
-        listNumber.add(num);
-        num = new Number("Dua","Two",this.getResources().getDrawable(R.drawable.two));
-        listNumber.add(num);
-        num = new Number("Tiga","Three",this.getResources().getDrawable(R.drawable.three));
-        listNumber.add(num);
-        num = new Number("Empat","Four",this.getResources().getDrawable(R.drawable.four));
-        listNumber.add(num);
-        num = new Number("Lima","Five",this.getResources().getDrawable(R.drawable.five));
-        listNumber.add(num);
-        num = new Number("Enam","Six",this.getResources().getDrawable(R.drawable.six));
-        listNumber.add(num);
-        num = new Number("Tujuh","Seven",this.getResources().getDrawable(R.drawable.seven));
-        listNumber.add(num);
-        num = new Number("Delapan","Eight",this.getResources().getDrawable(R.drawable.eight));
-        listNumber.add(num);
-        num = new Number("Sembilan","Nine",this.getResources().getDrawable(R.drawable.nine));
-        listNumber.add(num);
-        num = new Number("Sepuluh","Ten",this.getResources().getDrawable(R.drawable.ten));
-        listNumber.add(num);
-        num = new Number("Sebelas","Eleven",this.getResources().getDrawable(R.drawable.eleven));
-        listNumber.add(num);
-        num = new Number("Duabelas","Twelve",this.getResources().getDrawable(R.drawable.twelve));
-        listNumber.add(num);
-        num = new Number("Tigabelas","Thirteen",this.getResources().getDrawable(R.drawable.thirteen));
-        listNumber.add(num);
-        num = new Number("Setengah / Satu per dua","A half",this.getResources().getDrawable(R.drawable.half));
-        listNumber.add(num);
-        num = new Number("Seperempat / Satu per empat"," A quarter",this.getResources().getDrawable(R.drawable.quarter));
-        listNumber.add(num);
-        num = new Number("Dua per tiga","Two third",this.getResources().getDrawable(R.drawable.twothird));
-        listNumber.add(num);
-        num = new Number("Pertama","First",this.getResources().getDrawable(R.drawable.first));
-        listNumber.add(num);
-        num = new Number("Ke-dua","Second",this.getResources().getDrawable(R.drawable.second));
-        listNumber.add(num);
-        num = new Number("Ke-tiga","Third",this.getResources().getDrawable(R.drawable.third));
-        listNumber.add(num);
-        num = new Number("Ke-empat","Fourth",this.getResources().getDrawable(R.drawable.fourth));
-        listNumber.add(num);
-        num = new Number("","",this.getResources().getDrawable(R.drawable.template_1));
-        listNumber.add(num);
-        num = new Number("","",this.getResources().getDrawable(R.drawable.template_1));
-        listNumber.add(num);
-        num = new Number("","",this.getResources().getDrawable(R.drawable.template_1));
-        listNumber.add(num);
-        num = new Number("t","",this.getResources().getDrawable(R.drawable.template_1));
-        listNumber.add(num);
-
-        NumberAdapter numberAdapter = new NumberAdapter(listNumber);
-        rvNumber.setAdapter(numberAdapter);
-
         rvNumber.setLayoutManager(new GridLayoutManager(this.getActivity(), 3));
+
+        Query query = getQuery(mDatabase);
+
+        FirebaseRecyclerOptions options = new FirebaseRecyclerOptions.Builder<Number>()
+                .setQuery(query, Number.class)
+                .build();
+
+        mAdapter = new FirebaseRecyclerAdapter<Number, MyViewHolder>(options) {
+            @Override
+            public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View vh = LayoutInflater.
+                        from(parent.getContext()).
+                        inflate(R.layout.item_number,parent,false);
+
+                //4 membuat view holder
+
+                final MyViewHolder viewHolder = new MyViewHolder(vh);
+
+                myDialog = new Dialog(parent.getContext());
+                myDialog.setContentView(R.layout.number_popup);
+
+                return viewHolder;
+            }
+            @Override
+            protected void onBindViewHolder(@NonNull final MyViewHolder holder, int position, @NonNull final Number model) {
+
+                holder.setDisplayImage(model.getImage_url(), GambarNumberFragment.this);
+
+                holder.numberItem.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(final View view) {
+                        TextView clockBing = myDialog.findViewById(R.id.bing_name);
+                        TextView clockBind = myDialog.findViewById(R.id.bind_name);
+                        ImageView clockImg = myDialog.findViewById(R.id.img);
+
+                        final Button buttonStart = myDialog.findViewById(R.id.button_start);
+
+                        clockBing.setText(model.getBing());
+                        clockBind.setText(model.getBind());
+
+                        Glide.with(getActivity())
+                                .load(model.getImage_url())
+                                .into(clockImg);
+
+                        buttonStart.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                mediaPlayer = new MediaPlayer();
+                                mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+
+                                try {
+                                    mediaPlayer.setDataSource(model.getAudio_url());
+                                    mediaPlayer.prepare();
+                                    mediaPlayer.start();
+
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+
+                            }
+
+                        });
+
+                        myDialog.show();
+                    }
+                });
+
+            }
+        };
+
+        mAdapter.notifyDataSetChanged();
+
+        rvNumber.setAdapter(mAdapter);
+
         return rootView;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        if (mAdapter != null) {
+            mAdapter.startListening();
+        }
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAdapter != null) {
+            mAdapter.stopListening();
+        }
+    }
+
+    private Query getQuery(DatabaseReference mDatabase){
+        Query query = mDatabase.child("number-example");
+        return query;
+    }
+
+
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+        private AdapterView.OnItemClickListener listener;
+
+        public ConstraintLayout numberItem;
+        public ImageView imageNumber;
+        public TextView bingTitle;
+        public TextView bindTitle;
+
+        public MyViewHolder( View itemView) {
+            super(itemView);
+
+            numberItem = itemView.findViewById(R.id.number_item);
+            imageNumber = itemView.findViewById(R.id.image_number);
+            bindTitle = itemView.findViewById(R.id.bind_name);
+            bingTitle = itemView.findViewById(R.id.bing_name);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                }
+            });
+        }
+
+        public void setDisplayImage(String imageUrl, GambarNumberFragment context) {
+            Glide.with(context)
+                    .load(imageUrl)
+                    .into(imageNumber);
+        }
+
+    }
 }

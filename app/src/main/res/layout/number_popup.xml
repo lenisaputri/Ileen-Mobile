@@ -21,34 +21,42 @@
             android:layout_height="250dp"
             android:padding="10dp"
             android:id="@+id/img"
-            android:src="@drawable/camel"
+            android:text="image_url"
             android:scaleType="centerCrop"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bing"
+            android:text="bing"
             android:textColor="#FFFFFF"
             android:textSize="20dp"
             android:textStyle="bold"
             android:layout_marginTop="10dp"
-            android:id="@+id/bing"
+            android:id="@+id/bing_name"
             android:background="@color/colorPrimary"
             android:padding="5dp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bind"
+            android:text="bind"
             android:textColor="#FFFFFF"
             android:textSize="20dp"
             android:textStyle="bold"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:id="@+id/bind"
+            android:id="@+id/bind_name"
             android:background="@color/colorPrimary"
             android:padding="5dp"
-            android:textAlignment="center"
             />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:id="@+id/button_start"
+            />
+
     </LinearLayout>
 </RelativeLayout>

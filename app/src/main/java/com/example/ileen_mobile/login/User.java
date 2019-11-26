@@ -2,12 +2,14 @@ package com.example.ileen_mobile.login;
 
 public class User {
     private String userName;
+    private String userKelas;
 
     public User() {
     }
 
-    public User(String userName) {
+    public User(String userName, String userKelas) {
         this.userName = userName;
+        this.userKelas = userKelas;
     }
 
     public String getUserName() {
@@ -16,5 +18,13 @@ public class User {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getUserKelas() {
+        return userKelas;
+    }
+
+    public void setUserKelas(String userKelas) {
+        this.userKelas = userKelas;
     }
 }
