@@ -17,7 +17,7 @@ import com.example.ileen_mobile.practice.Common.Common;
 
 public class PlayingActivity extends AppCompatActivity implements View.OnClickListener{
     final static long INTERVAL = 1000;//1sec
-    final static long TIMEOUT = 600000;//7sec
+    final static long TIMEOUT = 60000;//7sec
     int progressValue = 0;
 
     CountDownTimer mCountDown;
