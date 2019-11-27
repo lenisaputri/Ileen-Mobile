@@ -43,7 +43,7 @@
         android:id="@+id/kata1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NEW USER"
+        android:text="LOGIN"
         android:fontFamily="@font/rocco_regular"
         android:textColor="#081623"
         android:textSize="28sp"

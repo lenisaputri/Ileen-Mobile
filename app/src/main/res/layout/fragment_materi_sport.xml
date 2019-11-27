@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:fontFamily="@font/londrina_solid_regular"
-            android:text="SPORTS"
+            android:text="SPORT"
             android:textColor="#FFFFFF"
             android:textSize="50dp"
             app:layout_constraintLeft_toLeftOf="parent"

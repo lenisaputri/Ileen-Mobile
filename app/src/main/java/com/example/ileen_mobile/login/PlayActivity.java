@@ -196,32 +196,6 @@ public class PlayActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void nameButton(View view) {
-
-        myDialog.setContentView(R.layout.rename_input_popup);
-        ImageButton button = (ImageButton)findViewById(R.id.button_name);
-        final Animation myAnim = AnimationUtils.loadAnimation(this, R.anim.bounce);
-
-        MyBounceInterpolator interpolator = new MyBounceInterpolator(0.2, 20);
-        myAnim.setInterpolator(interpolator);
-
-        button.startAnimation(myAnim);
-
-        MediaPlayer mp = MediaPlayer.create(PlayActivity.this, R.raw.click_btn);
-        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                // TODO Auto-generated method stub
-                mp.release();
-            }
-
-        });
-        mp.start();
-
-        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        myDialog.show();
-    }
 
     public void gradeButton(View view) {
         ImageButton button = (ImageButton)findViewById(R.id.button_grade);
