@@ -17,12 +17,12 @@
         android:gravity="center_horizontal"
         >
         <ImageView
-            android:layout_width="400dp"
-            android:layout_height="267dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
             android:padding="10dp"
             android:id="@+id/img"
             android:text="image_url"
-            android:scaleType="centerCrop"
+            android:scaleType="center"
             />
 
         <Button

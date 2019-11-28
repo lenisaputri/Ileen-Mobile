@@ -58,7 +58,7 @@ public class GambarConversationFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_gambar_conversation, container, false);
         rvConversation = rootView.findViewById(R.id.rvConversation);
-        rvConversation.setLayoutManager(new GridLayoutManager(this.getActivity(), 2));
+        rvConversation.setLayoutManager(new GridLayoutManager(this.getActivity(), 1));
 
         Query query = getQuery(mDatabase);
 
