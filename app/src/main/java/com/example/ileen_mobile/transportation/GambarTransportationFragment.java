@@ -95,6 +95,7 @@ public class GambarTransportationFragment extends Fragment {
                         ImageView transImg = myDialog.findViewById(R.id.img);
 
                         final Button buttonStart = myDialog.findViewById(R.id.button_start);
+                        final Button buttonExit = myDialog.findViewById(R.id.button_exit);
 
                         transBing.setText(model.getBing());
                         transBind.setText(model.getBind());
@@ -118,6 +119,14 @@ public class GambarTransportationFragment extends Fragment {
                                     e.printStackTrace();
                                 }
 
+                            }
+
+                        });
+
+                        buttonExit.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                myDialog.cancel();
                             }
 
                         });

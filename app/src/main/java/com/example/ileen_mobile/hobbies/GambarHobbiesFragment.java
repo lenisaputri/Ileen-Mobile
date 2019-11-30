@@ -95,6 +95,7 @@ public class GambarHobbiesFragment extends Fragment {
                         ImageView hobbiesImg = myDialog.findViewById(R.id.img);
 
                         final Button buttonStart = myDialog.findViewById(R.id.button_start);
+                        final Button buttonExit = myDialog.findViewById(R.id.button_exit);
 
                         hobbiesBing.setText(model.getBing());
                         hobbiesBind.setText(model.getBind());
@@ -118,6 +119,14 @@ public class GambarHobbiesFragment extends Fragment {
                                     e.printStackTrace();
                                 }
 
+                            }
+
+                        });
+
+                        buttonExit.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                myDialog.cancel();
                             }
 
                         });

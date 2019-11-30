@@ -93,6 +93,7 @@ public class GambarConversationFragment extends Fragment {
                         ImageView conversationImg = myDialog.findViewById(R.id.img);
 
                         final Button buttonStart = myDialog.findViewById(R.id.button_start);
+                        final Button buttonExit = myDialog.findViewById(R.id.button_exit);
 
                         Glide.with(getActivity())
                                 .load(model.getImage_url())
@@ -113,6 +114,14 @@ public class GambarConversationFragment extends Fragment {
                                     e.printStackTrace();
                                 }
 
+                            }
+
+                        });
+
+                        buttonExit.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                myDialog.cancel();
                             }
 
                         });
@@ -165,12 +174,14 @@ public class GambarConversationFragment extends Fragment {
             conversationItem = itemView.findViewById(R.id.conversation_item);
             imageConversation = itemView.findViewById(R.id.image_conversation);
 
+
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
                 }
             });
+
         }
 
         public void setDisplayImage(String imageUrl, GambarConversationFragment context) {

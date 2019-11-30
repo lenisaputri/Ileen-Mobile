@@ -95,6 +95,7 @@ public class GambarNumberFragment extends Fragment {
                         ImageView clockImg = myDialog.findViewById(R.id.img);
 
                         final Button buttonStart = myDialog.findViewById(R.id.button_start);
+                        final Button buttonExit = myDialog.findViewById(R.id.button_exit);
 
                         clockBing.setText(model.getBing());
                         clockBind.setText(model.getBind());
@@ -118,6 +119,14 @@ public class GambarNumberFragment extends Fragment {
                                     e.printStackTrace();
                                 }
 
+                            }
+
+                        });
+
+                        buttonExit.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                myDialog.cancel();
                             }
 
                         });
