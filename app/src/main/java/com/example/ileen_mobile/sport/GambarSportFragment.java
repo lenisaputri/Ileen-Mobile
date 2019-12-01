@@ -95,6 +95,7 @@ public class GambarSportFragment extends Fragment {
                         ImageView sportImg = myDialog.findViewById(R.id.img);
 
                         final Button buttonStart = myDialog.findViewById(R.id.button_start);
+                        final Button buttonExit = myDialog.findViewById(R.id.button_exit);
 
                         sportBing.setText(model.getBing());
                         sportBind.setText(model.getBind());
@@ -118,6 +119,14 @@ public class GambarSportFragment extends Fragment {
                                     e.printStackTrace();
                                 }
 
+                            }
+
+                        });
+
+                        buttonExit.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                myDialog.cancel();
                             }
 
                         });

@@ -95,6 +95,7 @@ public class GambarWeatherFragment extends Fragment {
                         ImageView weatherImg = myDialog.findViewById(R.id.img);
 
                         final Button buttonStart = myDialog.findViewById(R.id.button_start);
+                        final Button buttonExit = myDialog.findViewById(R.id.button_exit);
 
                         weatherBing.setText(model.getBing());
                         weatherBind.setText(model.getBind());
@@ -121,6 +122,15 @@ public class GambarWeatherFragment extends Fragment {
                             }
 
                         });
+
+                        buttonExit.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                myDialog.cancel();
+                            }
+
+                        });
+
 
                         myDialog.show();
                     }

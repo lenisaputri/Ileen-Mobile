@@ -97,6 +97,7 @@ public class GambarFragment extends Fragment {
                         ImageView animalImg = myDialog.findViewById(R.id.img);
 
                         final Button buttonStart = myDialog.findViewById(R.id.button_start);
+                        final Button buttonExit = myDialog.findViewById(R.id.button_exit);
 
                         animalBing.setText(model.getBing());
                         animalBind.setText(model.getBind());
@@ -120,6 +121,14 @@ public class GambarFragment extends Fragment {
                                         e.printStackTrace();
                                     }
 
+                            }
+
+                        });
+
+                        buttonExit.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                myDialog.cancel();
                             }
 
                         });
