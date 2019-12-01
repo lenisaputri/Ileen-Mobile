@@ -55,5 +55,20 @@
             android:layout_height="wrap_content"
             />
 
+        <TextView
+            android:id="@+id/cba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:fontFamily="@font/londrina_solid_regular"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
