@@ -54,7 +54,7 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:orientation="horizontal">
-
+    
     <Button
         android:id="@+id/button_start"
         style="?android:attr/buttonStyleSmall"
