@@ -72,6 +72,7 @@ public class CategoryPracticeActivity extends AppCompatActivity {
                 viewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
+
                         Intent startGame = new Intent(view.getContext() ,Start.class);
                         Common.categoryId = adapter.getRef(position).getKey();
                         Common.categoryName = model.getName();
@@ -84,6 +85,8 @@ public class CategoryPracticeActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
         listCategory.setAdapter(adapter);
     }
+
+
 
     @Override
     public void onStart() {
