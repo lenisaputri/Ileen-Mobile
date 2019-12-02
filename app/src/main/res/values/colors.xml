@@ -7,6 +7,7 @@
     <color name="bg">#528f65</color>
     <color name="bg_soal">#d6f8b8</color>
     <color name="bg_pertanyaan">#587850</color>
+    <color name="bg_popup">#FF7A22</color>
 
     <!-- dots inactive colors -->
     <color name="dot_dark_screen1">#FFFFFF</color>
