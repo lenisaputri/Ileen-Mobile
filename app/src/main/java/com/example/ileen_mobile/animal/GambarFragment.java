@@ -2,6 +2,7 @@ package com.example.ileen_mobile.animal;
 
 
 import android.app.Dialog;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -41,7 +42,7 @@ public class GambarFragment extends Fragment {
 
     private FirebaseRecyclerAdapter<Animal, MyViewHolder> mAdapter;
 
-    RecyclerView.LayoutManager layoutManager;
+    private GridLayoutManager gridLayoutManager;
     private RecyclerView rvAnimal;
 
     public GambarFragment() {
@@ -55,10 +56,7 @@ public class GambarFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_gambar, container, false);
         rvAnimal = rootView.findViewById(R.id.rvAnimal);
-
-        layoutManager = new GridLayoutManager(container.getContext(),3);
-        rvAnimal.setLayoutManager(layoutManager);
-
+        rvAnimal.setLayoutManager(new GridLayoutManager(this.getActivity(), 3));
 
         Query query = getQuery(mDatabase);
 
@@ -106,7 +104,7 @@ public class GambarFragment extends Fragment {
                             @Override
                             public void onClick(View v) {
                                     mediaPlayer = new MediaPlayer();
-//                                    mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+                                    mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
                                     try {
                                         mediaPlayer.setDataSource(model.getAudio_url());
@@ -141,7 +139,6 @@ public class GambarFragment extends Fragment {
 
         rvAnimal.setAdapter(mAdapter);
 
-        rvAnimal.setHasFixedSize(false);
         return rootView;
     }
 
