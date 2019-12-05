@@ -39,7 +39,7 @@ public class Done extends AppCompatActivity {
         btnTryAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Done.this, CategoryPracticeActivity.class);
+                Intent intent = new Intent(Done.this, Start.class);
                 startActivity(intent);
                 finish();
             }
