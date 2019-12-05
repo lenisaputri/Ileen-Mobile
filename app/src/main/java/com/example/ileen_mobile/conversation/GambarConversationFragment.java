@@ -5,14 +5,6 @@ import android.app.Dialog;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +12,12 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.ileen_mobile.R;
@@ -30,8 +28,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class GambarConversationFragment extends Fragment {
     Dialog myDialog;
@@ -121,6 +117,7 @@ public class GambarConversationFragment extends Fragment {
                         buttonExit.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                mediaPlayer.stop();
                                 myDialog.cancel();
                             }
 

@@ -2,7 +2,6 @@ package com.example.ileen_mobile.animal;
 
 
 import android.app.Dialog;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -109,7 +108,7 @@ public class GambarFragment extends Fragment {
                             @Override
                             public void onClick(View v) {
                                     mediaPlayer = new MediaPlayer();
-                                    mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+//                                    mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
                                     try {
                                         mediaPlayer.setDataSource(model.getAudio_url());
@@ -127,6 +126,7 @@ public class GambarFragment extends Fragment {
                         buttonExit.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                mediaPlayer.stop();
                                 myDialog.cancel();
                             }
 
@@ -167,7 +167,6 @@ public class GambarFragment extends Fragment {
         Query query = mDatabase.child("animal-example");
         return query;
     }
-
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         private AdapterView.OnItemClickListener listener;
