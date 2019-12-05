@@ -69,8 +69,6 @@ public class GambarConversationFragment extends Fragment {
                         from(parent.getContext()).
                         inflate(R.layout.item_conversation,parent,false);
 
-                //4 membuat view holder
-
                 final MyViewHolder viewHolder = new MyViewHolder(vh);
 
                 myDialog = new Dialog(parent.getContext());

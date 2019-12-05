@@ -70,8 +70,6 @@ public class GambarHobbiesFragment extends Fragment {
                         from(parent.getContext()).
                         inflate(R.layout.item_hobbies,parent,false);
 
-                //4 membuat view holder
-
                 final MyViewHolder viewHolder = new MyViewHolder(vh);
 
                 myDialog = new Dialog(parent.getContext());

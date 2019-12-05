@@ -5,13 +5,6 @@ import android.app.Dialog;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +13,12 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.ileen_mobile.R;
@@ -30,8 +29,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class GambarClockFragment extends Fragment {
     Dialog myDialog;
@@ -72,8 +69,6 @@ public class GambarClockFragment extends Fragment {
                 View vh = LayoutInflater.
                         from(parent.getContext()).
                         inflate(R.layout.item_clock,parent,false);
-
-                //4 membuat view holder
 
                 final MyViewHolder viewHolder = new MyViewHolder(vh);
 

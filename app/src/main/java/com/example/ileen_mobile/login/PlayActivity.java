@@ -255,17 +255,6 @@ public class PlayActivity extends AppCompatActivity {
             }
         });
 
-//        btnExit = (Button) myDialog.findViewById(R.id.btn_exit);
-//        btnExit.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v) {
-////                moveTaskToBack(true);
-////                android.os.Process.killProcess(android.os.Process.myPid());
-////                System.exit(1);
-//
-//            }
-//        });
-
         final MediaPlayer mp = MediaPlayer.create(PlayActivity.this, R.raw.click_btn);
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 

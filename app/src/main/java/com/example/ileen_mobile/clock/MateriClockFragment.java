@@ -3,16 +3,15 @@ package com.example.ileen_mobile.clock;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.example.ileen_mobile.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -56,8 +55,6 @@ public class MateriClockFragment extends Fragment {
                 View vh = LayoutInflater.
                         from(parent.getContext()).
                         inflate(R.layout.item_materi_clock,parent,false);
-
-                //4 membuat view holder
 
                 final MyViewHolder viewHolder = new MyViewHolder(vh);
 

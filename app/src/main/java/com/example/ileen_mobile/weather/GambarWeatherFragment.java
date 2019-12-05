@@ -70,8 +70,6 @@ public class GambarWeatherFragment extends Fragment {
                         from(parent.getContext()).
                         inflate(R.layout.item_weather,parent,false);
 
-                //4 membuat view holder
-
                 final MyViewHolder viewHolder = new MyViewHolder(vh);
 
                 myDialog = new Dialog(parent.getContext());

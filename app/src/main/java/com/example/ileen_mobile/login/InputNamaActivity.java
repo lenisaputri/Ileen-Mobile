@@ -23,8 +23,6 @@ import com.google.firebase.database.ValueEventListener;
 
 public class InputNamaActivity extends AppCompatActivity {
 
-//    Dialog myDialog;
-
     EditText edtNewUser, edtNewClass; //for sing up
 
     EditText edtUser; //for sign in;
@@ -38,7 +36,6 @@ public class InputNamaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_nama);
-//        myDialog = new Dialog(this);
 
         database = FirebaseDatabase.getInstance();
         users = database.getReference("Users");

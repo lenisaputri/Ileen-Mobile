@@ -30,7 +30,6 @@ public class MateriConversationFragment extends Fragment {
     private FirebaseRecyclerAdapter<ConversationMateri, MyViewHolder> mAdapter;
 
     public MateriConversationFragment() {
-        // Required empty public constructor
     }
 
 
@@ -57,8 +56,6 @@ public class MateriConversationFragment extends Fragment {
                 View vh = LayoutInflater.
                         from(parent.getContext()).
                         inflate(R.layout.item_materi_conversation,parent,false);
-
-                //4 membuat view holder
 
                 final MyViewHolder viewHolder = new MyViewHolder(vh);
 
