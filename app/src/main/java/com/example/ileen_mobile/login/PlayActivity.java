@@ -243,10 +243,12 @@ public class PlayActivity extends AppCompatActivity {
         btnOnMusic.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                if (mServ != null) {
+                if (btnOnMusic.getText().equals("ON")) {
                     mServ.stopMusic();
                     btnOnMusic.setText("OFF");
-                }else {
+                }
+                else if(btnOnMusic.getText().equals("OFF"))
+                {
                     mServ.startMusic();
                     btnOnMusic.setText("ON");
                 }
