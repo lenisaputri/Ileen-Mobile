@@ -2,20 +2,9 @@ package com.example.ileen_mobile.animal;
 
 
 import android.app.Dialog;
-import android.content.Context;
-import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +14,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
 import com.example.ileen_mobile.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -32,6 +27,7 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+
 import java.io.IOException;
 
 public class GambarFragment extends Fragment {
@@ -46,7 +42,7 @@ public class GambarFragment extends Fragment {
 
     private FirebaseRecyclerAdapter<Animal, MyViewHolder> mAdapter;
 
-    private GridLayoutManager gridLayoutManager;
+    RecyclerView.LayoutManager layoutManager;
     private RecyclerView rvAnimal;
 
     public GambarFragment() {
@@ -60,7 +56,10 @@ public class GambarFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_gambar, container, false);
         rvAnimal = rootView.findViewById(R.id.rvAnimal);
-        rvAnimal.setLayoutManager(new GridLayoutManager(this.getActivity(), 3));
+
+        layoutManager = new GridLayoutManager(container.getContext(),3);
+        rvAnimal.setLayoutManager(layoutManager);
+
 
         Query query = getQuery(mDatabase);
 
@@ -144,6 +143,7 @@ public class GambarFragment extends Fragment {
 
         rvAnimal.setAdapter(mAdapter);
 
+        rvAnimal.setHasFixedSize(false);
         return rootView;
     }
 

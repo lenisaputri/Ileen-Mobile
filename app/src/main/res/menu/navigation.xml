@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/action_materi"
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/action_materi"
+        android:enabled="true"
         android:title="Theory"
-        android:icon="@drawable/materi_button" />
-    <item android:id="@+id/action_gambar"
+        android:icon="@drawable/materi_button"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:enabled="true"
+        android:id="@+id/action_gambar"
         android:title="Picture"
-        android:icon="@drawable/gambar_button" />
+        android:icon="@drawable/gambar_button"
+        app:showAsAction="ifRoom"/>
+
 </menu>
