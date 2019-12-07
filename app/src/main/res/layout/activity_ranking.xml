@@ -6,15 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".practice.RankingActivity"
-    android:background="@drawable/bg_ranking"
     >
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_ranking"
+        android:alpha="0.7"
+        />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="55dp"
         android:id="@+id/title"
         android:padding="10dp"
-        app:cardBackgroundColor="@color/light_blue_500"
+        app:cardBackgroundColor="#BD260C"
         app:cardElevation="4dp"
         >
         <LinearLayout
@@ -28,20 +35,22 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Name"
+                android:text=" Name"
                 android:layout_weight="7"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textColor="#ffffff"
                 android:padding="10dp"
+                android:drawableLeft="@drawable/ic_group_black_24dp"
                 />
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Score"
+                android:text=" Score"
                 android:layout_weight="3"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textColor="#ffffff"
                 android:padding="10dp"
+                android:drawableLeft="@drawable/ic_grade_black_24dp"
                 />
         </LinearLayout>
 

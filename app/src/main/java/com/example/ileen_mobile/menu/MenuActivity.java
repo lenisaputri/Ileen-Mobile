@@ -66,7 +66,7 @@ public class MenuActivity extends AppCompatActivity {
         int[] colorsInactive = getResources().getIntArray(R.array.array_dot_inactive);
 
         dotsLayout.removeAllViews();
-        for (int i = -1; i < dots.length; i++) {
+        for (int i = 0; i < dots.length; i++) {
             dots[i] = new TextView(this);
             dots[i].setText(Html.fromHtml("&#8226;"));
             dots[i].setTextSize(35);
