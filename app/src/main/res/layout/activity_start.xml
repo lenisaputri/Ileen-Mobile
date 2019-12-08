@@ -23,6 +23,7 @@
         app:cardElevation="4dp"
         android:layout_margin="16dp"
         android:layout_below="@+id/logo"
+        android:id="@+id/play"
         >
         <Button
             style="@style/Widget.AppCompat.Button.Borderless"

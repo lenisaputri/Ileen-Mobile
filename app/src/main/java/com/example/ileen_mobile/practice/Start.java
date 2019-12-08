@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.Collections;
 
 public class Start extends AppCompatActivity {
-    Button btnPlay;
+    Button btnPlay,btnExit;
 
     FirebaseDatabase database;
     DatabaseReference questions;
