@@ -45,6 +45,7 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginLeft="8dp"
                 />
+
             <Button
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
@@ -54,6 +55,20 @@
                 android:background="#AD1457"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:text="TRY AGAIN"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:theme="@style/MyButton"
+                />
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnExit"
+                android:layout_margin="8dp"
+                android:background="#AD1457"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="EXIT"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
                 android:theme="@style/MyButton"
