@@ -18,10 +18,10 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="70dp"
         android:id="@+id/title"
         android:padding="10dp"
-        app:cardBackgroundColor="#BD260C"
+        app:cardBackgroundColor="#F84132"
         app:cardElevation="4dp"
         >
         <LinearLayout
@@ -32,25 +32,25 @@
             android:layout_gravity="center"
             android:gravity="center"
             >
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text=" Name"
-                android:layout_weight="7"
-                android:textSize="20sp"
-                android:textColor="#ffffff"
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
                 android:padding="10dp"
-                android:drawableLeft="@drawable/ic_group_black_24dp"
+                android:background="@drawable/ic_arrow_back_black_24dp"
+                android:onClick="backButton"
                 />
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text=" Score"
-                android:layout_weight="3"
-                android:textSize="20sp"
+                android:layout_weight="10"
+                android:text="GRADE"
+                android:textSize="40sp"
                 android:textColor="#ffffff"
+                android:layout_marginLeft="90dp"
                 android:padding="10dp"
-                android:drawableLeft="@drawable/ic_grade_black_24dp"
+                android:fontFamily="@font/rocco_regular"
                 />
         </LinearLayout>
 

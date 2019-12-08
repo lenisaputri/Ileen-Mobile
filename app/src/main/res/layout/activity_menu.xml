@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     tools:showIn="@layout/activity_menu">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_menu"
+        android:alpha="0.7" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/menu_icon"
+        android:layout_marginTop="13dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        />
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
@@ -28,24 +43,24 @@
         android:alpha=".5"
         android:background="@android:color/white" />
 
-<!--    <Button-->
-<!--        android:id="@+id/btn_next"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_alignParentRight="true"-->
-<!--        android:background="@null"-->
-<!--        android:text="NEXT"-->
-<!--        android:textColor="#000000" />-->
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:text="next"
+        android:textColor="#FF4B40" />
 
-<!--    <Button-->
-<!--        android:id="@+id/btn_left"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_alignParentLeft="true"-->
-<!--        android:background="@null"-->
-<!--        android:text="LEFT"-->
-<!--        android:textColor="#000000" />-->
+    <Button
+        android:id="@+id/btn_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@null"
+        android:text=""
+        android:textColor="#FF4B40" />
 
 </RelativeLayout>

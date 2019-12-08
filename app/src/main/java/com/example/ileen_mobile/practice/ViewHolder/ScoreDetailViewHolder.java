@@ -28,6 +28,6 @@ public class ScoreDetailViewHolder extends RecyclerView.ViewHolder implements Vi
 
     @Override
     public void onClick(View v) {
-        itemClickListener.onClick(v,getAdapterPosition(),false);
+//        itemClickListener.onClick(v,getAdapterPosition(),false);
     }
 }
