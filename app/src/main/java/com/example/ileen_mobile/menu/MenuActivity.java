@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -40,7 +41,7 @@ public class MenuActivity extends AppCompatActivity {
     private LinearLayout dotsLayout;
     private TextView[] dots;
     private int[] layouts;
-
+    private Button btnSkip, btnNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,8 @@ public class MenuActivity extends AppCompatActivity {
 
         viewPager = findViewById(R.id.view_pager);
         dotsLayout = findViewById(R.id.layoutDots);
+        btnSkip = findViewById(R.id.btn_skip);
+        btnNext = findViewById(R.id.btn_next);
         layouts = new int[]{
                 R.layout.menu_slide1,
                 R.layout.menu_slide2};
@@ -57,6 +60,34 @@ public class MenuActivity extends AppCompatActivity {
 
         myViewPagerAdapter = new MyViewPagerAdapter();
         viewPager.setAdapter(myViewPagerAdapter);
+        viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
+
+        btnSkip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // checking for last page
+                // if last page home screen will be launched
+                int current = getItem(- 1);
+                if (current < layouts.length) {
+                    // move to next screen
+                    viewPager.setCurrentItem(current);
+                }
+            }
+        });
+
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // checking for last page
+                // if last page home screen will be launched
+                int current = getItem(+1);
+                if (current < layouts.length) {
+                    // move to next screen
+                    viewPager.setCurrentItem(current);
+                }
+            }
+        });
+
     }
 
     private void addBottomDots(int currentPage) {
@@ -82,6 +113,52 @@ public class MenuActivity extends AppCompatActivity {
     private int getItem(int i) {
         return viewPager.getCurrentItem() + i;
     }
+
+    //  viewpager change listener
+    ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
+
+        @Override
+        public void onPageSelected(int position) {
+            addBottomDots(position);
+
+            // changing the next button text 'NEXT' / 'GOT IT'
+            if (position == 0) {
+                // last page. make button text to GOT IT
+                btnNext.setEnabled(true);
+                btnSkip.setEnabled(false);
+                btnSkip.setVisibility(View.INVISIBLE);
+
+                btnNext.setText("NEXT");
+                btnSkip.setText("");
+            } else if(position == dots.length){
+                // last page. make button text to GOT IT
+                btnNext.setEnabled(false);
+                btnSkip.setEnabled(true);
+                btnSkip.setVisibility(View.VISIBLE);
+
+                btnNext.setText("");
+                btnSkip.setText("left");
+            } else{
+                btnNext.setEnabled(false);
+                btnSkip.setEnabled(true);
+                btnSkip.setVisibility(View.VISIBLE);
+
+                btnNext.setText("");
+                btnSkip.setText("LEFT");
+            }
+        }
+
+        @Override
+        public void onPageScrolled(int arg0, float arg1, int arg2) {
+
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int arg0) {
+
+        }
+    };
+
 
     public class MyViewPagerAdapter extends PagerAdapter {
         private LayoutInflater layoutInflater;

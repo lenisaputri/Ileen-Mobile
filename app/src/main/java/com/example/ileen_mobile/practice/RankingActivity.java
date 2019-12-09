@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ileen_mobile.R;
+import com.example.ileen_mobile.login.PlayActivity;
 import com.example.ileen_mobile.practice.Common.Common;
 import com.example.ileen_mobile.practice.Interface.ItemClickListener;
 import com.example.ileen_mobile.practice.Interface.RangkingCallBack;
@@ -56,6 +57,16 @@ public class RankingActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         rankingList.setHasFixedSize(true);
         rankingList.setLayoutManager(layoutManager);
+
+//        ImageButton backButton = (ImageButton) findViewById(R.id.back);
+//
+//        backButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(RankingActivity.this, PlayActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         updateScore(Common.currentUser.getUserName(), new RangkingCallBack<Ranking>() {
             @Override
@@ -136,5 +147,11 @@ public class RankingActivity extends AppCompatActivity {
         if (adapter != null) {
             adapter.stopListening();
         }
+    }
+
+    public void backButton(View view) {
+        Intent intent =  new Intent(this, PlayActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 }

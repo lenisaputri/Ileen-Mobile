@@ -1,5 +1,6 @@
 package com.example.ileen_mobile.practice.ViewHolder;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ileen_mobile.R;
 import com.example.ileen_mobile.practice.Model.QuestionScore;
+import com.example.ileen_mobile.practice.RankingActivity;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
@@ -87,5 +89,11 @@ public class ScoreDetail extends AppCompatActivity {
         if (adapter != null) {
             adapter.stopListening();
         }
+    }
+
+    public void backButton(View view) {
+        Intent intent =  new Intent(this, RankingActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 }

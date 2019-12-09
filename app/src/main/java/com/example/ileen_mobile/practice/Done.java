@@ -10,13 +10,14 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ileen_mobile.R;
+import com.example.ileen_mobile.login.PlayActivity;
 import com.example.ileen_mobile.practice.Common.Common;
 import com.example.ileen_mobile.practice.Model.QuestionScore;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Done extends AppCompatActivity {
-    Button btnTryAgain;
+    Button btnTryAgain, btnExit;
     TextView txtResultScore,getTxtResultQuestion;
     ProgressBar progressBar;
 
@@ -35,6 +36,16 @@ public class Done extends AppCompatActivity {
         getTxtResultQuestion = findViewById(R.id.txtTotalQuestion);
         progressBar = findViewById(R.id.doneProgressBar);
         btnTryAgain = findViewById(R.id.btnTryAgain);
+        btnExit = findViewById(R.id.btnExit);
+
+        btnExit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Done.this, PlayActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
 
         btnTryAgain.setOnClickListener(new View.OnClickListener() {
             @Override
