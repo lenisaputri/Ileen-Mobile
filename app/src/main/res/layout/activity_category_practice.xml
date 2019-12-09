@@ -4,19 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_practice"
     tools:context=".practice.CategoryPracticeActivity">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_practice"
+            android:alpha="0.7" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+        <ImageView
+            android:id="@+id/board"
+            android:layout_width="300dp"
+            android:layout_height="75dp"
+            android:src="@drawable/practice_logo"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toTopOf="@id/guideline5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listCategory"
             android:layout_width="350dp"
-            android:layout_height="450dp"
+            android:layout_height="500dp"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline5"
             android:background="#FFFFFF"
         />
 

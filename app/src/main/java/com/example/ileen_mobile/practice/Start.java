@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.Collections;
 
 public class Start extends AppCompatActivity {
-    Button btnPlay,btnExit;
+    Button btnPlay,btnBack;
 
     FirebaseDatabase database;
     DatabaseReference questions;
@@ -71,5 +71,11 @@ public class Start extends AppCompatActivity {
 
         //Random list
         Collections.shuffle(Common.questionList);
+    }
+
+    public void backButton(View view) {
+        Intent intent = new Intent(Start.this, CategoryPracticeActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 }
