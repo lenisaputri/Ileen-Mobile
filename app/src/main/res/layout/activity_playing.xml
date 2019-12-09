@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".practice.PlayingActivity"
-    android:background="#07124B"
+    android:background="#FF7A22"
     >
 
     <ImageView
@@ -92,7 +92,7 @@
                 android:textStyle="bold"
                 android:theme="@style/MyButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:background="#ff8a80"
+                android:background="#D81B60"
                 android:layout_margin="8dp"
                 android:foreground="?android:attr/selectableItemBackground"
                 />
@@ -105,7 +105,7 @@
                 android:textStyle="bold"
                 android:theme="@style/MyButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:background="#ff8a80"
+                android:background="#D81B60"
                 android:layout_margin="8dp"
                 android:foreground="?android:attr/selectableItemBackground"
                 />
@@ -118,7 +118,7 @@
                 android:textStyle="bold"
                 android:theme="@style/MyButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:background="#ff8a80"
+                android:background="#D81B60"
                 android:layout_margin="8dp"
                 android:foreground="?android:attr/selectableItemBackground"
                 />
@@ -131,7 +131,7 @@
                 android:textStyle="bold"
                 android:theme="@style/MyButton"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:background="#ff8a80"
+                android:background="#D81B60"
                 android:layout_margin="8dp"
                 android:foreground="?android:attr/selectableItemBackground"
                 />
